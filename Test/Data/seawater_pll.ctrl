@@ -1,0 +1,28 @@
+BEGIN Options
+  Verbose = 3
+  MessageFile = seawater_messages.txt
+END Options
+
+BEGIN Simulation
+  SimCommand = "..\..\bin\mf2005dbl ..\data\seawater.nam"
+END Simulation
+
+BEGIN Model_Command_Lines
+  command = ..\data\seawater_cmr.bat
+  commandid = Seawater_cmr  
+END Model_Command_Lines
+
+BEGIN Parallel_Control
+  Parallel=true
+  VerboseRunner = 4
+  AutoStopRunners = true
+  Wait = 0.01
+  TimeOutFactor = 4.0
+END Parallel_Control
+
+BEGIN Parallel_Runners table
+  nrow=2  ncol=3  columnlabels
+  Runnername   Runnerdir     RunTime                                      Runtime  
+  Runner1      ..\runner1\   2.0                                       5.0
+  Runner2      ..\runner2\   2.0                                       5.0
+END Parallel_Runners

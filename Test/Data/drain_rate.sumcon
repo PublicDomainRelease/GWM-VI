@@ -1,0 +1,38 @@
+#DRAIN Sample Problem--SUMCON File
+#March 2012     
+  1                     #1-IPRN
+ 11                     #2-SMCNUM
+ WIN-MAX 2 le 80000.    #3a-SMCNAME NTERMS TYPE RHS
+  Q1  1.0               #3b-GVNAME GVCOEFF
+  Q2win 1.0
+ WIN-MIN 2 ge 30000.
+  Q1  1.0
+  Q2win 1.0
+ SPR-MAX 3 le 80000.
+  Q1  1.0
+  Q2spr 1.0
+  Q3spr 1.0
+ SPR-MIN  3 ge 45000.
+  Q1  1.0
+  Q2spr 1.0
+  Q3spr 1.0
+ SUM-MAX  3 le 80000.
+  Q1  1.0
+  Q2sum 1.0
+  Q3sum 1.0
+ SUM-MIN  3 ge 60000.
+  Q1  1.0
+  Q2sum 1.0
+  Q3sum 1.0
+ FAL-MAX  2 le 80000.
+  Q1  1.0
+  Q2fal 1.0
+ FAL-MIN  2 ge 30000.
+  Q1  1.0
+  Q2fal 1.0
+ DR1-MIN  1 ge 300000.
+  DR1  1.0 
+ DR2-MIN  1 ge 230000.
+  DR2  1.0
+ DR3-MIN  1 ge 235500.
+  DR3  1.0

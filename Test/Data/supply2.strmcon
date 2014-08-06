@@ -1,0 +1,20 @@
+#SUPPLY2 Sample Problem, STRMCON file, for GWM-VI
+#
+#
+ 1                          #1-IPRN
+ 0 12                       #2-NSF NSD
+ S01_9  1 14 le 15000. 9    #4-SDNAME SEG REACH TYPSD BND NSP
+ S01_10 1 14 le 15000. 10   
+ S01_11 1 14 le 15000. 11   
+ S01_12 1 14 le 15000. 12   
+ S02_11 1 21 le 20000. 11   
+ S02_12 1 21 le 20000. 12  
+ S03_9  2  8 le 15000. 9    
+ S03_10 2  8 le 15000. 10   
+ S03_11 2  8 le 15000. 11    
+ S03_12 2  8 le 15000. 12   
+ S04_11 3  5 le 30000. 11   
+ S04_12 3  5 le 30000. 12   
+
+
+

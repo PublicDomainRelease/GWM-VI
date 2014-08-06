@@ -1,0 +1,12 @@
+LIST    10   drain_volume.lst
+DIS     11   ..\data\drain.dis
+BAS6    12   ..\data\drain.ba6
+BCF6    13   ..\data\drain.bc6
+RCH     15   ..\data\drain.rch
+DRN     16   ..\data\drain.drn
+OC      17   ..\data\drain.oc
+PCG     18   ..\data\drain.pcg
+WEL     19   drain.wel
+DATA    20   drain_volume.gwmwell
+data(binary) 50  drainstate.bin
+data(binary) 51  drainheads.bin

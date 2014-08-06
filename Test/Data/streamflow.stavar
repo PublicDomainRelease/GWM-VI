@@ -1,0 +1,9 @@
+#STREAMFLOW Sample Problem--STAVAR File
+#
+#
+ 1                             #1-IPRN
+ 0  4  0                       #2-NHVAR NRVAR NSVAR
+ SF1  1  14  11               #4-SVNAME SEG REACH SVSP
+ SF2  1  21  11   
+ SF3  2   8  11   
+ SF4  3   5  11   

@@ -1,0 +1,9 @@
+LIST  10   maximin.lst
+DIS   11   ..\data\maximin.dis
+BAS6  12   ..\data\maximin.ba6
+LPF   13   ..\data\maximin.lpf
+PCG   14   ..\data\maximin.pcg
+OC    15   ..\data\maximin.oc
+WEL   19   maximin.wel
+data(binary) 51  maximinheads.bin
+data         52  maximin.gwmwell

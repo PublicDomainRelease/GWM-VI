@@ -1,0 +1,70 @@
+SUMMARY OF GWM-VI
+
+
+NOTE: Any use of trade, product, or firm names is for descriptive purposes only
+      and does not imply endorsement by the U.S. Government.
+
+
+ABSTRACT 
+
+Groundwater Management–Version Independent (GWM–VI) is a new version of the 
+Groundwater Management Process of MODFLOW. The Groundwater Management Process 
+couples groundwater-flow simulation with a capability to optimize stresses on 
+the simulated aquifer based on an objective function and constraints imposed on 
+stresses and aquifer state. GWM–VI extends prior versions of Groundwater 
+Management in two significant ways—-(1) it can be used with any version of 
+MODFLOW that meets certain requirements on input and output, and (2) it is 
+structured to allow parallel processing of the repeated runs of the MODFLOW 
+model that are required to solve the optimization problem. GWM–VI uses the same 
+input structure for files that describe the management problem as that used by 
+prior versions of Groundwater Management. GWM–VI requires only minor changes to 
+the input files used by the MODFLOW model. GWM–VI uses the Joint Universal 
+Parameter IdenTification and Evaluation of Reliability Application Programming 
+Interface (JUPITER-API) to implement both version independence and parallel 
+processing. GWM–VI communicates with the MODFLOW model by manipulating certain 
+input files and interpreting results from the MODFLOW listing file and binary 
+output files. Nearly all capabilities of prior versions of Groundwater 
+Management are available in GWM–VI. GWM–VI has been tested with MODFLOW-2005, 
+MODFLOW-NWT (a Newton formulation for MODFLOW-2005), MF2005-FMP2 (the Farm 
+Process for MODFLOW-2005), SEAWAT, and CFP (Conduit Flow Process for 
+MODFLOW-2005). Banta and Ahlfeld (2013) provide sample problems that 
+demonstrate a range of applications of GWM–VI and the directory structure and 
+input information required to use the parallel-processing capability.
+
+
+HISTORY
+
+Please refer to file release.txt for the version history for GWM-VI.
+
+
+SYSTEM REQUIREMENTS
+
+The programs that make up GWM-VI are written in the Fortran 90 programming 
+language.  The GWM-VI distribution file includes executable files that can be 
+used on personal computers running various forms of the Microsoft Windows 
+operating system.  See the file readme.txt for instructions for compiling the 
+programs for use on computers that run other operating systems.
+
+
+DOCUMENTATION
+
+Banta, E.R., and Ahlfeld, D.P., 2013, GWM–VI—-Groundwater management with 
+parallel processing for multiple MODFLOW versions: U.S. Geological Survey 
+Techniques and Methods, book 6, chap. A48, 33 p., 
+http://pubs.usgs.gov/tm/6a48/.
+
+
+CONTACTS
+
+Edward R. Banta
+U.S. Geological Survey
+Colorado Water Science Center
+Mail Stop 415
+Denver Federal Center
+Lakewood, CO 80225
+erbanta@usgs.gov
+
+David P. Ahlfeld
+Dept. of Civil and Environmental Engineering
+University of Massachusetts, Amherst, MA 01003
+ahlfeld@engin.umass.edu

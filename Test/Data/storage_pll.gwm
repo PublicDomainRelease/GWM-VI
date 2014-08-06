@@ -1,0 +1,10 @@
+# STORAGE sample problem
+OUT     storage.gwmout.parallel
+DECVAR  ..\data\storage.decvar
+STAVAR  ..\data\storage.stavar
+OBJFNC  ..\data\storage.objfnc
+VARCON  ..\data\storage.varcon
+SUMCON  ..\data\storage.sumcon
+SOLN    ..\data\storage.soln
+CONTROL ..\data\storage_pll.ctrl
+NAM     ..\data\storage.nam

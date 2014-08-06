@@ -1,0 +1,94 @@
+#STORAGE Sample Problem, SUMCON file
+ 1                     #1_IPRN
+ 9                     #2_SMCNUM
+ ST1_2  2 le 0.        #3a_SMCNAME NTERMS TYPE RHS
+  SCHNG2 -0.85         #3b_GVNAME GVCOEFF
+  SCHNG3   1.0   
+ ST1_3  2 le 0.        #3a_SMCNAME NTERMS TYPE RHS
+  SCHNG3 -0.80         #3b_GVNAME GVCOEFF
+  SCHNG4   1.0   
+ ST1_4  2 le 0.        #3a_SMCNAME NTERMS TYPE RHS
+  SCHNG4 -0.75         #3b_GVNAME GVCOEFF
+  SCHNG5   1.0   
+ ST1_5  2 le 0.        #3a_SMCNAME NTERMS TYPE RHS
+  SCHNG5 -0.70         #3b_GVNAME GVCOEFF
+  SCHNG6   1.0   
+ ST2_1  2 le 0.        #3a_SMCNAME NTERMS TYPE RHS
+  SCHNGS  1.0          #3b_GVNAME GVCOEFF
+  SCHNGN  -0.9
+ EQ_b  18 eq 0.        #The next 4 constraints impose the requirement
+Q1_2_a    1.0	     #that total withdrawal rates are equal during
+Q2_3_a    1.0	     #each of the five 10_year management stress
+Q3_2_a    1.0	     #periods. This first constraint requires total
+Q4_1_a    1.0	     #withdrawals in the second management stress
+Q4_2_a    1.0	     #period to be equal to those in the first.
+Q4_3_a    1.0	   
+Q5_1_a    1.0	   
+Q5_2_a    1.0	   
+Q5_3_a    1.0	   
+Q1_2_b   -1.0	    
+Q2_3_b   -1.0	   
+Q3_2_b   -1.0	   
+Q4_1_b   -1.0	   
+Q4_2_b   -1.0	   
+Q4_3_b   -1.0	   
+Q5_1_b   -1.0	   
+Q5_2_b   -1.0	   
+Q5_3_b   -1.0	   
+ EQ_c  18 eq 0.
+Q1_2_a    1.0	     
+Q2_3_a    1.0	     
+Q3_2_a    1.0	     
+Q4_1_a    1.0	    
+Q4_2_a    1.0	     
+Q4_3_a    1.0	   
+Q5_1_a    1.0	   
+Q5_2_a    1.0	   
+Q5_3_a    1.0	   
+Q1_2_c   -1.0	    
+Q2_3_c   -1.0	   
+Q3_2_c   -1.0	   
+Q4_1_c   -1.0	   
+Q4_2_c   -1.0	   
+Q4_3_c   -1.0	   
+Q5_1_c   -1.0	   
+Q5_2_c   -1.0	   
+Q5_3_c   -1.0	   
+ EQ_d  18 eq 0.
+Q1_2_a    1.0	     
+Q2_3_a    1.0	     
+Q3_2_a    1.0	     
+Q4_1_a    1.0	    
+Q4_2_a    1.0	     
+Q4_3_a    1.0	   
+Q5_1_a    1.0	   
+Q5_2_a    1.0	   
+Q5_3_a    1.0	   
+Q1_2_d   -1.0	    
+Q2_3_d   -1.0	   
+Q3_2_d   -1.0	   
+Q4_1_d   -1.0	   
+Q4_2_d   -1.0	   
+Q4_3_d   -1.0	   
+Q5_1_d   -1.0	   
+Q5_2_d   -1.0	   
+Q5_3_d   -1.0	   
+ EQ_e  18 eq 0.
+Q1_2_a    1.0	     
+Q2_3_a    1.0	     
+Q3_2_a    1.0	     
+Q4_1_a    1.0	    
+Q4_2_a    1.0	     
+Q4_3_a    1.0	   
+Q5_1_a    1.0	   
+Q5_2_a    1.0	   
+Q5_3_a    1.0	   
+Q1_2_e   -1.0	    
+Q2_3_e   -1.0	   
+Q3_2_e   -1.0	   
+Q4_1_e   -1.0	   
+Q4_2_e   -1.0	   
+Q4_3_e   -1.0	   
+Q5_1_e   -1.0	   
+Q5_2_e   -1.0	   
+Q5_3_e   -1.0	   

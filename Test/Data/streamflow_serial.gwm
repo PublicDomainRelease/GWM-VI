@@ -1,0 +1,11 @@
+#STREAMFLOW Sample Problem--GWM File
+#December 2009     
+OUT     streamflow.gwmout.serial
+DECVAR  ..\data\streamflow.decvar
+STAVAR  ..\data\streamflow.stavar
+OBJFNC  ..\data\streamflow.objfnc
+VARCON  ..\data\streamflow.varcon
+SUMCON  ..\data\streamflow.sumcon
+SOLN    ..\data\streamflow.soln
+CONTROL ..\data\streamflow_serial.ctrl
+NAM     ..\data\streamflow.nam

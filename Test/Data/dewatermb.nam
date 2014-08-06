@@ -1,0 +1,10 @@
+LIST  10   dewatermb.lst
+DIS   11   ..\data\dewater.dis
+BAS6  12   ..\data\dewater.ba6
+BCF6  13   ..\data\dewater.bc6
+PCG   14   ..\data\dewater.pcg
+OC    15   ..\data\dewater.oc
+WEL   16   dewatermb.wel
+data(binary) 50  dewatermbhd.bin  REPLACE
+
+

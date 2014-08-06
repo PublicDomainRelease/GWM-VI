@@ -1,0 +1,49 @@
+#STORAGE Sample Problem, DECVAR file
+ 1 75                          #1-IPRN  GWMWFILE
+ 45 0 0                        #2-NFVAR  NEVAR  NBVAR
+Q1_2_a   1   2    4    6   W   Y   2 #FVNAME NC LAY ROW COL FTYPE FSTAT WSP
+Q1_2_b   1   2    4    6   W   Y   3 # Naming convention
+Q1_2_c   1   2    4    6   W   Y   4 # Q_ refers to well number
+Q1_2_d   1   2    4    6   W   Y   5 # -_- refers to layer of well
+Q1_2_e   1   2    4    6   W   Y   6 # sufffix a = stress period 2
+Q2_3_a   1   3    5   11   W   Y   2 # sufffix b = stress period 3
+Q2_3_b   1   3    5   11   W   Y   3 # sufffix c = stress period 4
+Q2_3_c   1   3    5   11   W   Y   4 # sufffix d = stress period 5
+Q2_3_d   1   3    5   11   W   Y   5 # sufffix e = stress period 6
+Q2_3_e   1   3    5   11   W   Y   6
+Q3_2_a   1   2    6   12   W   Y   2
+Q3_2_b   1   2    6   12   W   Y   3
+Q3_2_c   1   2    6   12   W   Y   4
+Q3_2_d   1   2    6   12   W   Y   5
+Q3_2_e   1   2    6   12   W   Y   6
+Q4_1_a   1   1   11    8   W   Y   2
+Q4_1_b   1   1   11    8   W   Y   3
+Q4_1_c   1   1   11    8   W   Y   4
+Q4_1_d   1   1   11    8   W   Y   5
+Q4_1_e   1   1   11    8   W   Y   6
+Q4_2_a   1   2   11    8   W   Y   2
+Q4_2_b   1   2   11    8   W   Y   3
+Q4_2_c   1   2   11    8   W   Y   4
+Q4_2_d   1   2   11    8   W   Y   5
+Q4_2_e   1   2   11    8   W   Y   6
+Q4_3_a   1   3   11    8   W   Y   2
+Q4_3_b   1   3   11    8   W   Y   3
+Q4_3_c   1   3   11    8   W   Y   4
+Q4_3_d   1   3   11    8   W   Y   5
+Q4_3_e   1   3   11    8   W   Y   6
+Q5_1_a   1   1   11   12   W   Y   2
+Q5_1_b   1   1   11   12   W   Y   3
+Q5_1_c   1   1   11   12   W   Y   4
+Q5_1_d   1   1   11   12   W   Y   5
+Q5_1_e   1   1   11   12   W   Y   6
+Q5_2_a   1   2   11   12   W   Y   2
+Q5_2_b   1   2   11   12   W   Y   3
+Q5_2_c   1   2   11   12   W   Y   4
+Q5_2_d   1   2   11   12   W   Y   5
+Q5_2_e   1   2   11   12   W   Y   6
+Q5_3_a   1   3   11   12   W   Y   2
+Q5_3_b   1   3   11   12   W   Y   3
+Q5_3_c   1   3   11   12   W   Y   4
+Q5_3_d   1   3   11   12   W   Y   5
+Q5_3_e   1   3   11   12   W   Y   6
+

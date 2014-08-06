@@ -1,0 +1,13 @@
+BEGIN Options
+  Verbose = 3
+  MessageFile = supply2_messages.txt
+END Options
+
+BEGIN Simulation
+  SimCommand = "..\..\bin\mf2005dbl ..\data\supply2.nam"
+END Simulation
+
+BEGIN Model_Command_Lines
+  command = ..\data\supply2_cmr.bat
+  commandID = Supply2_cmr
+END Model_Command_Lines

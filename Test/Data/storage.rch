@@ -1,0 +1,11 @@
+# STORAGE Sample problem
+# Convert: 3.E-8 ft/sec = 2.592E-3 ft/day
+# Reduce recharge by 10X to simulate arid environment
+         1         0    NRCHOP,IRCHBD
+         1              INRECH
+         0  2.592E-4    RECH-1  
+        -1              INRECH  Stress Period 2 => Use previous recharge rate
+        -1              INRECH  Stress Period 3 => Use previous recharge rate
+        -1              INRECH  Stress Period 4 => Use previous recharge rate
+        -1              INRECH  Stress Period 5 => Use previous recharge rate
+        -1              INRECH  Stress Period 6 => Use previous recharge rate

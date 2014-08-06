@@ -1,0 +1,24 @@
+#LPF Input for sample problem STORAGE using GWM-VI
+#Constructed to mimic behavior of BC6 file input for original TWRI problem
+#Vertical conductivity in layers is very large so VKCB controls conductance
+#
+# ILPFCB is set to 50 indicating that cell-by-cell flows will be written to unit 50
+#
+50    1.00E+30    0    ILPFCB  HDRY  NPLPF   
+ 1 0 0   LAYTYP
+ 0 0 0   LAYAVG
+ 1 1 1   CHANI
+ 1 1 1   LAYVKA
+ 0 0 0   LAYWET
+CONSTANT   8.640000E+01  HK   layer 1  86.4 ft/day = 0.001 ft/sec
+CONSTANT   1.000000E-04  VKA  layer 1   
+CONSTANT   1.000000E-05  SS   layer 1
+CONSTANT   1.500000E-01  SY   layer 1   
+CONSTANT   8.640000E-02  VKCB layer 1  2E-8/sec*50ft*86400sec/day = 8.64E-2 ft/day
+CONSTANT   8.640000E+00  HK   layer 2  0.01 ft2/sec/100ft*86400sec/day = 8.64 ft/day
+CONSTANT   1.000000E-04  VKA  layer 2   
+CONSTANT   1.000000E-05  SS   layer 2
+CONSTANT   4.320000E-02  VKCB layer 2  1E-8/sec*50ft*86400sec/day = 4.32E-2 ft/day
+CONSTANT   1.728000E+01  HK   layer 3  0.02ft2/sec/100ft*86400sec/day = 17.28 ft/day
+CONSTANT   1.000000E-04  VKA  layer 3   
+CONSTANT   1.000000E-05  SS   layer 3

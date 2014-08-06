@@ -1,0 +1,12 @@
+#MNW-SUPPLY Sample Problem, OBJFNC file
+#January 2012
+ 1          #1-IPRN
+ MAX  WSDV  #2-OBJTYP FNTYP
+ 6  0  0    #3-NFVOBJ NEVOBJ NBVOBJ   
+ Qm1  1	#4-FVNAME FVOBJC
+ Qm2  1
+ Qm3  1
+ Qm4  1 
+ Qm5  1
+ Qm6  1		
+	

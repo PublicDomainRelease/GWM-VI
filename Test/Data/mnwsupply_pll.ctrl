@@ -1,0 +1,29 @@
+BEGIN Options
+  Verbose = 3
+  MessageFile = mnwsupply_messages.txt
+END Options
+
+BEGIN Simulation
+  SimCommand = "..\..\bin\mf2005dbl ..\data\mnwsupply.nam"
+END Simulation
+
+BEGIN Model_Command_Lines
+  command = ..\data\mnwsupply_cmr.bat
+  commandid = mnwsupply_cmr  
+END Model_Command_Lines
+
+BEGIN Parallel_Control
+  parallel=true  wait=0.2  
+  VerboseRunner=4
+  AutoStopRunners = true
+  TimeOutFactor = 20.0
+END Parallel_Control
+
+BEGIN Parallel_Runners table
+  nrow=2 ncol=3 columnlabels
+  RunnerName  RunnerDir   RunTime
+  Runner1     ..\runner1\  0.5
+  Runner2     ..\runner2\  0.5
+END Parallel_Runners
+
+

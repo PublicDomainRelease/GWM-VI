@@ -1,0 +1,13 @@
+#STORAGE Sample Problem, OBJFNC file
+ 1              #1-IPRN
+ MAX  WSDV      #2-OBJTYP  FNTYP
+ 9  0  0  0     #3-NFVOBJ  NEVOBJ  NBVOBJ  (NSVOBJ)
+Q1_2_a	1.0     #4-FVNAME  FVOBJC
+Q2_3_a	1.0
+Q3_2_a	1.0
+Q4_1_a	1.0
+Q4_2_a	1.0
+Q4_3_a	1.0
+Q5_1_a	1.0
+Q5_2_a	1.0
+Q5_3_a	1.0

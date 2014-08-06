@@ -1,0 +1,17 @@
+BEGIN Options
+  Verbose = 3
+  MessageFile = maximin_messages.txt
+END Options
+
+BEGIN Simulation
+  SimCommand = "..\..\bin\mf2005dbl ..\data\maximin.nam"
+END Simulation
+
+BEGIN Model_Command_Lines
+  command = ..\data\maximin_cmr.bat
+  commandid = Maximin_cmr  
+END Model_Command_Lines
+
+BEGIN Parallel_Control
+  parallel=false  
+END Parallel_Control

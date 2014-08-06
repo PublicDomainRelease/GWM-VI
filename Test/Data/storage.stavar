@@ -1,0 +1,46 @@
+#STORAGE Sample Problem, STAVAR file
+ 1                             #1-IPRN
+ 0  0  7                       #2-NHVAR NRVAR NSVAR
+ SCHNG2  2  2  zone            # SVNAME SPSTRT SPEND CZONE:  Layer 1, stress period 2
+ 1                             # NSVZL: 1 layer in zone
+ 1                             # LNUM : 1st layer is layer 1       
+ CONSTANT 1                    # SVZONE: zone is all of layer 1
+ SCHNG3  3  3  zone            # SVNAME SPSTRT SPEND CZONE:  Layer 1, stress period 3
+ 1                             # NSVZL
+ 1                             # LNUM        
+ CONSTANT 1                    # SVZONE - zone is all of layer 1
+ SCHNG4  4  4  zone            # SVNAME SPSTRT SPEND CZONE:  Layer 1, stress period 4
+ 1                             # NSVZL
+ 1                             # LNUM        
+ CONSTANT 1                    # SVZONE - zone is all of layer 1
+ SCHNG5  5  5  zone            # SVNAME SPSTRT SPEND CZONE:  Layer 1, stress period 5
+ 1                             # NSVZL
+ 1                             # LNUM        
+ CONSTANT 1                    # SVZONE - zone is all of layer 1
+ SCHNG6  6  6  zone            # SVNAME SPSTRT SPEND CZONE:  Layer 1, stress period 6
+ 1                             # NSVZL
+ 1                             # LNUM        
+ CONSTANT 1                    # SVZONE - zone is all of layer 1
+ SCHNGN  2  6  zone            # SVNAME SPSTRT SPEND CZONE:  Layer 1, stress period 6
+ 1                             # NSVZL
+ 2                             # LNUM        
+ OPEN/CLOSE ..\data\storage.zone1  1  (15I4)   8 # SVZONE - zone is north part of layer 2
+ SCHNGS  2  6  zone            # SVNAME SPSTRT SPEND CZONE:  stress period 2 to 6
+ 1                             # NSVZL: 1 layer in zone
+ 2                             # LNUM : 1st layer is layer 2       
+ INTERNAL   1  (15I4)   8      # SVZONE - zone is south part of layer 2
+   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1
+   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1
+   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1
+   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1
+   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1
+   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1
+   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1

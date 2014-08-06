@@ -1,0 +1,9 @@
+#MAXIMIN Sample Problem, VARCON file
+#December 2009
+  1                          #1-IPRN
+ Q1 0.0d2  4.0d3  0.0d2      #2-FVNAME  FVMIN  FVMAX  FVREF
+ Q2 0.0d2  4.0d3  0.0d2
+ Q3 0.0d2  4.0d3  0.0d2
+ Q4 0.0d2  4.0d3  0.0d2
+ Q5 0.0d2  4.0d3  0.0d2
+ R  0.0d0  1.0d3             #3-EVNAME  EVMIN  EVMAX

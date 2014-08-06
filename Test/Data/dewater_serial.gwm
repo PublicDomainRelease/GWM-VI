@@ -1,0 +1,9 @@
+# DEWATER Sample Problem, GWM file - Serial
+OUT     dewater.gwmout.serial
+DECVAR  ..\data\dewater.decvar
+OBJFNC  ..\data\dewater.objfnc
+VARCON  ..\data\dewater.varcon
+HEDCON  ..\data\dewater.hedcon
+SOLN    ..\data\dewater.soln
+CONTROL ..\data\dewater_serial.ctrl
+NAM     ..\data\dewater.nam

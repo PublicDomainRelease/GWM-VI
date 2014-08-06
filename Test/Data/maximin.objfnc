@@ -1,0 +1,6 @@
+#MAXIMIN Sample Problem, OBJFNC file
+#December 2009
+ 1              #1-IPRN
+ MAX  USDV      #2-OBJTYP  FNTYP
+ 0  1  0  0     #3-NFVOBJ  NEVOBJ  NBVOBJ  (NSVOBJ)
+ R  1.0         #5-EVNAME  EVOBJC

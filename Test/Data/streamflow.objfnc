@@ -1,0 +1,10 @@
+#STREAMFLOW Sample Problem--OBJFNC File
+#December 2009     
+ 1             #1-IPRN
+ MAX  USDV     #2-OBJTYP FNTYP
+ 0  0  0  4    #3-NFVOBJ NEVOBJ  NBVOBJ NSVOBJ
+ SF1 1.00      #7-SVNAME  SVOBJC
+ SF2 1.00    
+ SF3 1.00
+ SF4 1.00
+

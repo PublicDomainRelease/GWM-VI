@@ -1,0 +1,9 @@
+#MAXIMIN Sample Problem, SOLN file
+#December 2009
+ LP                #1-SOLNTYP
+ 2                 #4a-IRM
+ 1000  2000        #4b-LPITMAX  BBITMAX
+ 0.5               #4c-DELTA
+ 1  10  0.5        #4d-NSIGDIG  NPGNMX  PGFACT
+ 1  0              #4e-BBITPRT  RANGE
+ 0                 #6a-IBASE

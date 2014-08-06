@@ -1,0 +1,22 @@
+#  WEL file specifying no wells.
+#
+#  A file like this is required by GWM-VI
+#  when the original model does not use
+#  the Well Package but the GWM management
+#  model includes flow-rate decision
+#  variables to be simulated with the
+#  Well Package.
+0 0   # Item 1: MXACTW IWELCB
+0 0   # Item 5: ITMP NP, stress period 1
+0 0   # Item 5: ITMP NP, stress period 2
+0 0   # Item 5: ITMP NP, stress period 3
+0 0   # Item 5: ITMP NP, stress period 4
+0 0   # Item 5: ITMP NP, stress period 5
+0 0   # Item 5: ITMP NP, stress period 6
+0 0   # Item 5: ITMP NP, stress period 7
+0 0   # Item 5: ITMP NP, stress period 8
+0 0   # Item 5: ITMP NP, stress period 9
+0 0   # Item 5: ITMP NP, stress period 10
+0 0   # Item 5: ITMP NP, stress period 11
+0 0   # Item 5: ITMP NP, stress period 12
+

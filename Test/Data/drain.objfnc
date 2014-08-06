@@ -1,0 +1,9 @@
+#DRAIN Sample Problem--OBJFNC File
+#March 2012      
+ 1             #1-IPRN
+ MAX  USDV     #2-OBJTYP FNTYP
+ 0  0  0  3    #3-NFVOBJ NEVOBJ  NBVOBJ NSVOBJ
+ DR1 1.00      #7-SVNAME  SVOBJC
+ DR2 1.00    
+ DR3 1.00
+

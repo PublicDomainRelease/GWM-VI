@@ -1,0 +1,8 @@
+#MNW-SUPPLY Sample Problem, STAVAR file
+#January 2012
+#State Variable H1_SP3 is the head in the cell containing MNWQm1
+#  In the GWM2005 version of this sample problem the head in the cell is directly used
+ 1                             #1-IPRN
+ 2  0  0  0                    #2-NHVAR NRVAR NSVAR NDVAR
+ H1_SP3  2  3  12  3           # SVNAME LAY ROW COL SVSP
+ N1_SP3  2  2  12  3           # SVNAME LAY ROW COL SVSP

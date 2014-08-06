@@ -1,0 +1,39 @@
+release.txt
+
+                             GWM-VI Release Notes
+
+     This file describes changes introduced into the GWM-VI suite of 
+     programs with each official release; these changes may substantially 
+     affect users.  For additional information about the GWM-VI suite of 
+     programs, see readme.txt.
+
+NOTE: Any use of trade, product or firm names is for descriptive purposes 
+      only and does not imply endorsement by the U.S. Government.
+
+o Version 1.0.1 08/07/2014
+
+A new variable called EpsQnet is now supported in the GWM-VI Control input 
+file.  EpsQnet applies when MNW2 multi-node wells are used as flow-rate 
+decision variables.  Please see Input_instructions_GWM-VI_v1.0.1.pdf in the 
+doc folder for details.
+
+In the earlier version of GWM-VI, certain messages, including some error 
+messages, were not being saved.  Now, these messages are written to file
+messages_from_gwmvi.txt.
+
+The following bugs have been fixed:
+
+1. Execution failed when there were no managed wells simulated by the 
+Well Package.
+
+2. An infinite loop could happen under any of the following conditions:
+    a. Modflow did not converge,
+    b. A managed well cell (WEL or MNW2) went dry, or
+    c. A constraint cell went dry.
+
+3. Execution failed when flow-rate decision variables were simulated with
+the MNW2 Package and the original MNW2 input file specified 0 wells.
+
+o Version 1.0.0 12/05/2013
+
+This version is the initial release.

@@ -1,0 +1,12 @@
+#SEAWATER Sample Problem, GWM file
+#August 12, 2007
+OUT     seawater.gwmout.parallel
+DECVAR  ..\data\seawater.decvar
+OBJFNC  ..\data\seawater.objfnc
+VARCON  ..\data\seawater.varcon
+SUMCON  ..\data\seawater.sumcon
+HEDCON  ..\data\seawater.hedcon
+SOLN    ..\data\seawater.soln
+CONTROL ..\data\seawater_pll.ctrl
+NAM     ..\data\seawater.nam
+

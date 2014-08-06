@@ -1,0 +1,354 @@
+
+                                  GWM-VI
+    U.S. GEOLOGICAL SURVEY GROUNDWATER MANAGEMENT VERSION INDEPENDENT PROGRAM
+                 Version  1.0.1                                  
+
+
+
+
+ OPENING GWM FILE FOR GWM1 -- GROUNDWATER MANAGEMENT PROCESS
+ INPUT READ FROM UNIT 980
+
+ #MAXIMIN Sample Problem, GWM file                                                                                                                                                                       
+ #December 2009                                                                                                                                                                                          
+
+ OPENING DECISION-VARIABLE FILE ON UNIT   10:
+ ..\data\maximin.decvar                                                                                                                                                                                  
+ #MAXIMIN Sample Problem, DECVAR file
+ #December 2009
+
+ OPTIMAL FLOW VARIABLE VALUES WILL BE WRITTEN TO UNIT NUMBER:  52
+
+ NO. OF FLOW-RATE DECISION VARIABLES (NFVAR)       5
+ NO. OF EXTERNAL DECISION VARIABLES (NEVAR):       1
+ BINARY VARIABLES ARE NOT ACTIVE.
+
+ FLOW-RATE VARIABLES: WEL-TYPE
+                                                   FRACTION
+  NUMBER     NAME       TYPE      LAY   ROW   COL   OF FLOW
+ ----------------------------------------------------------
+    1      Q1         WITHDRAWAL     1    4   14    1.0000
+   AVAILABLE IN STRESS PERIODS: 1                                                                                                                       
+
+    2      Q2         WITHDRAWAL     1    3   15    1.0000
+   AVAILABLE IN STRESS PERIODS: 1                                                                                                                       
+
+    3      Q3         WITHDRAWAL     1   12   20    1.0000
+   AVAILABLE IN STRESS PERIODS: 1                                                                                                                       
+
+    4      Q4         WITHDRAWAL     1   13   16    1.0000
+   AVAILABLE IN STRESS PERIODS: 1                                                                                                                       
+
+    5      Q5         WITHDRAWAL     1    9   14    1.0000
+   AVAILABLE IN STRESS PERIODS: 1                                                                                                                       
+
+
+ EXTERNAL VARIABLES:
+
+  NUMBER     NAME      TYPE
+ ------------------------------
+
+    1        R           Head    
+   AVAILABLE IN STRESS PERIODS: 1                                                                                                                       
+
+
+      476 BYTES OF MEMORY ALLOCATED TO STORE DATA FOR DECISION VARIABLES
+
+ CLOSING DECISION-VARIABLE FILE
+
+
+ OPENING STATE VARIABLE FILE ON UNIT   10:
+ ..\data\maximin.stavar                                                                                                                                                                                  
+ #MAXIMIN Sample Problem, STAVAR file
+ #December 2009
+
+ NO. OF HEAD STATE VARIABLES (NHVAR):              4
+ NO. OF STREAMFLOW STATE VARIABLES (NRVAR):        0
+ NO. OF STORAGE STATE VARIABLES (NSVAR):           0
+ NO. OF DRAIN STATE VARIABLES (NDVAR):             0
+
+ HEAD TYPE STATE VARIABLES:
+                             MNW WELLID or
+  NUMBER     NAME            LAY  ROW  COL
+ ----------------------------------------------------------
+      1      H1              1    8   16
+   AVAILABLE IN STRESS PERIOD:     1
+
+      2      H2              1   11   14
+   AVAILABLE IN STRESS PERIOD:     1
+
+      3      H3              1   10   18
+   AVAILABLE IN STRESS PERIOD:     1
+
+      4      H4              1    8   21
+   AVAILABLE IN STRESS PERIOD:     1
+
+
+      424 BYTES OF MEMORY ALLOCATED TO STORE DATA FOR STATE VARIABLES
+
+ CLOSING STATE VARIABLE FILE
+
+
+ OPENING OBJECTIVE-FUNCTION FILE ON UNIT   10:
+ ..\data\maximin.objfnc                                                                                                                                                                                  
+ #MAXIMIN Sample Problem, OBJFNC file
+ #December 2009
+
+ OBJECTIVE TYPE: MAX   FUNCTION TYPE: USDV
+
+ NO. OF FLOW-RATE DECISION VARIABLES IN OBJECTIVE FUNCTION (NFVOBJ):    0
+ NO. OF EXTERNAL DECISION VARIABLES IN OBJECTIVE FUNCTION (NEVOBJ):     1
+ NO. OF BINARY DECISION VARIABLES IN OBJECTIVE FUNCTION (NBVOBJ):       0
+ NO. OF STATE VARIABLES IN OBJECTIVE FUNCTION (NSVOBJ):                 0
+
+ OBJECTIVE FUNCTION: (excluding flow duration terms)
+
+ MAX    +  1.00E+00 R         
+
+       40 BYTES OF MEMORY ALLOCATED TO STORE DATA FOR OBJECTIVE-FUNCTION
+
+ CLOSING OBJECTIVE-FUNCTION FILE
+
+
+ OPENING DECISION-VARIABLE CONSTRAINTS FILE ON UNIT   10:
+ ..\data\maximin.varcon                                                                                                                                                                                  
+ #MAXIMIN Sample Problem, VARCON file
+ #December 2009
+
+ FLOW RATE VARIABLES:
+                        MINIMUM        MAXIMUM        REFERENCE
+  NUMBER   NAME         FLOW RATE      FLOW RATE      FLOW RATE
+----------------------------------------------------------------
+    1      Q1           0.000E+00      4.000E+03      0.000E+00
+    2      Q2           0.000E+00      4.000E+03      0.000E+00
+    3      Q3           0.000E+00      4.000E+03      0.000E+00
+    4      Q4           0.000E+00      4.000E+03      0.000E+00
+    5      Q5           0.000E+00      4.000E+03      0.000E+00
+
+ EXTERNAL VARIABLES:
+                        MINIMUM        MAXIMUM
+  NUMBER   NAME          VALUE          VALUE
+-------------------------------------------------
+    1      R            0.000D+00      0.100D+04
+
+ CLOSING DECISION-VARIABLE CONSTRAINTS FILE
+
+
+ OPENING SUMMATION CONSTRAINTS FILE ON UNIT   10:
+ ..\data\maximin.sumcon                                                                                                                                                                                  
+ #MAXIMIN Sample Problem, SUMCON file
+ #December 2009
+
+ NUMBER OF SUMMATION CONSTRAINTS:     5
+
+ SUMMATION CONSTRAINTS:
+
+ DEMAND    
+   +  1.00E+00 Q1         +  1.00E+00 Q2         +  1.00E+00 Q3        
+   +  1.00E+00 Q4         +  1.00E+00 Q5        
+
+  >=   4.00E+03
+
+ CON1      
+   +  1.00E+00 H1         -  1.00E+00 R         
+
+  >=   0.00E+00
+
+ CON2      
+   +  1.00E+00 H2         -  1.00E+00 R         
+
+  >=   0.00E+00
+
+ CON3      
+   +  1.00E+00 H3         -  1.00E+00 R         
+
+  >=   0.00E+00
+
+ CON4      
+   +  1.00E+00 H4         -  1.00E+00 R         
+
+  >=   0.00E+00
+
+      330 BYTES OF MEMORY ALLOCATED TO STORE DATA FOR SUMMATION CONSTRAINTS
+
+ CLOSING SUMMATION CONSTRAINTS FILE
+
+
+ OPENING SOLUTION FILE ON UNIT   10:
+ ..\data\maximin.soln                                                                                                                                                                                    
+ #MAXIMIN Sample Problem, SOLN file
+ #December 2009
+
+ SOLNTYP IS LP: GWM WILL COMPLETE A SINGLE ITERATION OF THE LINEAR PROBLEM.
+
+ IRM EQUALS 2: RESPONSE MATRIX WILL BE CALCULATED BY GWM
+ BUT NOT WRITTEN TO FILE
+
+ MAXIMUM NUMBER OF LP ITERATIONS:               1000
+ MAXIMUM NUMBER OF BRANCH AND BOUND ITER:       2000
+
+ PERTURBATION VALUE:                          0.50D+00
+
+ MAXIMUM NUMBER OF PERTURBATION ATTEMPTS:         10
+ PERTURBATION ADJUSTMENT FACTOR (PGFACT):    0.50000
+
+ OUTPUT FROM BRANCH-AND-BOUND ALGORITHM WILL NOT BE PRINTED.
+
+ CRITMFC SET TO                               0.000D+00
+ GWM WILL ACCEPT FLOW PROCESS RESULTS THAT MEET GWF
+ CONVERGENCE CRITERIA
+
+ BASE PUMPING RATES TAKEN FROM FVREF SPECIFIED IN VARCON INPUT FILE
+ 
+     PROBLEM SIZE
+ 
+  NUMBER OF VARIABLES (INCLUDING SLACKS)          11
+  NUMBER OF CONSTRAINT EQUATIONS                   5
+ 
+
+     3041 BYTES OF MEMORY ALLOCATED FOR RESPONSE MATRIX ALGORITHM
+
+ CLOSING SOLUTION AND OUTPUT FILE
+
+ 
+ Reading input from file: ..\data\maximin_serial.gwm
+ CONTROL file: ..\data\maximin_serial.ctrl
+ NAM file: ..\data\maximin.nam
+---------------------------------------------------------------
+               Solution Algorithm
+---------------------------------------------------------------
+  Begin Solution Algorithm
+    Running Base Flow Process Simulation
+      Status of State Variable Values 
+      State Variable Type    Name        Computed Value
+      -------------------    ----        --------------
+      Head                   H1          6.9655172E+01
+      Head                   H2          7.1034483E+01
+      Head                   H3          6.8275862E+01
+      Head                   H4          6.6206897E+01
+ 
+      Status of Simulation-Based Constraints 
+      Constraint Type        Name       Status   Distance To RHS
+      ---------------        ----       ------   ---------------
+      Summation              DEMAND     Not Met       4.0000E+03
+      Summation              CON1       Satisfied     6.9655E+01
+      Summation              CON2       Satisfied     7.1034E+01
+      Summation              CON3       Satisfied     6.8276E+01
+      Summation              CON4       Satisfied     6.6207E+01
+
+  Distance to RHS is the absolute value of the difference between the
+    the right hand side of the constraint and the left side of the
+    constraint evaluated using the current set of decision variable values.
+    
+    Calculating Response Matrix
+      Perturb Flow Variable    1
+       By Perturbation Value: -2.000000E+03
+      Perturb Flow Variable    2
+       By Perturbation Value: -2.000000E+03
+      Perturb Flow Variable    3
+       By Perturbation Value: -2.000000E+03
+      Perturb Flow Variable    4
+       By Perturbation Value: -2.000000E+03
+      Perturb Flow Variable    5
+       By Perturbation Value: -2.000000E+03
+ 
+      Average Number of Significant Digits in Matrix  9.750000E+00
+    
+    Solving Linear Program
+    Feasible Solution Found
+  Optimal Solution Found
+
+----------------------------------------------------------------------
+               Groundwater Management Solution
+----------------------------------------------------------------------
+
+       OPTIMAL SOLUTION FOUND 
+
+       OPTIMAL RATES FOR EACH FLOW VARIABLE 
+       ---------------------------------------
+Variable           Withdrawal          Injection           Contribution
+Name               Rate                Rate                To Objective
+----------         --------------      ------------        ------------
+ Q1                0.000000E+00                            0.000000E+00
+ Q2                2.523063E+03                            0.000000E+00
+ Q3                1.476937E+03                            0.000000E+00
+ Q4                0.000000E+00                            0.000000E+00
+ Q5                0.000000E+00                            0.000000E+00
+                   ------------        ------------        ------------
+TOTALS             4.000000E+03        0.000000E+00        0.000000E+00
+
+       OPTIMAL VALUES FOR EACH EXTERNAL VARIABLE 
+       ---------------------------------------
+Variable           Variable            Optimal             Contribution
+Name               Type                Value               To Objective
+----------         --------------      ------------        ------------
+ R                  Head               4.459702E+01        4.459702E+01
+                                                           ------------
+TOTAL                                                      4.459702E+01
+
+       OPTIMAL VALUES FOR EACH STATE VARIABLE 
+       ---------------------------------------
+Variable                                                   Contribution
+Name               Value                                   To Objective
+----------         ------------                            ------------
+ H1                 4.459702E+01                            0.000000E+00
+ H2                 5.106773E+01                            0.000000E+00
+ H3                 4.459702E+01                            0.000000E+00
+ H4                 4.557614E+01                            0.000000E+00
+                   ------------                            ------------
+TOTALS              1.858379E+02                            0.000000E+00
+
+
+       OBJECTIVE FUNCTION VALUE                            4.459702E+01
+
+       BINDING CONSTRAINTS 
+Constraint Type        Name     Status      Shadow Price
+---------------        ----     ------      ------------
+Summation              DEMAND   Binding     -6.1069E-03
+Summation              CON1     Binding     -5.4299E-01
+Summation              CON3     Binding     -4.5701E-01
+
+  Binding constraint values are determined from the linear program
+    and based on the response matrix approximation of the flow process.
+ 
+       Range Analysis Not Reported 
+---------------------------------------------------------------
+         Final Flow Process Simulation
+---------------------------------------------------------------
+  Running Final Flow Process Simulation
+    using Optimal Flow Variable Rates 
+    
+      Status of State Variable Values 
+        Using Optimal Flow Rate Variable Values
+      State Variable Type    Name        Computed Value
+      -------------------    ----        --------------
+      Head                   H1          4.4597015E+01
+      Head                   H2          5.1067732E+01
+      Head                   H3          4.4597015E+01
+      Head                   H4          4.5576141E+01
+  Precision limitations and nonlinear response may cause 
+    the state variables computed directly by the flow process 
+    to differ from those computed using the linear program.  
+ 
+      Status of Simulation-Based Constraints 
+        Using Optimal Flow Rate Variable Values
+
+                                           Simulated    Specified
+                                            By Flow        in
+      Constraint Type        Name           Process    Constraints   Difference
+      ---------------        ----          ----------   ----------   ----------
+      Summation              DEMAND        4.0000E+03 > 4.0000E+03   0.0000E+00
+      Summation              CON1          3.5996E-09 > 0.0000E+00   3.5996E-09
+      Summation              CON2          6.4707E+00 > 0.0000E+00   6.4707E+00
+      Summation              CON3          3.7654E-09 > 0.0000E+00   3.7654E-09
+      Summation              CON4          9.7913E-01 > 0.0000E+00   9.7913E-01
+
+  Difference is computed by subtracting right hand side of the constraint 
+    from the left side of the constraint.
+  Precision limitations and nonlinear response may cause the 
+    values of the binding constraints computed directly by the flow process 
+    to differ from those computed using the linear program.  
+
+ Run end date and time (yyyy/mm/dd hh:mm:ss): 2014/08/11 15:22:15
+ Elapsed run time:  3.307 Seconds
+

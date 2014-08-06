@@ -1,0 +1,9 @@
+# DEWATER Sample Problem, GWM file - Parallel
+OUT     dewater.gwmout.parallel
+DECVAR  ..\data\dewater.decvar
+OBJFNC  ..\data\dewater.objfnc
+VARCON  ..\data\dewater.varcon
+HEDCON  ..\data\dewater.hedcon
+SOLN    ..\data\dewater.soln
+CONTROL ..\data\dewater_pll.ctrl
+NAM     ..\data\dewater.nam

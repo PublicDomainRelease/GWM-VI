@@ -1,0 +1,29 @@
+BEGIN Options
+  Verbose = 3
+  MessageFile = maximin_messages.txt
+END Options
+
+BEGIN Simulation
+  SimCommand = "..\..\bin\mf2005dbl ..\data\maximin.nam"
+END Simulation
+
+BEGIN Model_Command_Lines
+  command = ..\data\maximin_cmr.bat
+  commandid = Maximin_cmr  
+END Model_Command_Lines
+
+BEGIN Parallel_Control
+  parallel=true  wait=0.1  
+  VerboseRunner=4
+  AutoStopRunners = true
+  TimeOutFactor = 10.0
+END Parallel_Control
+
+BEGIN Parallel_Runners table
+  nrow=2 ncol=3 columnlabels
+  RunnerName  RunnerDir   RunTime
+  Runner1     ..\runner1\  0.5
+  Runner2     ..\runner2\  0.5
+END Parallel_Runners
+
+

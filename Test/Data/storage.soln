@@ -1,0 +1,7 @@
+#STORAGE Sample Problem, SOLN file
+  SLP                            #1-SOLNTYP
+  5 10000   2000                #5a-SLPITMAX LPITMAX BBITMAX
+0.00001  0.0001  0.2  0.00002 2 #5b-SLPVCRIT SLPZCRIT DINIT DMIN DSC
+1   10  0.5  0.5   5            #5c-NSIGDIG NPGNMX PGFACT AFACT NINFMX
+ 2 1 0                          #5d-SLPITPRT BBITPRT RANGE
+ 0                              #6a-IBASE

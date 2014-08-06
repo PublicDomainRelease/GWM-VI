@@ -1,0 +1,10 @@
+#MAXIMIN Sample Problem, LPF file
+#December 2009
+ 0  0.00E+00     0       ILPFCB, HDRY, NPLPF
+ 0                       LAYTYP (Confined)
+ 0                       LAYAVG (Harmonic)
+ 1.0                     CHANI (Horizontal anisotropy)
+ 1                       LAYVKA (ratio Kh:Kv)
+ 0                       LAYWET (inactive for LAYTYP 0)
+CONSTANT   5.000000E-01  HK (horizontal hyd. cond.)
+CONSTANT   1.000000E+00  VKA (ratio of Kh to Kv)

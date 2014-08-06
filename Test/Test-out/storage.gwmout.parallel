@@ -1,0 +1,1518 @@
+
+                                  GWM-VI
+    U.S. GEOLOGICAL SURVEY GROUNDWATER MANAGEMENT VERSION INDEPENDENT PROGRAM
+                 Version  1.0.1                                  
+
+
+
+
+ OPENING GWM FILE FOR GWM1 -- GROUNDWATER MANAGEMENT PROCESS
+ INPUT READ FROM UNIT 980
+
+ # STORAGE sample problem                                                                                                                                                                                
+
+ OPENING DECISION-VARIABLE FILE ON UNIT   10:
+ ..\data\storage.decvar                                                                                                                                                                                  
+ #STORAGE Sample Problem, DECVAR file
+
+ OPTIMAL FLOW VARIABLE VALUES WILL BE WRITTEN TO UNIT NUMBER:  75
+
+ NO. OF FLOW-RATE DECISION VARIABLES (NFVAR)      45
+ NO. OF EXTERNAL DECISION VARIABLES (NEVAR):       0
+ BINARY VARIABLES ARE NOT ACTIVE.
+
+ FLOW-RATE VARIABLES: WEL-TYPE
+                                                   FRACTION
+  NUMBER     NAME       TYPE      LAY   ROW   COL   OF FLOW
+ ----------------------------------------------------------
+    1      Q1_2_a     WITHDRAWAL     2    4    6    1.0000
+   AVAILABLE IN STRESS PERIODS: 2                                                                                                                       
+
+    2      Q1_2_b     WITHDRAWAL     2    4    6    1.0000
+   AVAILABLE IN STRESS PERIODS: 3                                                                                                                       
+
+    3      Q1_2_c     WITHDRAWAL     2    4    6    1.0000
+   AVAILABLE IN STRESS PERIODS: 4                                                                                                                       
+
+    4      Q1_2_d     WITHDRAWAL     2    4    6    1.0000
+   AVAILABLE IN STRESS PERIODS: 5                                                                                                                       
+
+    5      Q1_2_e     WITHDRAWAL     2    4    6    1.0000
+   AVAILABLE IN STRESS PERIODS: 6                                                                                                                       
+
+    6      Q2_3_a     WITHDRAWAL     3    5   11    1.0000
+   AVAILABLE IN STRESS PERIODS: 2                                                                                                                       
+
+    7      Q2_3_b     WITHDRAWAL     3    5   11    1.0000
+   AVAILABLE IN STRESS PERIODS: 3                                                                                                                       
+
+    8      Q2_3_c     WITHDRAWAL     3    5   11    1.0000
+   AVAILABLE IN STRESS PERIODS: 4                                                                                                                       
+
+    9      Q2_3_d     WITHDRAWAL     3    5   11    1.0000
+   AVAILABLE IN STRESS PERIODS: 5                                                                                                                       
+
+   10      Q2_3_e     WITHDRAWAL     3    5   11    1.0000
+   AVAILABLE IN STRESS PERIODS: 6                                                                                                                       
+
+   11      Q3_2_a     WITHDRAWAL     2    6   12    1.0000
+   AVAILABLE IN STRESS PERIODS: 2                                                                                                                       
+
+   12      Q3_2_b     WITHDRAWAL     2    6   12    1.0000
+   AVAILABLE IN STRESS PERIODS: 3                                                                                                                       
+
+   13      Q3_2_c     WITHDRAWAL     2    6   12    1.0000
+   AVAILABLE IN STRESS PERIODS: 4                                                                                                                       
+
+   14      Q3_2_d     WITHDRAWAL     2    6   12    1.0000
+   AVAILABLE IN STRESS PERIODS: 5                                                                                                                       
+
+   15      Q3_2_e     WITHDRAWAL     2    6   12    1.0000
+   AVAILABLE IN STRESS PERIODS: 6                                                                                                                       
+
+   16      Q4_1_a     WITHDRAWAL     1   11    8    1.0000
+   AVAILABLE IN STRESS PERIODS: 2                                                                                                                       
+
+   17      Q4_1_b     WITHDRAWAL     1   11    8    1.0000
+   AVAILABLE IN STRESS PERIODS: 3                                                                                                                       
+
+   18      Q4_1_c     WITHDRAWAL     1   11    8    1.0000
+   AVAILABLE IN STRESS PERIODS: 4                                                                                                                       
+
+   19      Q4_1_d     WITHDRAWAL     1   11    8    1.0000
+   AVAILABLE IN STRESS PERIODS: 5                                                                                                                       
+
+   20      Q4_1_e     WITHDRAWAL     1   11    8    1.0000
+   AVAILABLE IN STRESS PERIODS: 6                                                                                                                       
+
+   21      Q4_2_a     WITHDRAWAL     2   11    8    1.0000
+   AVAILABLE IN STRESS PERIODS: 2                                                                                                                       
+
+   22      Q4_2_b     WITHDRAWAL     2   11    8    1.0000
+   AVAILABLE IN STRESS PERIODS: 3                                                                                                                       
+
+   23      Q4_2_c     WITHDRAWAL     2   11    8    1.0000
+   AVAILABLE IN STRESS PERIODS: 4                                                                                                                       
+
+   24      Q4_2_d     WITHDRAWAL     2   11    8    1.0000
+   AVAILABLE IN STRESS PERIODS: 5                                                                                                                       
+
+   25      Q4_2_e     WITHDRAWAL     2   11    8    1.0000
+   AVAILABLE IN STRESS PERIODS: 6                                                                                                                       
+
+   26      Q4_3_a     WITHDRAWAL     3   11    8    1.0000
+   AVAILABLE IN STRESS PERIODS: 2                                                                                                                       
+
+   27      Q4_3_b     WITHDRAWAL     3   11    8    1.0000
+   AVAILABLE IN STRESS PERIODS: 3                                                                                                                       
+
+   28      Q4_3_c     WITHDRAWAL     3   11    8    1.0000
+   AVAILABLE IN STRESS PERIODS: 4                                                                                                                       
+
+   29      Q4_3_d     WITHDRAWAL     3   11    8    1.0000
+   AVAILABLE IN STRESS PERIODS: 5                                                                                                                       
+
+   30      Q4_3_e     WITHDRAWAL     3   11    8    1.0000
+   AVAILABLE IN STRESS PERIODS: 6                                                                                                                       
+
+   31      Q5_1_a     WITHDRAWAL     1   11   12    1.0000
+   AVAILABLE IN STRESS PERIODS: 2                                                                                                                       
+
+   32      Q5_1_b     WITHDRAWAL     1   11   12    1.0000
+   AVAILABLE IN STRESS PERIODS: 3                                                                                                                       
+
+   33      Q5_1_c     WITHDRAWAL     1   11   12    1.0000
+   AVAILABLE IN STRESS PERIODS: 4                                                                                                                       
+
+   34      Q5_1_d     WITHDRAWAL     1   11   12    1.0000
+   AVAILABLE IN STRESS PERIODS: 5                                                                                                                       
+
+   35      Q5_1_e     WITHDRAWAL     1   11   12    1.0000
+   AVAILABLE IN STRESS PERIODS: 6                                                                                                                       
+
+   36      Q5_2_a     WITHDRAWAL     2   11   12    1.0000
+   AVAILABLE IN STRESS PERIODS: 2                                                                                                                       
+
+   37      Q5_2_b     WITHDRAWAL     2   11   12    1.0000
+   AVAILABLE IN STRESS PERIODS: 3                                                                                                                       
+
+   38      Q5_2_c     WITHDRAWAL     2   11   12    1.0000
+   AVAILABLE IN STRESS PERIODS: 4                                                                                                                       
+
+   39      Q5_2_d     WITHDRAWAL     2   11   12    1.0000
+   AVAILABLE IN STRESS PERIODS: 5                                                                                                                       
+
+   40      Q5_2_e     WITHDRAWAL     2   11   12    1.0000
+   AVAILABLE IN STRESS PERIODS: 6                                                                                                                       
+
+   41      Q5_3_a     WITHDRAWAL     3   11   12    1.0000
+   AVAILABLE IN STRESS PERIODS: 2                                                                                                                       
+
+   42      Q5_3_b     WITHDRAWAL     3   11   12    1.0000
+   AVAILABLE IN STRESS PERIODS: 3                                                                                                                       
+
+   43      Q5_3_c     WITHDRAWAL     3   11   12    1.0000
+   AVAILABLE IN STRESS PERIODS: 4                                                                                                                       
+
+   44      Q5_3_d     WITHDRAWAL     3   11   12    1.0000
+   AVAILABLE IN STRESS PERIODS: 5                                                                                                                       
+
+   45      Q5_3_e     WITHDRAWAL     3   11   12    1.0000
+   AVAILABLE IN STRESS PERIODS: 6                                                                                                                       
+
+
+     3907 BYTES OF MEMORY ALLOCATED TO STORE DATA FOR DECISION VARIABLES
+
+ CLOSING DECISION-VARIABLE FILE
+
+
+ OPENING STATE VARIABLE FILE ON UNIT   10:
+ ..\data\storage.stavar                                                                                                                                                                                  
+ #STORAGE Sample Problem, STAVAR file
+
+ NO. OF HEAD STATE VARIABLES (NHVAR):              0
+ NO. OF STREAMFLOW STATE VARIABLES (NRVAR):        0
+ NO. OF STORAGE STATE VARIABLES (NSVAR):           7
+ NO. OF DRAIN STATE VARIABLES (NDVAR):             0
+
+ STORAGE TYPE STATE VARIABLES:
+
+ NUMBER:    1 NAME: SCHNG2     SPSTRT:    2 SPEND:    2
+ STORAGE CHANGE CALCULATED FOR ONE LAYER IN GRID
+
+      STATE VARIABLE ZONE =              1 FOR LAYER   1
+
+ NUMBER:    2 NAME: SCHNG3     SPSTRT:    3 SPEND:    3
+ STORAGE CHANGE CALCULATED FOR ONE LAYER IN GRID
+
+      STATE VARIABLE ZONE =              1 FOR LAYER   1
+
+ NUMBER:    3 NAME: SCHNG4     SPSTRT:    4 SPEND:    4
+ STORAGE CHANGE CALCULATED FOR ONE LAYER IN GRID
+
+      STATE VARIABLE ZONE =              1 FOR LAYER   1
+
+ NUMBER:    4 NAME: SCHNG5     SPSTRT:    5 SPEND:    5
+ STORAGE CHANGE CALCULATED FOR ONE LAYER IN GRID
+
+      STATE VARIABLE ZONE =              1 FOR LAYER   1
+
+ NUMBER:    5 NAME: SCHNG6     SPSTRT:    6 SPEND:    6
+ STORAGE CHANGE CALCULATED FOR ONE LAYER IN GRID
+
+      STATE VARIABLE ZONE =              1 FOR LAYER   1
+
+ NUMBER:    6 NAME: SCHNGN     SPSTRT:    2 SPEND:    6
+ STORAGE CHANGE CALCULATED FOR ONE LAYER IN GRID
+
+ OPENING FILE ON UNIT   99:
+ ..\data\storage.zone1                                                                                                                                                                                   
+
+
+
+                STATE VARIABLE ZONE FOR LAYER   2
+ READING ON UNIT   99 WITH FORMAT: (15I4)              
+
+         1    2    3    4    5    6    7    8    9   10   11   12   13   14   15
+ ...............................................................................
+   1     1    1    1    1    1    1    1    1    1    1    1    1    1    1    1
+   2     1    1    1    1    1    1    1    1    1    1    1    1    1    1    1
+   3     1    1    1    1    1    1    1    1    1    1    1    1    1    1    1
+   4     1    1    1    1    1    1    1    1    1    1    1    1    1    1    1
+   5     1    1    1    1    1    1    1    1    1    1    1    1    1    1    1
+   6     1    1    1    1    1    1    1    1    1    1    1    1    1    1    1
+   7     1    1    1    1    1    1    1    1    1    1    1    1    1    1    1
+   8     1    1    1    1    1    1    1    1    1    1    1    1    1    1    1
+   9     0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+  10     0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+  11     0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+  12     0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+  13     0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+  14     0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+  15     0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+
+ NUMBER:    7 NAME: SCHNGS     SPSTRT:    2 SPEND:    6
+ STORAGE CHANGE CALCULATED FOR ONE LAYER IN GRID
+
+
+
+                STATE VARIABLE ZONE FOR LAYER   2
+ READING ON UNIT   10 WITH FORMAT: (15I4)              
+
+         1    2    3    4    5    6    7    8    9   10   11   12   13   14   15
+ ...............................................................................
+   1     0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+   2     0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+   3     0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+   4     0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+   5     0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+   6     0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+   7     0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+   8     0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+   9     1    1    1    1    1    1    1    1    1    1    1    1    1    1    1
+  10     1    1    1    1    1    1    1    1    1    1    1    1    1    1    1
+  11     1    1    1    1    1    1    1    1    1    1    1    1    1    1    1
+  12     1    1    1    1    1    1    1    1    1    1    1    1    1    1    1
+  13     1    1    1    1    1    1    1    1    1    1    1    1    1    1    1
+  14     1    1    1    1    1    1    1    1    1    1    1    1    1    1    1
+  15     1    1    1    1    1    1    1    1    1    1    1    1    1    1    1
+
+    22302 BYTES OF MEMORY ALLOCATED TO STORE DATA FOR STATE VARIABLES
+
+ CLOSING STATE VARIABLE FILE
+
+
+ OPENING OBJECTIVE-FUNCTION FILE ON UNIT   10:
+ ..\data\storage.objfnc                                                                                                                                                                                  
+ #STORAGE Sample Problem, OBJFNC file
+
+ OBJECTIVE TYPE: MAX   FUNCTION TYPE: WSDV
+
+ NO. OF FLOW-RATE DECISION VARIABLES IN OBJECTIVE FUNCTION (NFVOBJ):    9
+ NO. OF EXTERNAL DECISION VARIABLES IN OBJECTIVE FUNCTION (NEVOBJ):     0
+ NO. OF BINARY DECISION VARIABLES IN OBJECTIVE FUNCTION (NBVOBJ):       0
+ NO. OF STATE VARIABLES IN OBJECTIVE FUNCTION (NSVOBJ):                 0
+
+ OBJECTIVE FUNCTION: (excluding flow duration terms)
+
+ MAX    +  1.00E+00 Q1_2_a     +  1.00E+00 Q2_3_a     +  1.00E+00 Q3_2_a    
+        +  1.00E+00 Q4_1_a     +  1.00E+00 Q4_2_a     +  1.00E+00 Q4_3_a    
+        +  1.00E+00 Q5_1_a     +  1.00E+00 Q5_2_a     +  1.00E+00 Q5_3_a    
+
+      208 BYTES OF MEMORY ALLOCATED TO STORE DATA FOR OBJECTIVE-FUNCTION
+
+ CLOSING OBJECTIVE-FUNCTION FILE
+
+
+ OPENING DECISION-VARIABLE CONSTRAINTS FILE ON UNIT   10:
+ ..\data\storage.varcon                                                                                                                                                                                  
+ #STORAGE Sample Problem, VARCON file
+
+ FLOW RATE VARIABLES:
+                        MINIMUM        MAXIMUM        REFERENCE
+  NUMBER   NAME         FLOW RATE      FLOW RATE      FLOW RATE
+----------------------------------------------------------------
+    1      Q1_2_a       0.000E+00      6.400E+04      0.000E+00
+    2      Q1_2_b       0.000E+00      6.400E+04      0.000E+00
+    3      Q1_2_c       0.000E+00      6.400E+04      0.000E+00
+    4      Q1_2_d       0.000E+00      6.400E+04      0.000E+00
+    5      Q1_2_e       0.000E+00      6.400E+04      0.000E+00
+    6      Q2_3_a       0.000E+00      6.400E+04      0.000E+00
+    7      Q2_3_b       0.000E+00      6.400E+04      0.000E+00
+    8      Q2_3_c       0.000E+00      6.400E+04      0.000E+00
+    9      Q2_3_d       0.000E+00      6.400E+04      0.000E+00
+   10      Q2_3_e       0.000E+00      6.400E+04      0.000E+00
+   11      Q3_2_a       0.000E+00      6.400E+04      0.000E+00
+   12      Q3_2_b       0.000E+00      6.400E+04      0.000E+00
+   13      Q3_2_c       0.000E+00      6.400E+04      0.000E+00
+   14      Q3_2_d       0.000E+00      6.400E+04      0.000E+00
+   15      Q3_2_e       0.000E+00      6.400E+04      0.000E+00
+   16      Q4_1_a       0.000E+00      6.400E+04      0.000E+00
+   17      Q4_1_b       0.000E+00      6.400E+04      0.000E+00
+   18      Q4_1_c       0.000E+00      6.400E+04      0.000E+00
+   19      Q4_1_d       0.000E+00      6.400E+04      0.000E+00
+   20      Q4_1_e       0.000E+00      6.400E+04      0.000E+00
+   21      Q4_2_a       0.000E+00      6.400E+04      0.000E+00
+   22      Q4_2_b       0.000E+00      6.400E+04      0.000E+00
+   23      Q4_2_c       0.000E+00      6.400E+04      0.000E+00
+   24      Q4_2_d       0.000E+00      6.400E+04      0.000E+00
+   25      Q4_2_e       0.000E+00      6.400E+04      0.000E+00
+   26      Q4_3_a       0.000E+00      6.400E+04      0.000E+00
+   27      Q4_3_b       0.000E+00      6.400E+04      0.000E+00
+   28      Q4_3_c       0.000E+00      6.400E+04      0.000E+00
+   29      Q4_3_d       0.000E+00      6.400E+04      0.000E+00
+   30      Q4_3_e       0.000E+00      6.400E+04      0.000E+00
+   31      Q5_1_a       0.000E+00      6.400E+04      0.000E+00
+   32      Q5_1_b       0.000E+00      6.400E+04      0.000E+00
+   33      Q5_1_c       0.000E+00      6.400E+04      0.000E+00
+   34      Q5_1_d       0.000E+00      6.400E+04      0.000E+00
+   35      Q5_1_e       0.000E+00      6.400E+04      0.000E+00
+   36      Q5_2_a       0.000E+00      6.400E+04      0.000E+00
+   37      Q5_2_b       0.000E+00      6.400E+04      0.000E+00
+   38      Q5_2_c       0.000E+00      6.400E+04      0.000E+00
+   39      Q5_2_d       0.000E+00      6.400E+04      0.000E+00
+   40      Q5_2_e       0.000E+00      6.400E+04      0.000E+00
+   41      Q5_3_a       0.000E+00      6.400E+04      0.000E+00
+   42      Q5_3_b       0.000E+00      6.400E+04      0.000E+00
+   43      Q5_3_c       0.000E+00      6.400E+04      0.000E+00
+   44      Q5_3_d       0.000E+00      6.400E+04      0.000E+00
+   45      Q5_3_e       0.000E+00      6.400E+04      0.000E+00
+
+ CLOSING DECISION-VARIABLE CONSTRAINTS FILE
+
+
+ OPENING SUMMATION CONSTRAINTS FILE ON UNIT   10:
+ ..\data\storage.sumcon                                                                                                                                                                                  
+ #STORAGE Sample Problem, SUMCON file
+
+ NUMBER OF SUMMATION CONSTRAINTS:     9
+
+ SUMMATION CONSTRAINTS:
+
+ ST1_2     
+   -  8.50E-01 SCHNG2     +  1.00E+00 SCHNG3    
+
+  <=   0.00E+00
+
+ ST1_3     
+   -  8.00E-01 SCHNG3     +  1.00E+00 SCHNG4    
+
+  <=   0.00E+00
+
+ ST1_4     
+   -  7.50E-01 SCHNG4     +  1.00E+00 SCHNG5    
+
+  <=   0.00E+00
+
+ ST1_5     
+   -  7.00E-01 SCHNG5     +  1.00E+00 SCHNG6    
+
+  <=   0.00E+00
+
+ ST2_1     
+   +  1.00E+00 SCHNGS     -  9.00E-01 SCHNGN    
+
+  <=   0.00E+00
+
+ EQ_b      
+   +  1.00E+00 Q1_2_a     +  1.00E+00 Q2_3_a     +  1.00E+00 Q3_2_a    
+   +  1.00E+00 Q4_1_a     +  1.00E+00 Q4_2_a     +  1.00E+00 Q4_3_a    
+   +  1.00E+00 Q5_1_a     +  1.00E+00 Q5_2_a     +  1.00E+00 Q5_3_a    
+   -  1.00E+00 Q1_2_b     -  1.00E+00 Q2_3_b     -  1.00E+00 Q3_2_b    
+   -  1.00E+00 Q4_1_b     -  1.00E+00 Q4_2_b     -  1.00E+00 Q4_3_b    
+   -  1.00E+00 Q5_1_b     -  1.00E+00 Q5_2_b     -  1.00E+00 Q5_3_b    
+
+  =   0.00E+00
+
+ EQ_c      
+   +  1.00E+00 Q1_2_a     +  1.00E+00 Q2_3_a     +  1.00E+00 Q3_2_a    
+   +  1.00E+00 Q4_1_a     +  1.00E+00 Q4_2_a     +  1.00E+00 Q4_3_a    
+   +  1.00E+00 Q5_1_a     +  1.00E+00 Q5_2_a     +  1.00E+00 Q5_3_a    
+   -  1.00E+00 Q1_2_c     -  1.00E+00 Q2_3_c     -  1.00E+00 Q3_2_c    
+   -  1.00E+00 Q4_1_c     -  1.00E+00 Q4_2_c     -  1.00E+00 Q4_3_c    
+   -  1.00E+00 Q5_1_c     -  1.00E+00 Q5_2_c     -  1.00E+00 Q5_3_c    
+
+  =   0.00E+00
+
+ EQ_d      
+   +  1.00E+00 Q1_2_a     +  1.00E+00 Q2_3_a     +  1.00E+00 Q3_2_a    
+   +  1.00E+00 Q4_1_a     +  1.00E+00 Q4_2_a     +  1.00E+00 Q4_3_a    
+   +  1.00E+00 Q5_1_a     +  1.00E+00 Q5_2_a     +  1.00E+00 Q5_3_a    
+   -  1.00E+00 Q1_2_d     -  1.00E+00 Q2_3_d     -  1.00E+00 Q3_2_d    
+   -  1.00E+00 Q4_1_d     -  1.00E+00 Q4_2_d     -  1.00E+00 Q4_3_d    
+   -  1.00E+00 Q5_1_d     -  1.00E+00 Q5_2_d     -  1.00E+00 Q5_3_d    
+
+  =   0.00E+00
+
+ EQ_e      
+   +  1.00E+00 Q1_2_a     +  1.00E+00 Q2_3_a     +  1.00E+00 Q3_2_a    
+   +  1.00E+00 Q4_1_a     +  1.00E+00 Q4_2_a     +  1.00E+00 Q4_3_a    
+   +  1.00E+00 Q5_1_a     +  1.00E+00 Q5_2_a     +  1.00E+00 Q5_3_a    
+   -  1.00E+00 Q1_2_e     -  1.00E+00 Q2_3_e     -  1.00E+00 Q3_2_e    
+   -  1.00E+00 Q4_1_e     -  1.00E+00 Q4_2_e     -  1.00E+00 Q4_3_e    
+   -  1.00E+00 Q5_1_e     -  1.00E+00 Q5_2_e     -  1.00E+00 Q5_3_e    
+
+  =   0.00E+00
+
+     1530 BYTES OF MEMORY ALLOCATED TO STORE DATA FOR SUMMATION CONSTRAINTS
+
+ CLOSING SUMMATION CONSTRAINTS FILE
+
+
+ OPENING SOLUTION FILE ON UNIT   10:
+ ..\data\storage.soln                                                                                                                                                                                    
+ #STORAGE Sample Problem, SOLN file
+
+ SOLNTYP IS SLP: GWM WILL USE SEQUENTIAL ITERATION OF THE
+ NONLINEAR PROBLEM UNTIL A SOLUTION IS FOUND OR THE PROBLEM
+ DOES NOT CONVERGE.
+
+ MAXIMUM NUMBER OF LP ITERATIONS:              10000
+ MAXIMUM NUMBER OF BRANCH AND BOUND ITER:       2000
+
+ MAXIMUM NUMBER OF SLP ITERATIONS:                 5
+
+ SLP VARIABLE CONVERGENCE CRITERION (SLPVCRIT):    1.00000E-05
+ SLP OBJECTIVE CONVERGENCE CRITERION (SLPZCRIT):   1.00000E-04
+
+ PERTURBATION VALUES (DINIT, DMIN, AND DSC):   0.20D+00  0.20D-04  0.20D+01
+
+ MAXIMUM NUMBER OF PERTURBATION ATTEMPTS:         10
+ BASE FLOW RATE RELAXATION PARAMETER (AFACT) 0.50000
+ PERTURBATION ADJUSTMENT FACTOR (PGFACT):    0.50000
+
+ SLPITPRT>=1: PRINT SLP ITERATIONS.
+
+ SLPITPRT=2: PRINT INTERMEDIATE LP SOLUTIONS.
+
+ OUTPUT FROM BRANCH-AND-BOUND ALGORITHM WILL NOT BE PRINTED.
+
+ CRITMFC SET TO                               0.000D+00
+ GWM WILL ACCEPT FLOW PROCESS RESULTS THAT MEET GWF
+ CONVERGENCE CRITERIA
+
+ BASE PUMPING RATES TAKEN FROM FVREF SPECIFIED IN VARCON INPUT FILE
+ 
+     PROBLEM SIZE
+ 
+  NUMBER OF VARIABLES (INCLUDING SLACKS)          50
+  NUMBER OF CONSTRAINT EQUATIONS                   9
+ 
+
+    15617 BYTES OF MEMORY ALLOCATED FOR RESPONSE MATRIX ALGORITHM
+
+ CLOSING SOLUTION AND OUTPUT FILE
+
+ 
+ Reading input from file: ..\data\storage_pll.gwm
+ CONTROL file: ..\data\storage_pll.ctrl
+ NAM file: ..\data\storage.nam
+---------------------------------------------------------------
+               Solution Algorithm
+---------------------------------------------------------------
+  Begin Solution Algorithm
+    Running Base Flow Process Simulation
+      Status of State Variable Values 
+      State Variable Type    Name        Computed Value
+      -------------------    ----        --------------
+      Change in Storage      SCHNG2     -7.1140440E+08
+      Change in Storage      SCHNG3     -5.7593576E+08
+      Change in Storage      SCHNG4     -4.6915362E+08
+      Change in Storage      SCHNG5     -3.8379861E+08
+      Change in Storage      SCHNG6     -3.1418094E+08
+      Change in Storage      SCHNGN     -9.0824771E+06
+      Change in Storage      SCHNGS     -7.3455127E+06
+ 
+      Status of Simulation-Based Constraints 
+      Constraint Type        Name       Status   Distance To RHS
+      ---------------        ----       ------   ---------------
+      Summation              ST1_2      Not Met       2.8758E+07
+      Summation              ST1_3      Satisfied     8.4050E+06
+      Summation              ST1_4      Satisfied     3.1933E+07
+      Summation              ST1_5      Satisfied     4.5522E+07
+      Summation              ST2_1      Not Met       8.2872E+05
+      Summation              EQ_b       Satisfied     0.0000E+00
+      Summation              EQ_c       Satisfied     0.0000E+00
+      Summation              EQ_d       Satisfied     0.0000E+00
+      Summation              EQ_e       Satisfied     0.0000E+00
+
+  Distance to RHS is the absolute value of the difference between the
+    the right hand side of the constraint and the left side of the
+    constraint evaluated using the current set of decision variable values.
+    
+    Calculating Response Matrix
+      Perturb Flow Variable    1
+       By Perturbation Value: -1.280000E+04
+      Perturb Flow Variable    2
+       By Perturbation Value: -1.280000E+04
+      Perturb Flow Variable    3
+       By Perturbation Value: -1.280000E+04
+      Perturb Flow Variable    4
+       By Perturbation Value: -1.280000E+04
+      Perturb Flow Variable    5
+       By Perturbation Value: -1.280000E+04
+      Perturb Flow Variable    6
+       By Perturbation Value: -1.280000E+04
+      Perturb Flow Variable    7
+       By Perturbation Value: -1.280000E+04
+      Perturb Flow Variable    8
+       By Perturbation Value: -1.280000E+04
+      Perturb Flow Variable    9
+       By Perturbation Value: -1.280000E+04
+      Perturb Flow Variable   10
+       By Perturbation Value: -1.280000E+04
+      Perturb Flow Variable   11
+       By Perturbation Value: -1.280000E+04
+      Perturb Flow Variable   12
+       By Perturbation Value: -1.280000E+04
+      Perturb Flow Variable   13
+       By Perturbation Value: -1.280000E+04
+      Perturb Flow Variable   14
+       By Perturbation Value: -1.280000E+04
+      Perturb Flow Variable   15
+       By Perturbation Value: -1.280000E+04
+      Perturb Flow Variable   16
+       By Perturbation Value: -1.280000E+04
+      Perturb Flow Variable   17
+       By Perturbation Value: -1.280000E+04
+      Perturb Flow Variable   18
+       By Perturbation Value: -1.280000E+04
+      Perturb Flow Variable   19
+       By Perturbation Value: -1.280000E+04
+      Perturb Flow Variable   20
+       By Perturbation Value: -1.280000E+04
+      Perturb Flow Variable   21
+       By Perturbation Value: -1.280000E+04
+      Perturb Flow Variable   22
+       By Perturbation Value: -1.280000E+04
+      Perturb Flow Variable   23
+       By Perturbation Value: -1.280000E+04
+      Perturb Flow Variable   24
+       By Perturbation Value: -1.280000E+04
+      Perturb Flow Variable   25
+       By Perturbation Value: -1.280000E+04
+      Perturb Flow Variable   26
+       By Perturbation Value: -1.280000E+04
+      Perturb Flow Variable   27
+       By Perturbation Value: -1.280000E+04
+      Perturb Flow Variable   28
+       By Perturbation Value: -1.280000E+04
+      Perturb Flow Variable   29
+       By Perturbation Value: -1.280000E+04
+      Perturb Flow Variable   30
+       By Perturbation Value: -1.280000E+04
+      Perturb Flow Variable   31
+       By Perturbation Value: -1.280000E+04
+      Perturb Flow Variable   32
+       By Perturbation Value: -1.280000E+04
+      Perturb Flow Variable   33
+       By Perturbation Value: -1.280000E+04
+      Perturb Flow Variable   34
+       By Perturbation Value: -1.280000E+04
+      Perturb Flow Variable   35
+       By Perturbation Value: -1.280000E+04
+      Perturb Flow Variable   36
+       By Perturbation Value: -1.280000E+04
+      Perturb Flow Variable   37
+       By Perturbation Value: -1.280000E+04
+      Perturb Flow Variable   38
+       By Perturbation Value: -1.280000E+04
+      Perturb Flow Variable   39
+       By Perturbation Value: -1.280000E+04
+      Perturb Flow Variable   40
+       By Perturbation Value: -1.280000E+04
+      Perturb Flow Variable   41
+       By Perturbation Value: -1.280000E+04
+      Perturb Flow Variable   42
+       By Perturbation Value: -1.280000E+04
+      Perturb Flow Variable   43
+       By Perturbation Value: -1.280000E+04
+      Perturb Flow Variable   44
+       By Perturbation Value: -1.280000E+04
+      Perturb Flow Variable   45
+       By Perturbation Value: -1.280000E+04
+ 
+      Average Number of Significant Digits in Matrix  1.458667E+01
+    
+    Solving Linear Program
+    Feasible Solution Found
+    Optimal Solution Found
+    Objective Value  1.257476E+09
+  SLP Algorithm: End Iteration    1
+  No SLP convergence at this iteration
+
+----------------------------------------------------------------------
+               Solution at This Iteration of SLP
+----------------------------------------------------------------------
+       OPTIMAL RATES FOR EACH FLOW VARIABLE 
+       ---------------------------------------
+Variable           Withdrawal          Injection           Contribution
+Name               Rate                Rate                To Objective
+----------         --------------      ------------        ------------
+ Q1_2_a            6.400000E+04                            2.336000E+08
+ Q1_2_b            6.400000E+04                            0.000000E+00
+ Q1_2_c            6.400000E+04                            0.000000E+00
+ Q1_2_d            6.400000E+04                            0.000000E+00
+ Q1_2_e            6.400000E+04                            0.000000E+00
+ Q2_3_a            6.400000E+04                            2.336000E+08
+ Q2_3_b            6.400000E+04                            0.000000E+00
+ Q2_3_c            6.400000E+04                            0.000000E+00
+ Q2_3_d            6.400000E+04                            0.000000E+00
+ Q2_3_e            6.400000E+04                            0.000000E+00
+ Q3_2_a            6.400000E+04                            2.336000E+08
+ Q3_2_b            6.400000E+04                            0.000000E+00
+ Q3_2_c            6.400000E+04                            0.000000E+00
+ Q3_2_d            6.400000E+04                            0.000000E+00
+ Q3_2_e            6.400000E+04                            0.000000E+00
+ Q4_1_a            0.000000E+00                            0.000000E+00
+ Q4_1_b            0.000000E+00                            0.000000E+00
+ Q4_1_c            0.000000E+00                            0.000000E+00
+ Q4_1_d            2.451396E+04                            0.000000E+00
+ Q4_1_e            6.400000E+04                            0.000000E+00
+ Q4_2_a            3.595892E+04                            1.312501E+08
+ Q4_2_b            4.011118E+04                            0.000000E+00
+ Q4_2_c            3.742900E+04                            0.000000E+00
+ Q4_2_d            6.400000E+04                            0.000000E+00
+ Q4_2_e            2.451396E+04                            0.000000E+00
+ Q4_3_a            6.400000E+04                            2.336000E+08
+ Q4_3_b            6.400000E+04                            0.000000E+00
+ Q4_3_c            6.400000E+04                            0.000000E+00
+ Q4_3_d            6.400000E+04                            0.000000E+00
+ Q4_3_e            6.400000E+04                            0.000000E+00
+ Q5_1_a            0.000000E+00                            0.000000E+00
+ Q5_1_b            0.000000E+00                            0.000000E+00
+ Q5_1_c            0.000000E+00                            0.000000E+00
+ Q5_1_d            0.000000E+00                            0.000000E+00
+ Q5_1_e            0.000000E+00                            0.000000E+00
+ Q5_2_a            0.000000E+00                            0.000000E+00
+ Q5_2_b            0.000000E+00                            0.000000E+00
+ Q5_2_c            0.000000E+00                            0.000000E+00
+ Q5_2_d            0.000000E+00                            0.000000E+00
+ Q5_2_e            0.000000E+00                            0.000000E+00
+ Q5_3_a            5.255504E+04                            1.918259E+08
+ Q5_3_b            4.840278E+04                            0.000000E+00
+ Q5_3_c            5.108495E+04                            0.000000E+00
+ Q5_3_d            0.000000E+00                            0.000000E+00
+ Q5_3_e            0.000000E+00                            0.000000E+00
+                   ------------        ------------        ------------
+TOTALS             1.722570E+06        0.000000E+00        1.257476E+09
+
+       OPTIMAL VALUES FOR EACH STATE VARIABLE 
+       ---------------------------------------
+Variable                                                   Contribution
+Name               Value                                   To Objective
+----------         ------------                            ------------
+ SCHNG2             4.160092E+08                            0.000000E+00
+ SCHNG3             3.250676E+08                            0.000000E+00
+ SCHNG4             2.600541E+08                            0.000000E+00
+ SCHNG5             1.950405E+08                            0.000000E+00
+ SCHNG6             1.365284E+08                            0.000000E+00
+ SCHNGN             4.718491E+06                            0.000000E+00
+ SCHNGS             4.246642E+06                            0.000000E+00
+                   ------------                            ------------
+TOTALS              1.341665E+09                            0.000000E+00
+
+
+       OBJECTIVE FUNCTION VALUE                            1.257476E+09
+
+       BINDING CONSTRAINTS 
+Constraint Type        Name     Status      Shadow Price
+---------------        ----     ------      ------------
+Summation              ST1_3    Binding      1.5203E-02
+Summation              ST1_4    Binding      4.3838E-02
+Summation              ST1_5    Binding      3.7895E-01
+Summation              ST2_1    Binding      1.8286E+02
+Summation              EQ_b     Binding      8.5566E+01
+Summation              EQ_c     Binding      2.5011E+02
+Summation              EQ_d     Binding     -2.3538E+02
+Summation              EQ_e     Binding      3.5004E+03
+Maximum Flow Rate      Q1_2_a   Binding    Not Available
+Maximum Flow Rate      Q1_2_b   Binding    Not Available
+Maximum Flow Rate      Q1_2_c   Binding    Not Available
+Maximum Flow Rate      Q1_2_d   Binding    Not Available
+Maximum Flow Rate      Q1_2_e   Binding    Not Available
+Maximum Flow Rate      Q2_3_a   Binding    Not Available
+Maximum Flow Rate      Q2_3_b   Binding    Not Available
+Maximum Flow Rate      Q2_3_c   Binding    Not Available
+Maximum Flow Rate      Q2_3_d   Binding    Not Available
+Maximum Flow Rate      Q2_3_e   Binding    Not Available
+Maximum Flow Rate      Q3_2_a   Binding    Not Available
+Maximum Flow Rate      Q3_2_b   Binding    Not Available
+Maximum Flow Rate      Q3_2_c   Binding    Not Available
+Maximum Flow Rate      Q3_2_d   Binding    Not Available
+Maximum Flow Rate      Q3_2_e   Binding    Not Available
+Maximum Flow Rate      Q4_1_e   Binding    Not Available
+Maximum Flow Rate      Q4_2_d   Binding    Not Available
+Maximum Flow Rate      Q4_3_a   Binding    Not Available
+Maximum Flow Rate      Q4_3_b   Binding    Not Available
+Maximum Flow Rate      Q4_3_c   Binding    Not Available
+Maximum Flow Rate      Q4_3_d   Binding    Not Available
+Maximum Flow Rate      Q4_3_e   Binding    Not Available
+
+  Binding constraint values are determined from the linear program
+    and based on the response matrix approximation of the flow process.
+ 
+       Range Analysis Not Reported 
+ 
+  SLP Algorithm: Begin Iteration     2
+    Running Base Flow Process Simulation
+      Status of State Variable Values 
+      State Variable Type    Name        Computed Value
+      -------------------    ----        --------------
+      Change in Storage      SCHNG2      4.1633298E+08
+      Change in Storage      SCHNG3      3.2669309E+08
+      Change in Storage      SCHNG4      2.6336932E+08
+      Change in Storage      SCHNG5      2.0034197E+08
+      Change in Storage      SCHNG6      1.4317133E+08
+      Change in Storage      SCHNGN      4.7852856E+06
+      Change in Storage      SCHNGS      4.2946559E+06
+ 
+      Status of Simulation-Based Constraints 
+      Constraint Type        Name       Status   Distance To RHS
+      ---------------        ----       ------   ---------------
+      Summation              ST1_2      Satisfied     2.7190E+07
+      Summation              ST1_3      Not Met       2.0148E+06
+      Summation              ST1_4      Not Met       2.8150E+06
+      Summation              ST1_5      Not Met       2.9319E+06
+      Summation              ST2_1      Satisfied     1.2101E+04
+      Summation              EQ_b       Not Met       2.9104E-11
+      Summation              EQ_c       Not Met       2.9104E-11
+      Summation              EQ_d       Not Met       2.9104E-11
+      Summation              EQ_e       Not Met       2.9104E-11
+
+  Distance to RHS is the absolute value of the difference between the
+    the right hand side of the constraint and the left side of the
+    constraint evaluated using the current set of decision variable values.
+    
+    Calculating Response Matrix
+      Perturb Flow Variable    1
+       By Perturbation Value: -6.400640E+03
+      Perturb Flow Variable    2
+       By Perturbation Value: -6.400640E+03
+      Perturb Flow Variable    3
+       By Perturbation Value: -6.400640E+03
+      Perturb Flow Variable    4
+       By Perturbation Value: -6.400640E+03
+      Perturb Flow Variable    5
+       By Perturbation Value: -6.400640E+03
+      Perturb Flow Variable    6
+       By Perturbation Value: -6.400640E+03
+      Perturb Flow Variable    7
+       By Perturbation Value: -6.400640E+03
+      Perturb Flow Variable    8
+       By Perturbation Value: -6.400640E+03
+      Perturb Flow Variable    9
+       By Perturbation Value: -6.400640E+03
+      Perturb Flow Variable   10
+       By Perturbation Value: -6.400640E+03
+      Perturb Flow Variable   11
+       By Perturbation Value: -6.400640E+03
+      Perturb Flow Variable   12
+       By Perturbation Value: -6.400640E+03
+      Perturb Flow Variable   13
+       By Perturbation Value: -6.400640E+03
+      Perturb Flow Variable   14
+       By Perturbation Value: -6.400640E+03
+      Perturb Flow Variable   15
+       By Perturbation Value: -6.400640E+03
+      Perturb Flow Variable   16
+       By Perturbation Value: -6.400640E+03
+      Perturb Flow Variable   17
+       By Perturbation Value: -6.400640E+03
+      Perturb Flow Variable   18
+       By Perturbation Value: -6.400640E+03
+      Perturb Flow Variable   19
+       By Perturbation Value: -6.400640E+03
+      Perturb Flow Variable   20
+       By Perturbation Value: -6.400640E+03
+      Perturb Flow Variable   21
+       By Perturbation Value: -6.400640E+03
+      Perturb Flow Variable   22
+       By Perturbation Value: -6.400640E+03
+      Perturb Flow Variable   23
+       By Perturbation Value: -6.400640E+03
+      Perturb Flow Variable   24
+       By Perturbation Value: -6.400640E+03
+      Perturb Flow Variable   25
+       By Perturbation Value: -6.400640E+03
+      Perturb Flow Variable   26
+       By Perturbation Value: -6.400640E+03
+      Perturb Flow Variable   27
+       By Perturbation Value: -6.400640E+03
+      Perturb Flow Variable   28
+       By Perturbation Value: -6.400640E+03
+      Perturb Flow Variable   29
+       By Perturbation Value: -6.400640E+03
+      Perturb Flow Variable   30
+       By Perturbation Value: -6.400640E+03
+      Perturb Flow Variable   31
+       By Perturbation Value: -6.400640E+03
+      Perturb Flow Variable   32
+       By Perturbation Value: -6.400640E+03
+      Perturb Flow Variable   33
+       By Perturbation Value: -6.400640E+03
+      Perturb Flow Variable   34
+       By Perturbation Value: -6.400640E+03
+      Perturb Flow Variable   35
+       By Perturbation Value: -6.400640E+03
+      Perturb Flow Variable   36
+       By Perturbation Value: -6.400640E+03
+      Perturb Flow Variable   37
+       By Perturbation Value: -6.400640E+03
+      Perturb Flow Variable   38
+       By Perturbation Value: -6.400640E+03
+      Perturb Flow Variable   39
+       By Perturbation Value: -6.400640E+03
+      Perturb Flow Variable   40
+       By Perturbation Value: -6.400640E+03
+      Perturb Flow Variable   41
+       By Perturbation Value: -6.400640E+03
+      Perturb Flow Variable   42
+       By Perturbation Value: -6.400640E+03
+      Perturb Flow Variable   43
+       By Perturbation Value: -6.400640E+03
+      Perturb Flow Variable   44
+       By Perturbation Value: -6.400640E+03
+      Perturb Flow Variable   45
+       By Perturbation Value: -6.400640E+03
+ 
+      Average Number of Significant Digits in Matrix  1.444000E+01
+    
+    Solving Linear Program
+    Feasible Solution Found
+    Optimal Solution Found
+    Objective Value  1.258326E+09
+    Relative Change in Objective Value
+      Needs to be less than SLPZCRIT =  1.000000E-04
+      Value at this iteration        =  6.758052E-04
+    Maximum Relative Change in Variables
+      Needs to be less than SLPVCRIT =  1.000000E-05
+      For Flow Variable Max Change   =  2.483956E-01
+  SLP Algorithm: End Iteration    2
+  No SLP convergence at this iteration
+
+----------------------------------------------------------------------
+               Solution at This Iteration of SLP
+----------------------------------------------------------------------
+       OPTIMAL RATES FOR EACH FLOW VARIABLE 
+       ---------------------------------------
+Variable           Withdrawal          Injection           Contribution
+Name               Rate                Rate                To Objective
+----------         --------------      ------------        ------------
+ Q1_2_a            6.400000E+04                            2.336000E+08
+ Q1_2_b            6.400000E+04                            0.000000E+00
+ Q1_2_c            6.400000E+04                            0.000000E+00
+ Q1_2_d            6.400000E+04                            0.000000E+00
+ Q1_2_e            6.400000E+04                            0.000000E+00
+ Q2_3_a            6.400000E+04                            2.336000E+08
+ Q2_3_b            6.400000E+04                            0.000000E+00
+ Q2_3_c            6.400000E+04                            0.000000E+00
+ Q2_3_d            6.400000E+04                            0.000000E+00
+ Q2_3_e            6.400000E+04                            0.000000E+00
+ Q3_2_a            6.400000E+04                            2.336000E+08
+ Q3_2_b            6.400000E+04                            0.000000E+00
+ Q3_2_c            6.400000E+04                            0.000000E+00
+ Q3_2_d            6.400000E+04                            0.000000E+00
+ Q3_2_e            6.400000E+04                            0.000000E+00
+ Q4_1_a            0.000000E+00                            0.000000E+00
+ Q4_1_b            0.000000E+00                            0.000000E+00
+ Q4_1_c            0.000000E+00                            0.000000E+00
+ Q4_1_d            2.474694E+04                            0.000000E+00
+ Q4_1_e            6.400000E+04                            0.000000E+00
+ Q4_2_a            2.006135E+04                            7.322393E+07
+ Q4_2_b            3.236141E+04                            0.000000E+00
+ Q4_2_c            3.108002E+04                            0.000000E+00
+ Q4_2_d            6.400000E+04                            0.000000E+00
+ Q4_2_e            2.474694E+04                            0.000000E+00
+ Q4_3_a            6.400000E+04                            2.336000E+08
+ Q4_3_b            6.400000E+04                            0.000000E+00
+ Q4_3_c            6.400000E+04                            0.000000E+00
+ Q4_3_d            6.400000E+04                            0.000000E+00
+ Q4_3_e            6.400000E+04                            0.000000E+00
+ Q5_1_a            0.000000E+00                            0.000000E+00
+ Q5_1_b            0.000000E+00                            0.000000E+00
+ Q5_1_c            0.000000E+00                            0.000000E+00
+ Q5_1_d            0.000000E+00                            0.000000E+00
+ Q5_1_e            0.000000E+00                            0.000000E+00
+ Q5_2_a            4.685587E+03                            1.710239E+07
+ Q5_2_b            0.000000E+00                            0.000000E+00
+ Q5_2_c            0.000000E+00                            0.000000E+00
+ Q5_2_d            0.000000E+00                            0.000000E+00
+ Q5_2_e            0.000000E+00                            0.000000E+00
+ Q5_3_a            6.400000E+04                            2.336000E+08
+ Q5_3_b            5.638552E+04                            0.000000E+00
+ Q5_3_c            5.766691E+04                            0.000000E+00
+ Q5_3_d            0.000000E+00                            0.000000E+00
+ Q5_3_e            0.000000E+00                            0.000000E+00
+                   ------------        ------------        ------------
+TOTALS             1.723735E+06        0.000000E+00        1.258326E+09
+
+       OPTIMAL VALUES FOR EACH STATE VARIABLE 
+       ---------------------------------------
+Variable                                                   Contribution
+Name               Value                                   To Objective
+----------         ------------                            ------------
+ SCHNG2             4.222377E+08                            0.000000E+00
+ SCHNG3             3.357816E+08                            0.000000E+00
+ SCHNG4             2.686253E+08                            0.000000E+00
+ SCHNG5             2.014689E+08                            0.000000E+00
+ SCHNG6             1.410283E+08                            0.000000E+00
+ SCHNGN             4.846440E+06                            0.000000E+00
+ SCHNGS             4.361796E+06                            0.000000E+00
+                   ------------                            ------------
+TOTALS              1.378350E+09                            0.000000E+00
+
+
+       OBJECTIVE FUNCTION VALUE                            1.258326E+09
+
+       BINDING CONSTRAINTS 
+Constraint Type        Name     Status      Shadow Price
+---------------        ----     ------      ------------
+Summation              ST1_3    Binding      1.6152E-02
+Summation              ST1_4    Binding      4.4468E-02
+Summation              ST1_5    Binding      3.9340E-01
+Summation              ST2_1    Binding      1.7836E+02
+Summation              EQ_b     Binding      8.6730E+01
+Summation              EQ_c     Binding      2.5842E+02
+Summation              EQ_d     Binding     -2.7002E+02
+Summation              EQ_e     Binding      3.5239E+03
+Maximum Flow Rate      Q1_2_a   Binding    Not Available
+Maximum Flow Rate      Q1_2_b   Binding    Not Available
+Maximum Flow Rate      Q1_2_c   Binding    Not Available
+Maximum Flow Rate      Q1_2_d   Binding    Not Available
+Maximum Flow Rate      Q1_2_e   Binding    Not Available
+Maximum Flow Rate      Q2_3_a   Binding    Not Available
+Maximum Flow Rate      Q2_3_b   Binding    Not Available
+Maximum Flow Rate      Q2_3_c   Binding    Not Available
+Maximum Flow Rate      Q2_3_d   Binding    Not Available
+Maximum Flow Rate      Q2_3_e   Binding    Not Available
+Maximum Flow Rate      Q3_2_a   Binding    Not Available
+Maximum Flow Rate      Q3_2_b   Binding    Not Available
+Maximum Flow Rate      Q3_2_c   Binding    Not Available
+Maximum Flow Rate      Q3_2_d   Binding    Not Available
+Maximum Flow Rate      Q3_2_e   Binding    Not Available
+Maximum Flow Rate      Q4_1_e   Binding    Not Available
+Maximum Flow Rate      Q4_2_d   Binding    Not Available
+Maximum Flow Rate      Q4_3_a   Binding    Not Available
+Maximum Flow Rate      Q4_3_b   Binding    Not Available
+Maximum Flow Rate      Q4_3_c   Binding    Not Available
+Maximum Flow Rate      Q4_3_d   Binding    Not Available
+Maximum Flow Rate      Q4_3_e   Binding    Not Available
+Maximum Flow Rate      Q5_3_a   Binding    Not Available
+
+  Binding constraint values are determined from the linear program
+    and based on the response matrix approximation of the flow process.
+ 
+       Range Analysis Not Reported 
+ 
+  SLP Algorithm: Begin Iteration     3
+    Running Base Flow Process Simulation
+      Status of State Variable Values 
+      State Variable Type    Name        Computed Value
+      -------------------    ----        --------------
+      Change in Storage      SCHNG2      4.2223989E+08
+      Change in Storage      SCHNG3      3.3578249E+08
+      Change in Storage      SCHNG4      2.6862491E+08
+      Change in Storage      SCHNG5      2.0146831E+08
+      Change in Storage      SCHNG6      1.4102776E+08
+      Change in Storage      SCHNGN      4.8464441E+06
+      Change in Storage      SCHNGS      4.3618031E+06
+ 
+      Status of Simulation-Based Constraints 
+      Constraint Type        Name       Status   Distance To RHS
+      ---------------        ----       ------   ---------------
+      Summation              ST1_2      Satisfied     2.3121E+07
+      Summation              ST1_3      Satisfied     1.0809E+03
+      Summation              ST1_4      Satisfied     3.7207E+02
+      Summation              ST1_5      Satisfied     5.8412E+01
+      Summation              ST2_1      Not Met       3.3983E+00
+      Summation              EQ_b       Not Met       5.0932E-11
+      Summation              EQ_c       Not Met       5.0932E-11
+      Summation              EQ_d       Not Met       5.8208E-11
+      Summation              EQ_e       Not Met       5.8208E-11
+
+  Distance to RHS is the absolute value of the difference between the
+    the right hand side of the constraint and the left side of the
+    constraint evaluated using the current set of decision variable values.
+    
+    Calculating Response Matrix
+      Perturb Flow Variable    1
+       By Perturbation Value: -3.200960E+03
+      Perturb Flow Variable    2
+       By Perturbation Value: -3.200960E+03
+      Perturb Flow Variable    3
+       By Perturbation Value: -3.200960E+03
+      Perturb Flow Variable    4
+       By Perturbation Value: -3.200960E+03
+      Perturb Flow Variable    5
+       By Perturbation Value: -3.200960E+03
+      Perturb Flow Variable    6
+       By Perturbation Value: -3.200960E+03
+      Perturb Flow Variable    7
+       By Perturbation Value: -3.200960E+03
+      Perturb Flow Variable    8
+       By Perturbation Value: -3.200960E+03
+      Perturb Flow Variable    9
+       By Perturbation Value: -3.200960E+03
+      Perturb Flow Variable   10
+       By Perturbation Value: -3.200960E+03
+      Perturb Flow Variable   11
+       By Perturbation Value: -3.200960E+03
+      Perturb Flow Variable   12
+       By Perturbation Value: -3.200960E+03
+      Perturb Flow Variable   13
+       By Perturbation Value: -3.200960E+03
+      Perturb Flow Variable   14
+       By Perturbation Value: -3.200960E+03
+      Perturb Flow Variable   15
+       By Perturbation Value: -3.200960E+03
+      Perturb Flow Variable   16
+       By Perturbation Value: -3.200960E+03
+      Perturb Flow Variable   17
+       By Perturbation Value: -3.200960E+03
+      Perturb Flow Variable   18
+       By Perturbation Value: -3.200960E+03
+      Perturb Flow Variable   19
+       By Perturbation Value: -3.200960E+03
+      Perturb Flow Variable   20
+       By Perturbation Value: -3.200960E+03
+      Perturb Flow Variable   21
+       By Perturbation Value: -3.200960E+03
+      Perturb Flow Variable   22
+       By Perturbation Value: -3.200960E+03
+      Perturb Flow Variable   23
+       By Perturbation Value: -3.200960E+03
+      Perturb Flow Variable   24
+       By Perturbation Value: -3.200960E+03
+      Perturb Flow Variable   25
+       By Perturbation Value: -3.200960E+03
+      Perturb Flow Variable   26
+       By Perturbation Value: -3.200960E+03
+      Perturb Flow Variable   27
+       By Perturbation Value: -3.200960E+03
+      Perturb Flow Variable   28
+       By Perturbation Value: -3.200960E+03
+      Perturb Flow Variable   29
+       By Perturbation Value: -3.200960E+03
+      Perturb Flow Variable   30
+       By Perturbation Value: -3.200960E+03
+      Perturb Flow Variable   31
+       By Perturbation Value: -3.200960E+03
+      Perturb Flow Variable   32
+       By Perturbation Value: -3.200960E+03
+      Perturb Flow Variable   33
+       By Perturbation Value: -3.200960E+03
+      Perturb Flow Variable   34
+       By Perturbation Value: -3.200960E+03
+      Perturb Flow Variable   35
+       By Perturbation Value: -3.200960E+03
+      Perturb Flow Variable   36
+       By Perturbation Value: -3.200960E+03
+      Perturb Flow Variable   37
+       By Perturbation Value: -3.200960E+03
+      Perturb Flow Variable   38
+       By Perturbation Value: -3.200960E+03
+      Perturb Flow Variable   39
+       By Perturbation Value: -3.200960E+03
+      Perturb Flow Variable   40
+       By Perturbation Value: -3.200960E+03
+      Perturb Flow Variable   41
+       By Perturbation Value: -3.200960E+03
+      Perturb Flow Variable   42
+       By Perturbation Value: -3.200960E+03
+      Perturb Flow Variable   43
+       By Perturbation Value: -3.200960E+03
+      Perturb Flow Variable   44
+       By Perturbation Value: -3.200960E+03
+      Perturb Flow Variable   45
+       By Perturbation Value: -3.200960E+03
+ 
+      Average Number of Significant Digits in Matrix  1.434222E+01
+    
+    Solving Linear Program
+    Feasible Solution Found
+    Optimal Solution Found
+    Objective Value  1.258326E+09
+    Relative Change in Objective Value
+      Needs to be less than SLPZCRIT =  1.000000E-04
+      Value at this iteration        =  4.361530E-07
+    Maximum Relative Change in Variables
+      Needs to be less than SLPVCRIT =  1.000000E-05
+      For Flow Variable Max Change   =  5.331247E-05
+  SLP Algorithm: End Iteration    3
+  No SLP convergence at this iteration
+
+----------------------------------------------------------------------
+               Solution at This Iteration of SLP
+----------------------------------------------------------------------
+       OPTIMAL RATES FOR EACH FLOW VARIABLE 
+       ---------------------------------------
+Variable           Withdrawal          Injection           Contribution
+Name               Rate                Rate                To Objective
+----------         --------------      ------------        ------------
+ Q1_2_a            6.400000E+04                            2.336000E+08
+ Q1_2_b            6.400000E+04                            0.000000E+00
+ Q1_2_c            6.400000E+04                            0.000000E+00
+ Q1_2_d            6.400000E+04                            0.000000E+00
+ Q1_2_e            6.400000E+04                            0.000000E+00
+ Q2_3_a            6.400000E+04                            2.336000E+08
+ Q2_3_b            6.400000E+04                            0.000000E+00
+ Q2_3_c            6.400000E+04                            0.000000E+00
+ Q2_3_d            6.400000E+04                            0.000000E+00
+ Q2_3_e            6.400000E+04                            0.000000E+00
+ Q3_2_a            6.400000E+04                            2.336000E+08
+ Q3_2_b            6.400000E+04                            0.000000E+00
+ Q3_2_c            6.400000E+04                            0.000000E+00
+ Q3_2_d            6.400000E+04                            0.000000E+00
+ Q3_2_e            6.400000E+04                            0.000000E+00
+ Q4_1_a            0.000000E+00                            0.000000E+00
+ Q4_1_b            0.000000E+00                            0.000000E+00
+ Q4_1_c            0.000000E+00                            0.000000E+00
+ Q4_1_d            2.474679E+04                            0.000000E+00
+ Q4_1_e            6.400000E+04                            0.000000E+00
+ Q4_2_a            2.006461E+04                            7.323584E+07
+ Q4_2_b            3.236154E+04                            0.000000E+00
+ Q4_2_c            3.107973E+04                            0.000000E+00
+ Q4_2_d            6.400000E+04                            0.000000E+00
+ Q4_2_e            2.474679E+04                            0.000000E+00
+ Q4_3_a            6.400000E+04                            2.336000E+08
+ Q4_3_b            6.400000E+04                            0.000000E+00
+ Q4_3_c            6.400000E+04                            0.000000E+00
+ Q4_3_d            6.400000E+04                            0.000000E+00
+ Q4_3_e            6.400000E+04                            0.000000E+00
+ Q5_1_a            0.000000E+00                            0.000000E+00
+ Q5_1_b            0.000000E+00                            0.000000E+00
+ Q5_1_c            0.000000E+00                            0.000000E+00
+ Q5_1_d            0.000000E+00                            0.000000E+00
+ Q5_1_e            0.000000E+00                            0.000000E+00
+ Q5_2_a            4.682175E+03                            1.708994E+07
+ Q5_2_b            0.000000E+00                            0.000000E+00
+ Q5_2_c            0.000000E+00                            0.000000E+00
+ Q5_2_d            0.000000E+00                            0.000000E+00
+ Q5_2_e            0.000000E+00                            0.000000E+00
+ Q5_3_a            6.400000E+04                            2.336000E+08
+ Q5_3_b            5.638525E+04                            0.000000E+00
+ Q5_3_c            5.766705E+04                            0.000000E+00
+ Q5_3_d            0.000000E+00                            0.000000E+00
+ Q5_3_e            0.000000E+00                            0.000000E+00
+                   ------------        ------------        ------------
+TOTALS             1.723734E+06        0.000000E+00        1.258326E+09
+
+       OPTIMAL VALUES FOR EACH STATE VARIABLE 
+       ---------------------------------------
+Variable                                                   Contribution
+Name               Value                                   To Objective
+----------         ------------                            ------------
+ SCHNG2             4.222383E+08                            0.000000E+00
+ SCHNG3             3.357808E+08                            0.000000E+00
+ SCHNG4             2.686246E+08                            0.000000E+00
+ SCHNG5             2.014685E+08                            0.000000E+00
+ SCHNG6             1.410279E+08                            0.000000E+00
+ SCHNGN             4.846434E+06                            0.000000E+00
+ SCHNGS             4.361791E+06                            0.000000E+00
+                   ------------                            ------------
+TOTALS              1.378348E+09                            0.000000E+00
+
+
+       OBJECTIVE FUNCTION VALUE                            1.258326E+09
+
+       BINDING CONSTRAINTS 
+Constraint Type        Name     Status      Shadow Price
+---------------        ----     ------      ------------
+Summation              ST1_3    Binding      1.6259E-02
+Summation              ST1_4    Binding      4.4646E-02
+Summation              ST1_5    Binding      3.9400E-01
+Summation              ST2_1    Binding      1.7833E+02
+Summation              EQ_b     Binding      8.6458E+01
+Summation              EQ_c     Binding      2.5829E+02
+Summation              EQ_d     Binding     -2.7126E+02
+Summation              EQ_e     Binding      3.5254E+03
+Maximum Flow Rate      Q1_2_a   Binding    Not Available
+Maximum Flow Rate      Q1_2_b   Binding    Not Available
+Maximum Flow Rate      Q1_2_c   Binding    Not Available
+Maximum Flow Rate      Q1_2_d   Binding    Not Available
+Maximum Flow Rate      Q1_2_e   Binding    Not Available
+Maximum Flow Rate      Q2_3_a   Binding    Not Available
+Maximum Flow Rate      Q2_3_b   Binding    Not Available
+Maximum Flow Rate      Q2_3_c   Binding    Not Available
+Maximum Flow Rate      Q2_3_d   Binding    Not Available
+Maximum Flow Rate      Q2_3_e   Binding    Not Available
+Maximum Flow Rate      Q3_2_a   Binding    Not Available
+Maximum Flow Rate      Q3_2_b   Binding    Not Available
+Maximum Flow Rate      Q3_2_c   Binding    Not Available
+Maximum Flow Rate      Q3_2_d   Binding    Not Available
+Maximum Flow Rate      Q3_2_e   Binding    Not Available
+Maximum Flow Rate      Q4_1_e   Binding    Not Available
+Maximum Flow Rate      Q4_2_d   Binding    Not Available
+Maximum Flow Rate      Q4_3_a   Binding    Not Available
+Maximum Flow Rate      Q4_3_b   Binding    Not Available
+Maximum Flow Rate      Q4_3_c   Binding    Not Available
+Maximum Flow Rate      Q4_3_d   Binding    Not Available
+Maximum Flow Rate      Q4_3_e   Binding    Not Available
+Maximum Flow Rate      Q5_3_a   Binding    Not Available
+
+  Binding constraint values are determined from the linear program
+    and based on the response matrix approximation of the flow process.
+ 
+       Range Analysis Not Reported 
+ 
+  SLP Algorithm: Begin Iteration     4
+    Running Base Flow Process Simulation
+      Status of State Variable Values 
+      State Variable Type    Name        Computed Value
+      -------------------    ----        --------------
+      Change in Storage      SCHNG2      4.2223832E+08
+      Change in Storage      SCHNG3      3.3578078E+08
+      Change in Storage      SCHNG4      2.6862462E+08
+      Change in Storage      SCHNG5      2.0146847E+08
+      Change in Storage      SCHNG6      1.4102793E+08
+      Change in Storage      SCHNGN      4.8464344E+06
+      Change in Storage      SCHNGS      4.3617909E+06
+ 
+      Status of Simulation-Based Constraints 
+      Constraint Type        Name       Status   Distance To RHS
+      ---------------        ----       ------   ---------------
+      Summation              ST1_2      Satisfied     2.3122E+07
+      Summation              ST1_3      Not Met       5.2321E-02
+      Summation              ST1_4      Satisfied     3.6834E-02
+      Summation              ST1_5      Satisfied     2.0182E-02
+      Summation              ST2_1      Not Met       4.3327E-04
+      Summation              EQ_b       Not Met       2.9104E-11
+      Summation              EQ_c       Not Met       2.1828E-11
+      Summation              EQ_d       Not Met       2.9104E-11
+      Summation              EQ_e       Not Met       2.1828E-11
+
+  Distance to RHS is the absolute value of the difference between the
+    the right hand side of the constraint and the left side of the
+    constraint evaluated using the current set of decision variable values.
+    
+    Calculating Response Matrix
+      Perturb Flow Variable    1
+       By Perturbation Value: -1.601120E+03
+      Perturb Flow Variable    2
+       By Perturbation Value: -1.601120E+03
+      Perturb Flow Variable    3
+       By Perturbation Value: -1.601120E+03
+      Perturb Flow Variable    4
+       By Perturbation Value: -1.601120E+03
+      Perturb Flow Variable    5
+       By Perturbation Value: -1.601120E+03
+      Perturb Flow Variable    6
+       By Perturbation Value: -1.601120E+03
+      Perturb Flow Variable    7
+       By Perturbation Value: -1.601120E+03
+      Perturb Flow Variable    8
+       By Perturbation Value: -1.601120E+03
+      Perturb Flow Variable    9
+       By Perturbation Value: -1.601120E+03
+      Perturb Flow Variable   10
+       By Perturbation Value: -1.601120E+03
+      Perturb Flow Variable   11
+       By Perturbation Value: -1.601120E+03
+      Perturb Flow Variable   12
+       By Perturbation Value: -1.601120E+03
+      Perturb Flow Variable   13
+       By Perturbation Value: -1.601120E+03
+      Perturb Flow Variable   14
+       By Perturbation Value: -1.601120E+03
+      Perturb Flow Variable   15
+       By Perturbation Value: -1.601120E+03
+      Perturb Flow Variable   16
+       By Perturbation Value: -1.601120E+03
+      Perturb Flow Variable   17
+       By Perturbation Value: -1.601120E+03
+      Perturb Flow Variable   18
+       By Perturbation Value: -1.601120E+03
+      Perturb Flow Variable   19
+       By Perturbation Value: -1.601120E+03
+      Perturb Flow Variable   20
+       By Perturbation Value: -1.601120E+03
+      Perturb Flow Variable   21
+       By Perturbation Value: -1.601120E+03
+      Perturb Flow Variable   22
+       By Perturbation Value: -1.601120E+03
+      Perturb Flow Variable   23
+       By Perturbation Value: -1.601120E+03
+      Perturb Flow Variable   24
+       By Perturbation Value: -1.601120E+03
+      Perturb Flow Variable   25
+       By Perturbation Value: -1.601120E+03
+      Perturb Flow Variable   26
+       By Perturbation Value: -1.601120E+03
+      Perturb Flow Variable   27
+       By Perturbation Value: -1.601120E+03
+      Perturb Flow Variable   28
+       By Perturbation Value: -1.601120E+03
+      Perturb Flow Variable   29
+       By Perturbation Value: -1.601120E+03
+      Perturb Flow Variable   30
+       By Perturbation Value: -1.601120E+03
+      Perturb Flow Variable   31
+       By Perturbation Value: -1.601120E+03
+      Perturb Flow Variable   32
+       By Perturbation Value: -1.601120E+03
+      Perturb Flow Variable   33
+       By Perturbation Value: -1.601120E+03
+      Perturb Flow Variable   34
+       By Perturbation Value: -1.601120E+03
+      Perturb Flow Variable   35
+       By Perturbation Value: -1.601120E+03
+      Perturb Flow Variable   36
+       By Perturbation Value: -1.601120E+03
+      Perturb Flow Variable   37
+       By Perturbation Value: -1.601120E+03
+      Perturb Flow Variable   38
+       By Perturbation Value: -1.601120E+03
+      Perturb Flow Variable   39
+       By Perturbation Value: -1.601120E+03
+      Perturb Flow Variable   40
+       By Perturbation Value: -1.601120E+03
+      Perturb Flow Variable   41
+       By Perturbation Value: -1.601120E+03
+      Perturb Flow Variable   42
+       By Perturbation Value: -1.601120E+03
+      Perturb Flow Variable   43
+       By Perturbation Value: -1.601120E+03
+      Perturb Flow Variable   44
+       By Perturbation Value: -1.601120E+03
+      Perturb Flow Variable   45
+       By Perturbation Value: -1.601120E+03
+ 
+      Average Number of Significant Digits in Matrix  1.367556E+01
+    
+    Solving Linear Program
+    Feasible Solution Found
+    Optimal Solution Found
+    Objective Value  1.258326E+09
+    Relative Change in Objective Value
+      Needs to be less than SLPZCRIT =  1.000000E-04
+      Value at this iteration        =  5.445620E-11
+    Maximum Relative Change in Variables
+      Needs to be less than SLPVCRIT =  1.000000E-05
+      For Flow Variable Max Change   =  2.665650E-09
+  SLP Algorithm: End Iteration    4
+  SLP Iterations have converged
+
+----------------------------------------------------------------------
+               Groundwater Management Solution
+----------------------------------------------------------------------
+
+       OPTIMAL SOLUTION FOUND 
+
+       OPTIMAL RATES FOR EACH FLOW VARIABLE 
+       ---------------------------------------
+Variable           Withdrawal          Injection           Contribution
+Name               Rate                Rate                To Objective
+----------         --------------      ------------        ------------
+ Q1_2_a            6.400000E+04                            2.336000E+08
+ Q1_2_b            6.400000E+04                            0.000000E+00
+ Q1_2_c            6.400000E+04                            0.000000E+00
+ Q1_2_d            6.400000E+04                            0.000000E+00
+ Q1_2_e            6.400000E+04                            0.000000E+00
+ Q2_3_a            6.400000E+04                            2.336000E+08
+ Q2_3_b            6.400000E+04                            0.000000E+00
+ Q2_3_c            6.400000E+04                            0.000000E+00
+ Q2_3_d            6.400000E+04                            0.000000E+00
+ Q2_3_e            6.400000E+04                            0.000000E+00
+ Q3_2_a            6.400000E+04                            2.336000E+08
+ Q3_2_b            6.400000E+04                            0.000000E+00
+ Q3_2_c            6.400000E+04                            0.000000E+00
+ Q3_2_d            6.400000E+04                            0.000000E+00
+ Q3_2_e            6.400000E+04                            0.000000E+00
+ Q4_1_a            0.000000E+00                            0.000000E+00
+ Q4_1_b            0.000000E+00                            0.000000E+00
+ Q4_1_c            0.000000E+00                            0.000000E+00
+ Q4_1_d            2.474679E+04                            0.000000E+00
+ Q4_1_e            6.400000E+04                            0.000000E+00
+ Q4_2_a            2.006461E+04                            7.323583E+07
+ Q4_2_b            3.236154E+04                            0.000000E+00
+ Q4_2_c            3.107973E+04                            0.000000E+00
+ Q4_2_d            6.400000E+04                            0.000000E+00
+ Q4_2_e            2.474679E+04                            0.000000E+00
+ Q4_3_a            6.400000E+04                            2.336000E+08
+ Q4_3_b            6.400000E+04                            0.000000E+00
+ Q4_3_c            6.400000E+04                            0.000000E+00
+ Q4_3_d            6.400000E+04                            0.000000E+00
+ Q4_3_e            6.400000E+04                            0.000000E+00
+ Q5_1_a            0.000000E+00                            0.000000E+00
+ Q5_1_b            0.000000E+00                            0.000000E+00
+ Q5_1_c            0.000000E+00                            0.000000E+00
+ Q5_1_d            0.000000E+00                            0.000000E+00
+ Q5_1_e            0.000000E+00                            0.000000E+00
+ Q5_2_a            4.682175E+03                            1.708994E+07
+ Q5_2_b            0.000000E+00                            0.000000E+00
+ Q5_2_c            0.000000E+00                            0.000000E+00
+ Q5_2_d            0.000000E+00                            0.000000E+00
+ Q5_2_e            0.000000E+00                            0.000000E+00
+ Q5_3_a            6.400000E+04                            2.336000E+08
+ Q5_3_b            5.638525E+04                            0.000000E+00
+ Q5_3_c            5.766705E+04                            0.000000E+00
+ Q5_3_d            0.000000E+00                            0.000000E+00
+ Q5_3_e            0.000000E+00                            0.000000E+00
+                   ------------        ------------        ------------
+TOTALS             1.723734E+06        0.000000E+00        1.258326E+09
+
+       OPTIMAL VALUES FOR EACH STATE VARIABLE 
+       ---------------------------------------
+Variable                                                   Contribution
+Name               Value                                   To Objective
+----------         ------------                            ------------
+ SCHNG2             4.222383E+08                            0.000000E+00
+ SCHNG3             3.357808E+08                            0.000000E+00
+ SCHNG4             2.686246E+08                            0.000000E+00
+ SCHNG5             2.014685E+08                            0.000000E+00
+ SCHNG6             1.410279E+08                            0.000000E+00
+ SCHNGN             4.846434E+06                            0.000000E+00
+ SCHNGS             4.361791E+06                            0.000000E+00
+                   ------------                            ------------
+TOTALS              1.378348E+09                            0.000000E+00
+
+
+       OBJECTIVE FUNCTION VALUE                            1.258326E+09
+
+       BINDING CONSTRAINTS 
+Constraint Type        Name     Status      Shadow Price
+---------------        ----     ------      ------------
+Summation              ST1_3    Binding      1.6255E-02
+Summation              ST1_4    Binding      4.4641E-02
+Summation              ST1_5    Binding      3.9394E-01
+Summation              ST2_1    Binding      1.7834E+02
+Summation              EQ_b     Binding      8.6463E+01
+Summation              EQ_c     Binding      2.5829E+02
+Summation              EQ_d     Binding     -2.7110E+02
+Summation              EQ_e     Binding      3.5253E+03
+Maximum Flow Rate      Q1_2_a   Binding    Not Available
+Maximum Flow Rate      Q1_2_b   Binding    Not Available
+Maximum Flow Rate      Q1_2_c   Binding    Not Available
+Maximum Flow Rate      Q1_2_d   Binding    Not Available
+Maximum Flow Rate      Q1_2_e   Binding    Not Available
+Maximum Flow Rate      Q2_3_a   Binding    Not Available
+Maximum Flow Rate      Q2_3_b   Binding    Not Available
+Maximum Flow Rate      Q2_3_c   Binding    Not Available
+Maximum Flow Rate      Q2_3_d   Binding    Not Available
+Maximum Flow Rate      Q2_3_e   Binding    Not Available
+Maximum Flow Rate      Q3_2_a   Binding    Not Available
+Maximum Flow Rate      Q3_2_b   Binding    Not Available
+Maximum Flow Rate      Q3_2_c   Binding    Not Available
+Maximum Flow Rate      Q3_2_d   Binding    Not Available
+Maximum Flow Rate      Q3_2_e   Binding    Not Available
+Maximum Flow Rate      Q4_1_e   Binding    Not Available
+Maximum Flow Rate      Q4_2_d   Binding    Not Available
+Maximum Flow Rate      Q4_3_a   Binding    Not Available
+Maximum Flow Rate      Q4_3_b   Binding    Not Available
+Maximum Flow Rate      Q4_3_c   Binding    Not Available
+Maximum Flow Rate      Q4_3_d   Binding    Not Available
+Maximum Flow Rate      Q4_3_e   Binding    Not Available
+Maximum Flow Rate      Q5_3_a   Binding    Not Available
+
+  Binding constraint values are determined from the linear program
+    and based on the response matrix approximation of the flow process.
+ 
+       Range Analysis Not Reported 
+---------------------------------------------------------------
+         Final Flow Process Simulation
+---------------------------------------------------------------
+  Running Final Flow Process Simulation
+    using Optimal Flow Variable Rates 
+    
+      Status of State Variable Values 
+        Using Optimal Flow Rate Variable Values
+      State Variable Type    Name        Computed Value
+      -------------------    ----        --------------
+      Change in Storage      SCHNG2      4.2223832E+08
+      Change in Storage      SCHNG3      3.3578078E+08
+      Change in Storage      SCHNG4      2.6862462E+08
+      Change in Storage      SCHNG5      2.0146847E+08
+      Change in Storage      SCHNG6      1.4102793E+08
+      Change in Storage      SCHNGN      4.8464344E+06
+      Change in Storage      SCHNGS      4.3617909E+06
+  Precision limitations and nonlinear response may cause 
+    the state variables computed directly by the flow process 
+    to differ from those computed using the linear program.  
+ 
+      Status of Simulation-Based Constraints 
+        Using Optimal Flow Rate Variable Values
+
+                                           Simulated    Specified
+                                            By Flow        in
+      Constraint Type        Name           Process    Constraints   Difference
+      ---------------        ----          ----------   ----------   ----------
+      Summation              ST1_2        -2.3122E+07 < 0.0000E+00  -2.3122E+07
+      Summation              ST1_3         8.8215E-06 < 0.0000E+00   8.8215E-06
+      Summation              ST1_4        -2.0862E-06 < 0.0000E+00  -2.0862E-06
+      Summation              ST1_5        -2.6524E-06 < 0.0000E+00  -2.6524E-06
+      Summation              ST2_1         6.7055E-08 < 0.0000E+00   6.7055E-08
+      Summation              EQ_b          7.2760E-12 = 0.0000E+00   7.2760E-12
+      Summation              EQ_c          2.1828E-11 = 0.0000E+00   2.1828E-11
+      Summation              EQ_d          1.4552E-11 = 0.0000E+00   1.4552E-11
+      Summation              EQ_e          1.4552E-11 = 0.0000E+00   1.4552E-11
+
+  Difference is computed by subtracting right hand side of the constraint 
+    from the left side of the constraint.
+  Precision limitations and nonlinear response may cause the 
+    values of the binding constraints computed directly by the flow process 
+    to differ from those computed using the linear program.  
+
+ Run end date and time (yyyy/mm/dd hh:mm:ss): 2014/08/11 15:27:43
+ Elapsed run time:  2 Minutes, 39.731 Seconds
+

@@ -1,0 +1,12 @@
+LIST    10   streamflow.lst
+DIS     11   ..\data\streamflow.dis
+BAS6    12   ..\data\streamflow.ba6
+BCF6    13   ..\data\streamflow.bc6
+RCH     15   ..\data\streamflow.rch
+SFR     16   ..\data\streamflow.sfr
+OC      17   ..\data\streamflow.oc
+PCG     18   ..\data\streamflow.pcg
+WEL     19   streamflow.wel
+DATA    20   streamflow.gwmwell
+data(binary) 50  streamflowstate.bin
+data(binary) 51  streamflowheads.bin

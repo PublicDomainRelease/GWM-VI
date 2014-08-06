@@ -1,0 +1,1383 @@
+
+                                  GWM-VI
+    U.S. GEOLOGICAL SURVEY GROUNDWATER MANAGEMENT VERSION INDEPENDENT PROGRAM
+                 Version  1.0.1                                  
+
+
+
+
+ OPENING GWM FILE FOR GWM1 -- GROUNDWATER MANAGEMENT PROCESS
+ INPUT READ FROM UNIT 980
+
+ #DEWATER Sample Problem, GWM file                                                                                                                                                                       
+ #August 12, 2007                                                                                                                                                                                        
+
+ OPENING DECISION-VARIABLE FILE ON UNIT   10:
+ ..\data\dewatermb.decvar                                                                                                                                                                                
+ #DEWATER Sample Problem, DECVAR file
+ #August 14, 2006
+
+ NO. OF FLOW-RATE DECISION VARIABLES (NFVAR)       7
+ NO. OF EXTERNAL DECISION VARIABLES (NEVAR):       0
+ BINARY VARIABLES ARE ACTIVE. NBVAR:               7
+
+ FLOW-RATE VARIABLES: WEL-TYPE
+                                                   FRACTION
+  NUMBER     NAME       TYPE      LAY   ROW   COL   OF FLOW
+ ----------------------------------------------------------
+    1      Q1         WITHDRAWAL     1    7   14    1.0000
+   AVAILABLE IN STRESS PERIODS: 1                                                                                                                       
+
+    2      Q2         WITHDRAWAL     1    7   16    1.0000
+   AVAILABLE IN STRESS PERIODS: 1                                                                                                                       
+
+    3      Q3         WITHDRAWAL     1    8   15    1.0000
+   AVAILABLE IN STRESS PERIODS: 1                                                                                                                       
+
+    4      Q4         WITHDRAWAL     1    9   14    1.0000
+   AVAILABLE IN STRESS PERIODS: 1                                                                                                                       
+
+    5      Q5         WITHDRAWAL     1    9   16    1.0000
+   AVAILABLE IN STRESS PERIODS: 1                                                                                                                       
+
+    6      Q6         WITHDRAWAL     1   11   17    1.0000
+   AVAILABLE IN STRESS PERIODS: 1                                                                                                                       
+
+    7      Q7         WITHDRAWAL     1   13   16    1.0000
+   AVAILABLE IN STRESS PERIODS: 1                                                                                                                       
+
+
+ BINARY VARIABLES:
+                       NUMBER OF             NAME OF
+  NUMBER     NAME  ASSOCIATED VARIABLES  ASSOCIATED VARIABLES
+ -------------------------------------------------------
+
+    1        BV1            1                Q1        
+    2        BV2            1                Q2        
+    3        BV3            1                Q3        
+    4        BV4            1                Q4        
+    5        BV5            1                Q5        
+    6        BV6            1                Q6        
+    7        BV7            1                Q7        
+
+      816 BYTES OF MEMORY ALLOCATED TO STORE DATA FOR DECISION VARIABLES
+
+ CLOSING DECISION-VARIABLE FILE
+
+
+ OPENING OBJECTIVE-FUNCTION FILE ON UNIT   10:
+ ..\data\dewatermb.objfnc                                                                                                                                                                                
+ #DEWATER Sample Problem, OBJFNC file
+ #February 20, 2005
+
+ OBJECTIVE TYPE: MIN   FUNCTION TYPE: WSDV
+
+ NO. OF FLOW-RATE DECISION VARIABLES IN OBJECTIVE FUNCTION (NFVOBJ):    7
+ NO. OF EXTERNAL DECISION VARIABLES IN OBJECTIVE FUNCTION (NEVOBJ):     0
+ NO. OF BINARY DECISION VARIABLES IN OBJECTIVE FUNCTION (NBVOBJ):       7
+ NO. OF STATE VARIABLES IN OBJECTIVE FUNCTION (NSVOBJ):                 0
+
+ OBJECTIVE FUNCTION: (excluding flow duration terms)
+
+ MIN    +  2.00E-02 Q1         +  2.00E-02 Q2         +  2.00E-02 Q3        
+        +  2.00E-02 Q4         +  2.00E-02 Q5         +  2.00E-02 Q6        
+        +  2.00E-02 Q7         +  2.00E+03 BV1        +  2.00E+03 BV2       
+        +  2.00E+03 BV3        +  2.00E+03 BV4        +  2.00E+03 BV5       
+        +  2.00E+03 BV6        +  2.00E+03 BV7       
+
+       56 BYTES OF MEMORY ALLOCATED TO STORE DATA FOR OBJECTIVE-FUNCTION
+
+ CLOSING OBJECTIVE-FUNCTION FILE
+
+
+ OPENING DECISION-VARIABLE CONSTRAINTS FILE ON UNIT   10:
+ ..\data\dewatermb.varcon                                                                                                                                                                                
+ #DEWATER Sample Problem, VARCON file
+ #February 20, 2005
+
+ CAUTION: WELL Q1         HAS A SPECIFIED REFERENCE
+ FLOW RATE (FVREF) THAT IS LESS THAN THE MINIMUM
+ SPECIFIED FLOW RATE (FVMIN).
+
+ CAUTION: WELL Q2         HAS A SPECIFIED REFERENCE
+ FLOW RATE (FVREF) THAT IS LESS THAN THE MINIMUM
+ SPECIFIED FLOW RATE (FVMIN).
+
+ CAUTION: WELL Q3         HAS A SPECIFIED REFERENCE
+ FLOW RATE (FVREF) THAT IS LESS THAN THE MINIMUM
+ SPECIFIED FLOW RATE (FVMIN).
+
+ CAUTION: WELL Q4         HAS A SPECIFIED REFERENCE
+ FLOW RATE (FVREF) THAT IS LESS THAN THE MINIMUM
+ SPECIFIED FLOW RATE (FVMIN).
+
+ CAUTION: WELL Q5         HAS A SPECIFIED REFERENCE
+ FLOW RATE (FVREF) THAT IS LESS THAN THE MINIMUM
+ SPECIFIED FLOW RATE (FVMIN).
+
+ CAUTION: WELL Q6         HAS A SPECIFIED REFERENCE
+ FLOW RATE (FVREF) THAT IS LESS THAN THE MINIMUM
+ SPECIFIED FLOW RATE (FVMIN).
+
+ CAUTION: WELL Q7         HAS A SPECIFIED REFERENCE
+ FLOW RATE (FVREF) THAT IS LESS THAN THE MINIMUM
+ SPECIFIED FLOW RATE (FVMIN).
+
+ FLOW RATE VARIABLES:
+                        MINIMUM        MAXIMUM        REFERENCE
+  NUMBER   NAME         FLOW RATE      FLOW RATE      FLOW RATE
+----------------------------------------------------------------
+    1      Q1           1.000E+02      2.000E+04      0.000E+00
+    2      Q2           1.000E+02      2.000E+04      0.000E+00
+    3      Q3           1.000E+02      2.000E+04      0.000E+00
+    4      Q4           1.000E+02      2.000E+04      0.000E+00
+    5      Q5           1.000E+02      2.000E+04      0.000E+00
+    6      Q6           1.000E+02      2.000E+04      0.000E+00
+    7      Q7           1.000E+02      2.000E+04      0.000E+00
+
+ CLOSING DECISION-VARIABLE CONSTRAINTS FILE
+
+
+ OPENING SUMMATION CONSTRAINTS FILE ON UNIT   10:
+ ..\data\dewatermb.sumcon                                                                                                                                                                                
+ #DEWATER Sample Problem, SUMCON file
+ #February 20, 2005
+
+ NUMBER OF SUMMATION CONSTRAINTS:     1
+
+ SUMMATION CONSTRAINTS:
+
+ Binlower  
+   +  1.00E+00 BV1        +  1.00E+00 BV2        +  1.00E+00 BV3       
+   +  1.00E+00 BV4        +  1.00E+00 BV5        +  1.00E+00 BV6       
+   +  1.00E+00 BV7       
+
+  >=   3.00E+00
+
+       82 BYTES OF MEMORY ALLOCATED TO STORE DATA FOR SUMMATION CONSTRAINTS
+
+ CLOSING SUMMATION CONSTRAINTS FILE
+
+
+ OPENING HEAD CONSTRAINTS FILE ON UNIT   10:
+ ..\data\dewatermb.hedcon                                                                                                                                                                                
+ #DEWATER Sample Problem, HEDCON file
+ #February 20, 2005
+
+ HEAD CONSTRAINTS:
+                     MNW WELLID or         RIGHT-HAND    STRESS
+ NUMBER  NAME        LAY  ROW  COL  TYPE      SIDE       PERIOD
+ ---------------------------------------------------------------
+     1   b_01          1    6   13   <    5.0000E+01         1
+     2   b_02          1    6   15   <    5.0000E+01         1
+     3   b_03          1    6   17   <    5.0000E+01         1
+     4   b_04          1    8   13   <    5.0000E+01         1
+     5   b_05          1    8   17   <    5.0000E+01         1
+     6   b_06          1   10   13   <    5.0000E+01         1
+     7   b_07          1   10   15   <    5.0000E+01         1
+     8   b_08          1   11   16   <    5.0000E+01         1
+     9   b_09          1   14   16   <    5.0000E+01         1
+    10   b_10          1   14   17   <    5.0000E+01         1
+
+      700 BYTES OF MEMORY ALLOCATED TO STORE DATA FOR HEAD CONSTRAINTS
+
+ CLOSING HEAD CONSTRAINTS FILE
+
+
+ OPENING SOLUTION FILE ON UNIT   10:
+ ..\data\dewatermb.soln                                                                                                                                                                                  
+ #DEWATER Sample Problem, SOLN file
+ #February 20, 2005
+
+ SOLNTYP IS LP: GWM WILL COMPLETE A SINGLE ITERATION OF THE LINEAR PROBLEM.
+
+ IRM EQUALS 2: RESPONSE MATRIX WILL BE CALCULATED BY GWM
+ BUT NOT WRITTEN TO FILE
+
+ MAXIMUM NUMBER OF LP ITERATIONS:               1000
+ MAXIMUM NUMBER OF BRANCH AND BOUND ITER:       2000
+
+ PERTURBATION VALUE:                          0.50D+00
+
+ MAXIMUM NUMBER OF PERTURBATION ATTEMPTS:         10
+ PERTURBATION ADJUSTMENT FACTOR (PGFACT):    0.50000
+
+ OUTPUT FROM BRANCH AND BOUND ALGORITHM WILL BE PRINTED.
+
+ CRITMFC SET TO                               0.000D+00
+ GWM WILL ACCEPT FLOW PROCESS RESULTS THAT MEET GWF
+ CONVERGENCE CRITERIA
+
+ BASE PUMPING RATES TAKEN FROM FVREF SPECIFIED IN VARCON INPUT FILE
+ 
+     PROBLEM SIZE
+ 
+  NUMBER OF VARIABLES (INCLUDING SLACKS)          39
+  NUMBER OF CONSTRAINT EQUATIONS                  25
+ 
+
+    24135 BYTES OF MEMORY ALLOCATED FOR RESPONSE MATRIX ALGORITHM
+
+ CLOSING SOLUTION AND OUTPUT FILE
+
+ 
+ Reading input from file: ..\data\dewatermb_pll.gwm
+ CONTROL file: ..\data\dewatermb_pll.ctrl
+ NAM file: ..\data\dewatermb.nam
+---------------------------------------------------------------
+               Solution Algorithm
+---------------------------------------------------------------
+  Begin Solution Algorithm
+    Running Base Flow Process Simulation
+      Status of Simulation-Based Constraints 
+      Constraint Type        Name       Status   Distance To RHS
+      ---------------        ----       ------   ---------------
+      Head Bound             b_01       Not Met       2.1724E+01
+      Head Bound             b_02       Not Met       2.0345E+01
+      Head Bound             b_03       Not Met       1.8966E+01
+      Head Bound             b_04       Not Met       2.1724E+01
+      Head Bound             b_05       Not Met       1.8966E+01
+      Head Bound             b_06       Not Met       2.1724E+01
+      Head Bound             b_07       Not Met       2.0345E+01
+      Head Bound             b_08       Not Met       1.9655E+01
+      Head Bound             b_09       Not Met       1.9655E+01
+      Head Bound             b_10       Not Met       1.8966E+01
+      Summation              Binlower   Not Met       3.0000E+00
+
+  Distance to RHS is the absolute value of the difference between the
+    the right hand side of the constraint and the left side of the
+    constraint evaluated using the current set of decision variable values.
+    
+    Calculating Response Matrix
+      Perturb Flow Variable    1
+       By Perturbation Value: -1.000000E+04
+      Perturb Flow Variable    2
+       By Perturbation Value: -1.000000E+04
+      Perturb Flow Variable    3
+       By Perturbation Value: -1.000000E+04
+      Perturb Flow Variable    4
+       By Perturbation Value: -1.000000E+04
+      Perturb Flow Variable    5
+       By Perturbation Value: -1.000000E+04
+      Perturb Flow Variable    6
+       By Perturbation Value: -1.000000E+04
+      Perturb Flow Variable    7
+       By Perturbation Value: -1.000000E+04
+ 
+      Average Number of Significant Digits in Matrix  1.011429E+01
+    
+    Solving Linear Program
+ REPORT BRANCH AND BOUND ITERATIONS
+ 
+    Feasible Solution Found
+ SUBPROBLEM           1 IS UNFATHOMED - IT IS RELAXED
+    Name          Value       Name          Value       Name          Value
+Flow Variables
+    Q1          0.0000E+00    Q2          0.0000E+00    Q3          2.2370E+03
+    Q4          1.0000E+02    Q5          0.0000E+00    Q6          0.0000E+00
+    Q7          6.7864E+02
+Binary Variables
+    BV1         0.0000E+00    BV2         0.0000E+00    BV3         1.0000E+00
+    BV4         1.0000E+00    BV5         0.0000E+00    BV6         0.0000E+00
+    BV7         1.0000E+00
+    Objective Function =  6.631228E+04
+ 
+    Feasible Solution Found
+ SUBPROBLEM           2 IS UNFATHOMED - IT IS RELAXED
+    Name          Value       Name          Value       Name          Value
+Flow Variables
+    Q1          1.0774E+03    Q2          7.8239E+01    Q3          0.0000E+00
+    Q4          7.6895E+02    Q5          0.0000E+00    Q6          0.0000E+00
+    Q7          9.4108E+02
+Binary Variables
+    BV1         1.0000E+00    BV2         7.8239E-01    BV3         0.0000E+00
+    BV4         1.0000E+00    BV5         0.0000E+00    BV6         0.0000E+00
+    BV7         2.1761E-01
+    Objective Function =  6.331310E+04
+ 
+ NEXT: BRANCH FROM SUBPROBLEM           2
+                 AND VARIABLE           2
+    Feasible Solution Found
+ SUBPROBLEM           3 IS UNFATHOMED - IT IS RELAXED
+    Name          Value       Name          Value       Name          Value
+Flow Variables
+    Q1          1.0262E+03    Q2          0.0000E+00    Q3          2.1719E+02
+    Q4          6.9619E+02    Q5          0.0000E+00    Q6          0.0000E+00
+    Q7          9.2952E+02
+Binary Variables
+    BV1         1.0000E+00    BV2         0.0000E+00    BV3         1.0000E+00
+    BV4         9.7676E-01    BV5         0.0000E+00    BV6         0.0000E+00
+    BV7         2.3238E-02
+    Objective Function =  6.338160E+04
+ 
+    Feasible Solution Found
+ SUBPROBLEM           4 IS UNFATHOMED - IT IS RELAXED
+    Name          Value       Name          Value       Name          Value
+Flow Variables
+    Q1          1.0637E+03    Q2          1.0000E+02    Q3          0.0000E+00
+    Q4          7.6690E+02    Q5          0.0000E+00    Q6          0.0000E+00
+    Q7          9.3792E+02
+Binary Variables
+    BV1         1.0000E+00    BV2         1.0000E+00    BV3         0.0000E+00
+    BV4         1.9172E-02    BV5         0.0000E+00    BV6         0.0000E+00
+    BV7         9.8083E-01
+    Objective Function =  6.337050E+04
+ 
+ NEXT: BRANCH FROM SUBPROBLEM           4
+                 AND VARIABLE           3
+    Feasible Solution Found
+ SUBPROBLEM           5 IS UNFATHOMED - IT IS RELAXED
+    Name          Value       Name          Value       Name          Value
+Flow Variables
+    Q1          1.0637E+03    Q2          1.0000E+02    Q3          0.0000E+00
+    Q4          7.6690E+02    Q5          0.0000E+00    Q6          0.0000E+00
+    Q7          9.3792E+02
+Binary Variables
+    BV1         1.0000E+00    BV2         1.0000E+00    BV3         0.0000E+00
+    BV4         9.7655E-01    BV5         0.0000E+00    BV6         0.0000E+00
+    BV7         2.3448E-02
+    Objective Function =  6.337050E+04
+ 
+    Feasible Solution Found
+ SUBPROBLEM           6 IS UNFATHOMED - IT IS RELAXED
+    Name          Value       Name          Value       Name          Value
+Flow Variables
+    Q1          1.0175E+03    Q2          1.0000E+02    Q3          1.0000E+02
+    Q4          7.3000E+02    Q5          0.0000E+00    Q6          0.0000E+00
+    Q7          9.2736E+02
+Binary Variables
+    BV1         1.0000E+00    BV2         1.0000E+00    BV3         1.0000E+00
+    BV4         1.8250E-02    BV5         0.0000E+00    BV6         0.0000E+00
+    BV7         2.3184E-02
+    Objective Function =  6.357993E+04
+ 
+ NEXT: BRANCH FROM SUBPROBLEM           6
+                 AND VARIABLE           4
+    Feasible Solution Found
+ SUBPROBLEM           7 IS UNFATHOMED - IT IS RELAXED
+    Name          Value       Name          Value       Name          Value
+Flow Variables
+    Q1          1.0297E+02    Q2          1.0000E+02    Q3          2.0785E+03
+    Q4          0.0000E+00    Q5          0.0000E+00    Q6          0.0000E+00
+    Q7          7.1862E+02
+Binary Variables
+    BV1         1.0000E+00    BV2         1.0000E+00    BV3         1.0000E+00
+    BV4         0.0000E+00    BV5         0.0000E+00    BV6         0.0000E+00
+    BV7         1.7966E-02
+    Objective Function =  6.603697E+04
+ 
+    Feasible Solution Found
+ SUBPROBLEM           8 IS UNFATHOMED - IT IS RELAXED
+    Name          Value       Name          Value       Name          Value
+Flow Variables
+    Q1          1.0175E+03    Q2          1.0000E+02    Q3          1.0000E+02
+    Q4          7.3000E+02    Q5          0.0000E+00    Q6          0.0000E+00
+    Q7          9.2736E+02
+Binary Variables
+    BV1         1.0000E+00    BV2         1.0000E+00    BV3         1.0000E+00
+    BV4         1.0000E+00    BV5         0.0000E+00    BV6         0.0000E+00
+    BV7         2.3184E-02
+    Objective Function =  6.554343E+04
+ 
+ NEXT: BRANCH FROM SUBPROBLEM           8
+                 AND VARIABLE           5
+    Feasible Solution Found
+ SUBPROBLEM           9 IS UNFATHOMED - IT IS RELAXED
+    Name          Value       Name          Value       Name          Value
+Flow Variables
+    Q1          1.0175E+03    Q2          1.0000E+02    Q3          1.0000E+02
+    Q4          7.3000E+02    Q5          0.0000E+00    Q6          0.0000E+00
+    Q7          9.2736E+02
+Binary Variables
+    BV1         1.0000E+00    BV2         1.0000E+00    BV3         1.0000E+00
+    BV4         1.0000E+00    BV5         0.0000E+00    BV6         0.0000E+00
+    BV7         2.3184E-02
+    Objective Function =  6.554343E+04
+ 
+    Feasible Solution Found
+ SUBPROBLEM          10 IS UNFATHOMED - IT IS RELAXED
+    Name          Value       Name          Value       Name          Value
+Flow Variables
+    Q1          9.9456E+02    Q2          1.0000E+02    Q3          1.0000E+02
+    Q4          6.8906E+02    Q5          1.0000E+02    Q6          0.0000E+00
+    Q7          9.0162E+02
+Binary Variables
+    BV1         1.0000E+00    BV2         1.0000E+00    BV3         1.0000E+00
+    BV4         1.0000E+00    BV5         1.0000E+00    BV6         0.0000E+00
+    BV7         2.2540E-02
+    Objective Function =  6.774993E+04
+ 
+ NEXT: BRANCH FROM SUBPROBLEM          10
+                 AND VARIABLE           6
+    Feasible Solution Found
+ SUBPROBLEM          11 IS UNFATHOMED - IT IS RELAXED
+    Name          Value       Name          Value       Name          Value
+Flow Variables
+    Q1          9.9456E+02    Q2          1.0000E+02    Q3          1.0000E+02
+    Q4          6.8906E+02    Q5          1.0000E+02    Q6          0.0000E+00
+    Q7          9.0162E+02
+Binary Variables
+    BV1         1.0000E+00    BV2         1.0000E+00    BV3         1.0000E+00
+    BV4         1.0000E+00    BV5         1.0000E+00    BV6         0.0000E+00
+    BV7         2.2540E-02
+    Objective Function =  6.774993E+04
+ 
+    Feasible Solution Found
+ SUBPROBLEM          12 IS UNFATHOMED - IT IS RELAXED
+    Name          Value       Name          Value       Name          Value
+Flow Variables
+    Q1          9.8581E+02    Q2          1.0000E+02    Q3          1.0000E+02
+    Q4          6.6979E+02    Q5          1.0000E+02    Q6          1.0000E+02
+    Q7          8.4038E+02
+Binary Variables
+    BV1         1.0000E+00    BV2         1.0000E+00    BV3         1.0000E+00
+    BV4         1.0000E+00    BV5         1.0000E+00    BV6         1.0000E+00
+    BV7         2.1010E-02
+    Objective Function =  6.996180E+04
+ 
+ NEXT: BRANCH FROM SUBPROBLEM          12
+                 AND VARIABLE           7
+    Feasible Solution Found
+ SUBPROBLEM          13 IS FATHOMED - IT IS INTEGER AND THE NEW BEST SOLUTION
+    Name          Value       Name          Value       Name          Value
+Flow Variables
+    Q1          8.5733E+02    Q2          1.0000E+02    Q3          1.0000E+02
+    Q4          2.9333E+02    Q5          1.0000E+02    Q6          1.6514E+03
+    Q7          0.0000E+00
+Binary Variables
+    BV1         1.0000E+00    BV2         1.0000E+00    BV3         1.0000E+00
+    BV4         1.0000E+00    BV5         1.0000E+00    BV6         1.0000E+00
+    BV7         0.0000E+00
+    Objective Function =  7.404028E+04
+ 
+    Feasible Solution Found
+ SUBPROBLEM          14 IS FATHOMED - IT IS INTEGER AND THE NEW BEST SOLUTION
+    Name          Value       Name          Value       Name          Value
+Flow Variables
+    Q1          9.8581E+02    Q2          1.0000E+02    Q3          1.0000E+02
+    Q4          6.6979E+02    Q5          1.0000E+02    Q6          1.0000E+02
+    Q7          8.4038E+02
+Binary Variables
+    BV1         1.0000E+00    BV2         1.0000E+00    BV3         1.0000E+00
+    BV4         1.0000E+00    BV5         1.0000E+00    BV6         1.0000E+00
+    BV7         1.0000E+00
+    Objective Function =  7.191978E+04
+ 
+ SUBPROBLEM          12 IS FATHOMED - ALREADY BRANCHED FROM IT ONCE
+ NEXT: BRANCH FROM SUBPROBLEM          11
+                 AND VARIABLE           7
+    Feasible Solution Found
+ SUBPROBLEM          15 IS FATHOMED - IT IS INTEGER AND INFERIOR
+    Name          Value       Name          Value       Name          Value
+Flow Variables
+    Q1          1.0000E+02    Q2          1.0000E+02    Q3          1.0000E+02
+    Q4          1.0000E+02    Q5          2.9515E+03    Q6          0.0000E+00
+    Q7          0.0000E+00
+Binary Variables
+    BV1         1.0000E+00    BV2         1.0000E+00    BV3         1.0000E+00
+    BV4         1.0000E+00    BV5         1.0000E+00    BV6         0.0000E+00
+    BV7         0.0000E+00
+    Objective Function =  7.702913E+04
+ 
+    Feasible Solution Found
+ SUBPROBLEM          16 IS FATHOMED - IT IS INTEGER AND THE NEW BEST SOLUTION
+    Name          Value       Name          Value       Name          Value
+Flow Variables
+    Q1          9.9456E+02    Q2          1.0000E+02    Q3          1.0000E+02
+    Q4          6.8906E+02    Q5          1.0000E+02    Q6          0.0000E+00
+    Q7          9.0162E+02
+Binary Variables
+    BV1         1.0000E+00    BV2         1.0000E+00    BV3         1.0000E+00
+    BV4         1.0000E+00    BV5         1.0000E+00    BV6         0.0000E+00
+    BV7         1.0000E+00
+    Objective Function =  6.970485E+04
+ 
+ SUBPROBLEM          11 IS FATHOMED - ALREADY BRANCHED FROM IT ONCE
+ SUBPROBLEM          10 IS FATHOMED - ALREADY BRANCHED FROM IT ONCE
+ NEXT: BRANCH FROM SUBPROBLEM           9
+                 AND VARIABLE           6
+    Feasible Solution Found
+ SUBPROBLEM          17 IS UNFATHOMED - IT IS RELAXED
+    Name          Value       Name          Value       Name          Value
+Flow Variables
+    Q1          1.0175E+03    Q2          1.0000E+02    Q3          1.0000E+02
+    Q4          7.3000E+02    Q5          0.0000E+00    Q6          0.0000E+00
+    Q7          9.2736E+02
+Binary Variables
+    BV1         1.0000E+00    BV2         1.0000E+00    BV3         1.0000E+00
+    BV4         1.0000E+00    BV5         0.0000E+00    BV6         0.0000E+00
+    BV7         2.3184E-02
+    Objective Function =  6.554343E+04
+ 
+    Feasible Solution Found
+ SUBPROBLEM          18 IS UNFATHOMED - IT IS RELAXED
+    Name          Value       Name          Value       Name          Value
+Flow Variables
+    Q1          1.0087E+03    Q2          1.0000E+02    Q3          1.0000E+02
+    Q4          7.1074E+02    Q5          0.0000E+00    Q6          1.0000E+02
+    Q7          8.6613E+02
+Binary Variables
+    BV1         1.0000E+00    BV2         1.0000E+00    BV3         1.0000E+00
+    BV4         1.0000E+00    BV5         0.0000E+00    BV6         1.0000E+00
+    BV7         2.1653E-02
+    Objective Function =  6.775530E+04
+ 
+ NEXT: BRANCH FROM SUBPROBLEM          18
+                 AND VARIABLE           7
+    Feasible Solution Found
+ SUBPROBLEM          19 IS FATHOMED - IT IS INTEGER AND INFERIOR
+    Name          Value       Name          Value       Name          Value
+Flow Variables
+    Q1          8.7651E+02    Q2          1.0000E+02    Q3          1.0000E+02
+    Q4          3.2539E+02    Q5          0.0000E+00    Q6          1.6947E+03
+    Q7          0.0000E+00
+Binary Variables
+    BV1         1.0000E+00    BV2         1.0000E+00    BV3         1.0000E+00
+    BV4         1.0000E+00    BV5         0.0000E+00    BV6         1.0000E+00
+    BV7         0.0000E+00
+    Objective Function =  7.193106E+04
+ 
+    Feasible Solution Found
+ SUBPROBLEM          20 IS FATHOMED - IT IS INTEGER AND INFERIOR
+    Name          Value       Name          Value       Name          Value
+Flow Variables
+    Q1          1.0087E+03    Q2          1.0000E+02    Q3          1.0000E+02
+    Q4          7.1074E+02    Q5          0.0000E+00    Q6          1.0000E+02
+    Q7          8.6613E+02
+Binary Variables
+    BV1         1.0000E+00    BV2         1.0000E+00    BV3         1.0000E+00
+    BV4         1.0000E+00    BV5         0.0000E+00    BV6         1.0000E+00
+    BV7         1.0000E+00
+    Objective Function =  6.971200E+04
+ 
+ SUBPROBLEM          18 IS FATHOMED - ALREADY BRANCHED FROM IT ONCE
+ NEXT: BRANCH FROM SUBPROBLEM          17
+                 AND VARIABLE           7
+    Feasible Solution Found
+ SUBPROBLEM          21 IS FATHOMED - IT IS INTEGER AND INFERIOR
+    Name          Value       Name          Value       Name          Value
+Flow Variables
+    Q1          1.0000E+02    Q2          1.0000E+02    Q3          1.0000E+02
+    Q4          3.2304E+03    Q5          0.0000E+00    Q6          0.0000E+00
+    Q7          0.0000E+00
+Binary Variables
+    BV1         1.0000E+00    BV2         1.0000E+00    BV3         1.0000E+00
+    BV4         1.0000E+00    BV5         0.0000E+00    BV6         0.0000E+00
+    BV7         0.0000E+00
+    Objective Function =  7.860735E+04
+ 
+    Feasible Solution Found
+ SUBPROBLEM          22 IS FATHOMED - IT IS INTEGER AND THE NEW BEST SOLUTION
+    Name          Value       Name          Value       Name          Value
+Flow Variables
+    Q1          1.0175E+03    Q2          1.0000E+02    Q3          1.0000E+02
+    Q4          7.3000E+02    Q5          0.0000E+00    Q6          0.0000E+00
+    Q7          9.2736E+02
+Binary Variables
+    BV1         1.0000E+00    BV2         1.0000E+00    BV3         1.0000E+00
+    BV4         1.0000E+00    BV5         0.0000E+00    BV6         0.0000E+00
+    BV7         1.0000E+00
+    Objective Function =  6.749706E+04
+ 
+ SUBPROBLEM          17 IS FATHOMED - ALREADY BRANCHED FROM IT ONCE
+ SUBPROBLEM           9 IS FATHOMED - ALREADY BRANCHED FROM IT ONCE
+ SUBPROBLEM           8 IS FATHOMED - ALREADY BRANCHED FROM IT ONCE
+ NEXT: BRANCH FROM SUBPROBLEM           7
+                 AND VARIABLE           5
+    Feasible Solution Found
+ SUBPROBLEM          23 IS UNFATHOMED - IT IS RELAXED
+    Name          Value       Name          Value       Name          Value
+Flow Variables
+    Q1          1.0297E+02    Q2          1.0000E+02    Q3          2.0785E+03
+    Q4          0.0000E+00    Q5          0.0000E+00    Q6          0.0000E+00
+    Q7          7.1862E+02
+Binary Variables
+    BV1         1.0000E+00    BV2         1.0000E+00    BV3         1.0000E+00
+    BV4         0.0000E+00    BV5         0.0000E+00    BV6         0.0000E+00
+    BV7         1.7966E-02
+    Objective Function =  6.603697E+04
+ 
+    Feasible Solution Found
+ SUBPROBLEM          24 IS FATHOMED - IT IS RELAXED AND INFERIOR
+    Name          Value       Name          Value       Name          Value
+Flow Variables
+    Q1          1.3133E+02    Q2          1.0000E+02    Q3          1.9675E+03
+    Q4          0.0000E+00    Q5          1.0000E+02    Q6          0.0000E+00
+    Q7          7.0458E+02
+Binary Variables
+    BV1         1.0000E+00    BV2         1.0000E+00    BV3         1.0000E+00
+    BV4         0.0000E+00    BV5         1.0000E+00    BV6         0.0000E+00
+    BV7         1.7615E-02
+    Objective Function =  6.810362E+04
+ 
+ NEXT: BRANCH FROM SUBPROBLEM          23
+                 AND VARIABLE           6
+    Feasible Solution Found
+ SUBPROBLEM          25 IS UNFATHOMED - IT IS RELAXED
+    Name          Value       Name          Value       Name          Value
+Flow Variables
+    Q1          1.0297E+02    Q2          1.0000E+02    Q3          2.0785E+03
+    Q4          0.0000E+00    Q5          0.0000E+00    Q6          0.0000E+00
+    Q7          7.1862E+02
+Binary Variables
+    BV1         1.0000E+00    BV2         1.0000E+00    BV3         1.0000E+00
+    BV4         0.0000E+00    BV5         0.0000E+00    BV6         0.0000E+00
+    BV7         1.7966E-02
+    Objective Function =  6.603697E+04
+ 
+    Feasible Solution Found
+ SUBPROBLEM          26 IS FATHOMED - IT IS RELAXED AND INFERIOR
+    Name          Value       Name          Value       Name          Value
+Flow Variables
+    Q1          1.1835E+02    Q2          1.0000E+02    Q3          2.0262E+03
+    Q4          0.0000E+00    Q5          0.0000E+00    Q6          1.0000E+02
+    Q7          6.6290E+02
+Binary Variables
+    BV1         1.0000E+00    BV2         1.0000E+00    BV3         1.0000E+00
+    BV4         0.0000E+00    BV5         0.0000E+00    BV6         1.0000E+00
+    BV7         1.6572E-02
+    Objective Function =  6.818304E+04
+ 
+ NEXT: BRANCH FROM SUBPROBLEM          25
+                 AND VARIABLE           7
+    Feasible Solution Found
+ SUBPROBLEM          27 IS FATHOMED - IT IS INTEGER AND INFERIOR
+    Name          Value       Name          Value       Name          Value
+Flow Variables
+    Q1          1.0000E+02    Q2          1.0000E+02    Q3          3.4940E+03
+    Q4          0.0000E+00    Q5          0.0000E+00    Q6          0.0000E+00
+    Q7          0.0000E+00
+Binary Variables
+    BV1         1.0000E+00    BV2         1.0000E+00    BV3         1.0000E+00
+    BV4         0.0000E+00    BV5         0.0000E+00    BV6         0.0000E+00
+    BV7         0.0000E+00
+    Objective Function =  7.987934E+04
+ 
+    Feasible Solution Found
+ SUBPROBLEM          28 IS FATHOMED - IT IS INTEGER AND INFERIOR
+    Name          Value       Name          Value       Name          Value
+Flow Variables
+    Q1          1.0297E+02    Q2          1.0000E+02    Q3          2.0785E+03
+    Q4          0.0000E+00    Q5          0.0000E+00    Q6          0.0000E+00
+    Q7          7.1862E+02
+Binary Variables
+    BV1         1.0000E+00    BV2         1.0000E+00    BV3         1.0000E+00
+    BV4         0.0000E+00    BV5         0.0000E+00    BV6         0.0000E+00
+    BV7         1.0000E+00
+    Objective Function =  6.800104E+04
+ 
+ SUBPROBLEM          25 IS FATHOMED - ALREADY BRANCHED FROM IT ONCE
+ SUBPROBLEM          23 IS FATHOMED - ALREADY BRANCHED FROM IT ONCE
+ SUBPROBLEM           7 IS FATHOMED - ALREADY BRANCHED FROM IT ONCE
+ SUBPROBLEM           6 IS FATHOMED - ALREADY BRANCHED FROM IT ONCE
+ NEXT: BRANCH FROM SUBPROBLEM           5
+                 AND VARIABLE           4
+    Feasible Solution Found
+ SUBPROBLEM          29 IS UNFATHOMED - IT IS RELAXED
+    Name          Value       Name          Value       Name          Value
+Flow Variables
+    Q1          6.3435E+02    Q2          1.0000E+02    Q3          0.0000E+00
+    Q4          0.0000E+00    Q5          1.8731E+03    Q6          0.0000E+00
+    Q7          4.5565E+02
+Binary Variables
+    BV1         1.0000E+00    BV2         1.0000E+00    BV3         0.0000E+00
+    BV4         0.0000E+00    BV5         9.8861E-01    BV6         0.0000E+00
+    BV7         1.1391E-02
+    Objective Function =  6.726258E+04
+ 
+    Feasible Solution Found
+ SUBPROBLEM          30 IS UNFATHOMED - IT IS RELAXED
+    Name          Value       Name          Value       Name          Value
+Flow Variables
+    Q1          1.0637E+03    Q2          1.0000E+02    Q3          0.0000E+00
+    Q4          7.6690E+02    Q5          0.0000E+00    Q6          0.0000E+00
+    Q7          9.3792E+02
+Binary Variables
+    BV1         1.0000E+00    BV2         1.0000E+00    BV3         0.0000E+00
+    BV4         1.0000E+00    BV5         0.0000E+00    BV6         0.0000E+00
+    BV7         2.3448E-02
+    Objective Function =  6.341740E+04
+ 
+ NEXT: BRANCH FROM SUBPROBLEM          30
+                 AND VARIABLE           5
+    Feasible Solution Found
+ SUBPROBLEM          31 IS UNFATHOMED - IT IS RELAXED
+    Name          Value       Name          Value       Name          Value
+Flow Variables
+    Q1          1.0637E+03    Q2          1.0000E+02    Q3          0.0000E+00
+    Q4          7.6690E+02    Q5          0.0000E+00    Q6          0.0000E+00
+    Q7          9.3792E+02
+Binary Variables
+    BV1         1.0000E+00    BV2         1.0000E+00    BV3         0.0000E+00
+    BV4         1.0000E+00    BV5         0.0000E+00    BV6         0.0000E+00
+    BV7         2.3448E-02
+    Objective Function =  6.341740E+04
+ 
+    Feasible Solution Found
+ SUBPROBLEM          32 IS UNFATHOMED - IT IS RELAXED
+    Name          Value       Name          Value       Name          Value
+Flow Variables
+    Q1          1.0408E+03    Q2          1.0000E+02    Q3          0.0000E+00
+    Q4          7.2596E+02    Q5          1.0000E+02    Q6          0.0000E+00
+    Q7          9.1217E+02
+Binary Variables
+    BV1         1.0000E+00    BV2         1.0000E+00    BV3         0.0000E+00
+    BV4         1.0000E+00    BV5         1.0000E+00    BV6         0.0000E+00
+    BV7         2.2804E-02
+    Objective Function =  6.562389E+04
+ 
+ NEXT: BRANCH FROM SUBPROBLEM          32
+                 AND VARIABLE           6
+    Feasible Solution Found
+ SUBPROBLEM          33 IS UNFATHOMED - IT IS RELAXED
+    Name          Value       Name          Value       Name          Value
+Flow Variables
+    Q1          1.0408E+03    Q2          1.0000E+02    Q3          0.0000E+00
+    Q4          7.2596E+02    Q5          1.0000E+02    Q6          0.0000E+00
+    Q7          9.1217E+02
+Binary Variables
+    BV1         1.0000E+00    BV2         1.0000E+00    BV3         0.0000E+00
+    BV4         1.0000E+00    BV5         1.0000E+00    BV6         0.0000E+00
+    BV7         2.2804E-02
+    Objective Function =  6.562389E+04
+ 
+    Feasible Solution Found
+ SUBPROBLEM          34 IS FATHOMED - IT IS RELAXED AND INFERIOR
+    Name          Value       Name          Value       Name          Value
+Flow Variables
+    Q1          1.0320E+03    Q2          1.0000E+02    Q3          0.0000E+00
+    Q4          7.0669E+02    Q5          1.0000E+02    Q6          1.0000E+02
+    Q7          8.5094E+02
+Binary Variables
+    BV1         1.0000E+00    BV2         1.0000E+00    BV3         0.0000E+00
+    BV4         1.0000E+00    BV5         1.0000E+00    BV6         1.0000E+00
+    BV7         2.1273E-02
+    Objective Function =  6.783577E+04
+ 
+ NEXT: BRANCH FROM SUBPROBLEM          33
+                 AND VARIABLE           7
+    Feasible Solution Found
+ SUBPROBLEM          35 IS FATHOMED - IT IS INTEGER AND INFERIOR
+    Name          Value       Name          Value       Name          Value
+Flow Variables
+    Q1          1.0000E+02    Q2          1.0000E+02    Q3          0.0000E+00
+    Q4          1.0000E+02    Q5          3.0412E+03    Q6          0.0000E+00
+    Q7          0.0000E+00
+Binary Variables
+    BV1         1.0000E+00    BV2         1.0000E+00    BV3         0.0000E+00
+    BV4         1.0000E+00    BV5         1.0000E+00    BV6         0.0000E+00
+    BV7         0.0000E+00
+    Objective Function =  7.482465E+04
+ 
+    Feasible Solution Found
+ SUBPROBLEM          36 IS FATHOMED - IT IS INTEGER AND INFERIOR
+    Name          Value       Name          Value       Name          Value
+Flow Variables
+    Q1          1.0408E+03    Q2          1.0000E+02    Q3          0.0000E+00
+    Q4          7.2596E+02    Q5          1.0000E+02    Q6          0.0000E+00
+    Q7          9.1217E+02
+Binary Variables
+    BV1         1.0000E+00    BV2         1.0000E+00    BV3         0.0000E+00
+    BV4         1.0000E+00    BV5         1.0000E+00    BV6         0.0000E+00
+    BV7         1.0000E+00
+    Objective Function =  6.757829E+04
+ 
+ SUBPROBLEM          33 IS FATHOMED - ALREADY BRANCHED FROM IT ONCE
+ SUBPROBLEM          32 IS FATHOMED - ALREADY BRANCHED FROM IT ONCE
+ NEXT: BRANCH FROM SUBPROBLEM          31
+                 AND VARIABLE           6
+    Feasible Solution Found
+ SUBPROBLEM          37 IS UNFATHOMED - IT IS RELAXED
+    Name          Value       Name          Value       Name          Value
+Flow Variables
+    Q1          1.0637E+03    Q2          1.0000E+02    Q3          0.0000E+00
+    Q4          7.6690E+02    Q5          0.0000E+00    Q6          0.0000E+00
+    Q7          9.3792E+02
+Binary Variables
+    BV1         1.0000E+00    BV2         1.0000E+00    BV3         0.0000E+00
+    BV4         1.0000E+00    BV5         0.0000E+00    BV6         0.0000E+00
+    BV7         2.3448E-02
+    Objective Function =  6.341740E+04
+ 
+    Feasible Solution Found
+ SUBPROBLEM          38 IS UNFATHOMED - IT IS RELAXED
+    Name          Value       Name          Value       Name          Value
+Flow Variables
+    Q1          1.0550E+03    Q2          1.0000E+02    Q3          0.0000E+00
+    Q4          7.4763E+02    Q5          0.0000E+00    Q6          1.0000E+02
+    Q7          8.7668E+02
+Binary Variables
+    BV1         1.0000E+00    BV2         1.0000E+00    BV3         0.0000E+00
+    BV4         1.0000E+00    BV5         0.0000E+00    BV6         1.0000E+00
+    BV7         2.1917E-02
+    Objective Function =  6.562927E+04
+ 
+ NEXT: BRANCH FROM SUBPROBLEM          38
+                 AND VARIABLE           7
+    Feasible Solution Found
+ SUBPROBLEM          39 IS FATHOMED - IT IS INTEGER AND INFERIOR
+    Name          Value       Name          Value       Name          Value
+Flow Variables
+    Q1          9.2120E+02    Q2          1.0000E+02    Q3          0.0000E+00
+    Q4          3.5870E+02    Q5          0.0000E+00    Q6          1.7123E+03
+    Q7          0.0000E+00
+Binary Variables
+    BV1         1.0000E+00    BV2         1.0000E+00    BV3         0.0000E+00
+    BV4         1.0000E+00    BV5         0.0000E+00    BV6         1.0000E+00
+    BV7         0.0000E+00
+    Objective Function =  6.984428E+04
+ 
+    Feasible Solution Found
+ SUBPROBLEM          40 IS FATHOMED - IT IS INTEGER AND INFERIOR
+    Name          Value       Name          Value       Name          Value
+Flow Variables
+    Q1          1.0550E+03    Q2          1.0000E+02    Q3          0.0000E+00
+    Q4          7.4763E+02    Q5          0.0000E+00    Q6          1.0000E+02
+    Q7          8.7668E+02
+Binary Variables
+    BV1         1.0000E+00    BV2         1.0000E+00    BV3         0.0000E+00
+    BV4         1.0000E+00    BV5         0.0000E+00    BV6         1.0000E+00
+    BV7         1.0000E+00
+    Objective Function =  6.758544E+04
+ 
+ SUBPROBLEM          38 IS FATHOMED - ALREADY BRANCHED FROM IT ONCE
+ NEXT: BRANCH FROM SUBPROBLEM          37
+                 AND VARIABLE           7
+    Feasible Solution Found
+ SUBPROBLEM          41 IS FATHOMED - IT IS INTEGER AND INFERIOR
+    Name          Value       Name          Value       Name          Value
+Flow Variables
+    Q1          1.0000E+02    Q2          1.0000E+02    Q3          0.0000E+00
+    Q4          3.3263E+03    Q5          0.0000E+00    Q6          0.0000E+00
+    Q7          0.0000E+00
+Binary Variables
+    BV1         1.0000E+00    BV2         1.0000E+00    BV3         0.0000E+00
+    BV4         1.0000E+00    BV5         0.0000E+00    BV6         0.0000E+00
+    BV7         0.0000E+00
+    Objective Function =  7.652634E+04
+ 
+    Feasible Solution Found
+ SUBPROBLEM           1 IS FATHOMED - IT IS RELAXED AND INFERIOR
+ SUBPROBLEM          29 IS FATHOMED - IT IS RELAXED AND INFERIOR
+ SUBPROBLEM          42 IS FATHOMED - IT IS INTEGER AND THE NEW BEST SOLUTION
+    Name          Value       Name          Value       Name          Value
+Flow Variables
+    Q1          1.0637E+03    Q2          1.0000E+02    Q3          0.0000E+00
+    Q4          7.6690E+02    Q5          0.0000E+00    Q6          0.0000E+00
+    Q7          9.3792E+02
+Binary Variables
+    BV1         1.0000E+00    BV2         1.0000E+00    BV3         0.0000E+00
+    BV4         1.0000E+00    BV5         0.0000E+00    BV6         0.0000E+00
+    BV7         1.0000E+00
+    Objective Function =  6.537050E+04
+ 
+ SUBPROBLEM          37 IS FATHOMED - ALREADY BRANCHED FROM IT ONCE
+ SUBPROBLEM          31 IS FATHOMED - ALREADY BRANCHED FROM IT ONCE
+ SUBPROBLEM          30 IS FATHOMED - ALREADY BRANCHED FROM IT ONCE
+ SUBPROBLEM           5 IS FATHOMED - ALREADY BRANCHED FROM IT ONCE
+ SUBPROBLEM           4 IS FATHOMED - ALREADY BRANCHED FROM IT ONCE
+ NEXT: BRANCH FROM SUBPROBLEM           3
+                 AND VARIABLE           3
+    Feasible Solution Found
+ SUBPROBLEM          43 IS UNFATHOMED - IT IS RELAXED
+    Name          Value       Name          Value       Name          Value
+Flow Variables
+    Q1          1.0870E+03    Q2          0.0000E+00    Q3          0.0000E+00
+    Q4          7.0569E+02    Q5          1.7254E+02    Q6          0.0000E+00
+    Q7          9.0801E+02
+Binary Variables
+    BV1         1.0000E+00    BV2         0.0000E+00    BV3         0.0000E+00
+    BV4         9.7730E-01    BV5         1.0000E+00    BV6         0.0000E+00
+    BV7         2.2700E-02
+    Objective Function =  6.346522E+04
+ 
+    Feasible Solution Found
+ SUBPROBLEM          44 IS UNFATHOMED - IT IS RELAXED
+    Name          Value       Name          Value       Name          Value
+Flow Variables
+    Q1          1.0262E+03    Q2          0.0000E+00    Q3          2.1719E+02
+    Q4          6.9619E+02    Q5          0.0000E+00    Q6          0.0000E+00
+    Q7          9.2952E+02
+Binary Variables
+    BV1         1.0000E+00    BV2         0.0000E+00    BV3         1.0000E+00
+    BV4         9.7676E-01    BV5         0.0000E+00    BV6         0.0000E+00
+    BV7         2.3238E-02
+    Objective Function =  6.338160E+04
+ 
+ NEXT: BRANCH FROM SUBPROBLEM          44
+                 AND VARIABLE           4
+    Feasible Solution Found
+ SUBPROBLEM          45 IS FATHOMED - IT IS RELAXED AND INFERIOR
+    Name          Value       Name          Value       Name          Value
+Flow Variables
+    Q1          1.5402E+02    Q2          0.0000E+00    Q3          2.1040E+03
+    Q4          0.0000E+00    Q5          0.0000E+00    Q6          0.0000E+00
+    Q7          7.3045E+02
+Binary Variables
+    BV1         1.0000E+00    BV2         0.0000E+00    BV3         1.0000E+00
+    BV4         0.0000E+00    BV5         0.0000E+00    BV6         0.0000E+00
+    BV7         1.0000E+00
+    Objective Function =  6.576960E+04
+ 
+    Feasible Solution Found
+ SUBPROBLEM          46 IS UNFATHOMED - IT IS RELAXED
+    Name          Value       Name          Value       Name          Value
+Flow Variables
+    Q1          1.0262E+03    Q2          0.0000E+00    Q3          2.1719E+02
+    Q4          6.9619E+02    Q5          0.0000E+00    Q6          0.0000E+00
+    Q7          9.2952E+02
+Binary Variables
+    BV1         1.0000E+00    BV2         0.0000E+00    BV3         1.0000E+00
+    BV4         1.0000E+00    BV5         0.0000E+00    BV6         0.0000E+00
+    BV7         2.3238E-02
+    Objective Function =  6.342807E+04
+ 
+ NEXT: BRANCH FROM SUBPROBLEM          46
+                 AND VARIABLE           5
+    Feasible Solution Found
+ SUBPROBLEM          47 IS UNFATHOMED - IT IS RELAXED
+    Name          Value       Name          Value       Name          Value
+Flow Variables
+    Q1          1.0262E+03    Q2          0.0000E+00    Q3          2.1719E+02
+    Q4          6.9619E+02    Q5          0.0000E+00    Q6          0.0000E+00
+    Q7          9.2952E+02
+Binary Variables
+    BV1         1.0000E+00    BV2         0.0000E+00    BV3         1.0000E+00
+    BV4         1.0000E+00    BV5         0.0000E+00    BV6         0.0000E+00
+    BV7         2.3238E-02
+    Objective Function =  6.342807E+04
+ 
+    Feasible Solution Found
+ SUBPROBLEM          48 IS FATHOMED - IT IS RELAXED AND INFERIOR
+    Name          Value       Name          Value       Name          Value
+Flow Variables
+    Q1          1.0574E+03    Q2          0.0000E+00    Q3          1.0000E+02
+    Q4          6.9849E+02    Q5          1.0000E+02    Q6          0.0000E+00
+    Q7          9.1614E+02
+Binary Variables
+    BV1         1.0000E+00    BV2         0.0000E+00    BV3         1.0000E+00
+    BV4         1.0000E+00    BV5         1.0000E+00    BV6         0.0000E+00
+    BV7         2.2903E-02
+    Objective Function =  6.548688E+04
+ 
+ NEXT: BRANCH FROM SUBPROBLEM          47
+                 AND VARIABLE           6
+    Feasible Solution Found
+ SUBPROBLEM          49 IS UNFATHOMED - IT IS RELAXED
+    Name          Value       Name          Value       Name          Value
+Flow Variables
+    Q1          1.0262E+03    Q2          0.0000E+00    Q3          2.1719E+02
+    Q4          6.9619E+02    Q5          0.0000E+00    Q6          0.0000E+00
+    Q7          9.2952E+02
+Binary Variables
+    BV1         1.0000E+00    BV2         0.0000E+00    BV3         1.0000E+00
+    BV4         1.0000E+00    BV5         0.0000E+00    BV6         0.0000E+00
+    BV7         2.3238E-02
+    Objective Function =  6.342807E+04
+ 
+    Feasible Solution Found
+ SUBPROBLEM          50 IS FATHOMED - IT IS RELAXED AND INFERIOR
+    Name          Value       Name          Value       Name          Value
+Flow Variables
+    Q1          1.0500E+03    Q2          0.0000E+00    Q3          1.4678E+02
+    Q4          7.0290E+02    Q5          0.0000E+00    Q6          1.0000E+02
+    Q7          8.7571E+02
+Binary Variables
+    BV1         1.0000E+00    BV2         0.0000E+00    BV3         1.0000E+00
+    BV4         1.0000E+00    BV5         0.0000E+00    BV6         1.0000E+00
+    BV7         2.1893E-02
+    Objective Function =  6.555122E+04
+ 
+ NEXT: BRANCH FROM SUBPROBLEM          49
+                 AND VARIABLE           7
+    Feasible Solution Found
+ SUBPROBLEM          51 IS FATHOMED - IT IS INTEGER AND INFERIOR
+    Name          Value       Name          Value       Name          Value
+Flow Variables
+    Q1          1.0000E+02    Q2          0.0000E+00    Q3          1.0000E+02
+    Q4          3.3204E+03    Q5          0.0000E+00    Q6          0.0000E+00
+    Q7          0.0000E+00
+Binary Variables
+    BV1         1.0000E+00    BV2         0.0000E+00    BV3         1.0000E+00
+    BV4         1.0000E+00    BV5         0.0000E+00    BV6         0.0000E+00
+    BV7         0.0000E+00
+    Objective Function =  7.640842E+04
+ 
+    Feasible Solution Found
+ SUBPROBLEM          52 IS FATHOMED - IT IS INTEGER AND INFERIOR
+    Name          Value       Name          Value       Name          Value
+Flow Variables
+    Q1          1.0262E+03    Q2          0.0000E+00    Q3          2.1719E+02
+    Q4          6.9619E+02    Q5          0.0000E+00    Q6          0.0000E+00
+    Q7          9.2952E+02
+Binary Variables
+    BV1         1.0000E+00    BV2         0.0000E+00    BV3         1.0000E+00
+    BV4         1.0000E+00    BV5         0.0000E+00    BV6         0.0000E+00
+    BV7         1.0000E+00
+    Objective Function =  6.538160E+04
+ 
+ SUBPROBLEM          49 IS FATHOMED - ALREADY BRANCHED FROM IT ONCE
+ SUBPROBLEM          47 IS FATHOMED - ALREADY BRANCHED FROM IT ONCE
+ SUBPROBLEM          46 IS FATHOMED - ALREADY BRANCHED FROM IT ONCE
+ SUBPROBLEM          44 IS FATHOMED - ALREADY BRANCHED FROM IT ONCE
+ NEXT: BRANCH FROM SUBPROBLEM          43
+                 AND VARIABLE           4
+    Feasible Solution Found
+ SUBPROBLEM          53 IS FATHOMED - IT IS RELAXED AND INFERIOR
+    Name          Value       Name          Value       Name          Value
+Flow Variables
+    Q1          6.9193E+02    Q2          0.0000E+00    Q3          0.0000E+00
+    Q4          0.0000E+00    Q5          1.8962E+03    Q6          0.0000E+00
+    Q7          4.6424E+02
+Binary Variables
+    BV1         1.0000E+00    BV2         0.0000E+00    BV3         0.0000E+00
+    BV4         0.0000E+00    BV5         1.0000E+00    BV6         0.0000E+00
+    BV7         1.0000E+00
+    Objective Function =  6.704664E+04
+ 
+    Feasible Solution Found
+ SUBPROBLEM          54 IS UNFATHOMED - IT IS RELAXED
+    Name          Value       Name          Value       Name          Value
+Flow Variables
+    Q1          1.0870E+03    Q2          0.0000E+00    Q3          0.0000E+00
+    Q4          7.0569E+02    Q5          1.7254E+02    Q6          0.0000E+00
+    Q7          9.0801E+02
+Binary Variables
+    BV1         1.0000E+00    BV2         0.0000E+00    BV3         0.0000E+00
+    BV4         1.0000E+00    BV5         9.7730E-01    BV6         0.0000E+00
+    BV7         2.2700E-02
+    Objective Function =  6.346522E+04
+ 
+ NEXT: BRANCH FROM SUBPROBLEM          54
+                 AND VARIABLE           5
+    Feasible Solution Found
+ SUBPROBLEM          55 IS UNFATHOMED - IT IS RELAXED
+    Name          Value       Name          Value       Name          Value
+Flow Variables
+    Q1          1.2425E+03    Q2          0.0000E+00    Q3          0.0000E+00
+    Q4          6.9415E+02    Q5          0.0000E+00    Q6          0.0000E+00
+    Q7          9.4327E+02
+Binary Variables
+    BV1         1.0000E+00    BV2         0.0000E+00    BV3         0.0000E+00
+    BV4         1.0000E+00    BV5         0.0000E+00    BV6         0.0000E+00
+    BV7         1.0000E+00
+    Objective Function =  6.359811E+04
+ 
+    Feasible Solution Found
+ SUBPROBLEM          56 IS UNFATHOMED - IT IS RELAXED
+    Name          Value       Name          Value       Name          Value
+Flow Variables
+    Q1          1.0870E+03    Q2          0.0000E+00    Q3          0.0000E+00
+    Q4          7.0569E+02    Q5          1.7254E+02    Q6          0.0000E+00
+    Q7          9.0801E+02
+Binary Variables
+    BV1         1.0000E+00    BV2         0.0000E+00    BV3         0.0000E+00
+    BV4         1.0000E+00    BV5         1.0000E+00    BV6         0.0000E+00
+    BV7         2.2700E-02
+    Objective Function =  6.351062E+04
+ 
+ NEXT: BRANCH FROM SUBPROBLEM          56
+                 AND VARIABLE           6
+    Feasible Solution Found
+ SUBPROBLEM          57 IS UNFATHOMED - IT IS RELAXED
+    Name          Value       Name          Value       Name          Value
+Flow Variables
+    Q1          1.0870E+03    Q2          0.0000E+00    Q3          0.0000E+00
+    Q4          7.0569E+02    Q5          1.7254E+02    Q6          0.0000E+00
+    Q7          9.0801E+02
+Binary Variables
+    BV1         1.0000E+00    BV2         0.0000E+00    BV3         0.0000E+00
+    BV4         1.0000E+00    BV5         1.0000E+00    BV6         0.0000E+00
+    BV7         2.2700E-02
+    Objective Function =  6.351062E+04
+ 
+    Feasible Solution Found
+ SUBPROBLEM          58 IS FATHOMED - IT IS RELAXED AND INFERIOR
+    Name          Value       Name          Value       Name          Value
+Flow Variables
+    Q1          1.0911E+03    Q2          0.0000E+00    Q3          0.0000E+00
+    Q4          7.0932E+02    Q5          1.1661E+02    Q6          1.0000E+02
+    Q7          8.6118E+02
+Binary Variables
+    BV1         1.0000E+00    BV2         0.0000E+00    BV3         0.0000E+00
+    BV4         1.0000E+00    BV5         1.0000E+00    BV6         1.0000E+00
+    BV7         2.1529E-02
+    Objective Function =  6.560701E+04
+ 
+ NEXT: BRANCH FROM SUBPROBLEM          57
+                 AND VARIABLE           7
+    Feasible Solution Found
+ SUBPROBLEM          59 IS FATHOMED - IT IS INTEGER AND INFERIOR
+    Name          Value       Name          Value       Name          Value
+Flow Variables
+    Q1          1.0000E+02    Q2          0.0000E+00    Q3          0.0000E+00
+    Q4          1.0000E+02    Q5          3.1242E+03    Q6          0.0000E+00
+    Q7          0.0000E+00
+Binary Variables
+    BV1         1.0000E+00    BV2         0.0000E+00    BV3         0.0000E+00
+    BV4         1.0000E+00    BV5         1.0000E+00    BV6         0.0000E+00
+    BV7         0.0000E+00
+    Objective Function =  7.248337E+04
+ 
+    Feasible Solution Found
+ SUBPROBLEM          60 IS FATHOMED - IT IS INTEGER AND INFERIOR
+    Name          Value       Name          Value       Name          Value
+Flow Variables
+    Q1          1.0870E+03    Q2          0.0000E+00    Q3          0.0000E+00
+    Q4          7.0569E+02    Q5          1.7254E+02    Q6          0.0000E+00
+    Q7          9.0801E+02
+Binary Variables
+    BV1         1.0000E+00    BV2         0.0000E+00    BV3         0.0000E+00
+    BV4         1.0000E+00    BV5         1.0000E+00    BV6         0.0000E+00
+    BV7         1.0000E+00
+    Objective Function =  6.546522E+04
+ 
+ SUBPROBLEM          57 IS FATHOMED - ALREADY BRANCHED FROM IT ONCE
+ SUBPROBLEM          56 IS FATHOMED - ALREADY BRANCHED FROM IT ONCE
+ NEXT: BRANCH FROM SUBPROBLEM          55
+                 AND VARIABLE           6
+    Feasible Solution Found
+ SUBPROBLEM          61 IS UNFATHOMED - IT IS RELAXED
+    Name          Value       Name          Value       Name          Value
+Flow Variables
+    Q1          1.2425E+03    Q2          0.0000E+00    Q3          0.0000E+00
+    Q4          6.9415E+02    Q5          0.0000E+00    Q6          0.0000E+00
+    Q7          9.4327E+02
+Binary Variables
+    BV1         1.0000E+00    BV2         0.0000E+00    BV3         0.0000E+00
+    BV4         1.0000E+00    BV5         0.0000E+00    BV6         0.0000E+00
+    BV7         1.0000E+00
+    Objective Function =  6.359811E+04
+ 
+    Feasible Solution Found
+ SUBPROBLEM          62 IS UNFATHOMED - IT IS RELAXED
+    Name          Value       Name          Value       Name          Value
+Flow Variables
+    Q1          1.1962E+03    Q2          0.0000E+00    Q3          0.0000E+00
+    Q4          7.0152E+02    Q5          0.0000E+00    Q6          1.0000E+02
+    Q7          8.8501E+02
+Binary Variables
+    BV1         1.0000E+00    BV2         0.0000E+00    BV3         0.0000E+00
+    BV4         1.0000E+00    BV5         0.0000E+00    BV6         1.0000E+00
+    BV7         2.2125E-02
+    Objective Function =  6.369801E+04
+ 
+ NEXT: BRANCH FROM SUBPROBLEM          62
+                 AND VARIABLE           7
+    Feasible Solution Found
+ SUBPROBLEM          63 IS FATHOMED - IT IS INTEGER AND INFERIOR
+    Name          Value       Name          Value       Name          Value
+Flow Variables
+    Q1          9.8201E+02    Q2          0.0000E+00    Q3          0.0000E+00
+    Q4          3.6373E+02    Q5          0.0000E+00    Q6          1.7358E+03
+    Q7          0.0000E+00
+Binary Variables
+    BV1         1.0000E+00    BV2         0.0000E+00    BV3         0.0000E+00
+    BV4         1.0000E+00    BV5         0.0000E+00    BV6         1.0000E+00
+    BV7         0.0000E+00
+    Objective Function =  6.762974E+04
+ 
+    Feasible Solution Found
+ SUBPROBLEM          64 IS FATHOMED - IT IS INTEGER AND INFERIOR
+    Name          Value       Name          Value       Name          Value
+Flow Variables
+    Q1          1.1962E+03    Q2          0.0000E+00    Q3          0.0000E+00
+    Q4          7.0152E+02    Q5          0.0000E+00    Q6          1.0000E+02
+    Q7          8.8501E+02
+Binary Variables
+    BV1         1.0000E+00    BV2         0.0000E+00    BV3         0.0000E+00
+    BV4         1.0000E+00    BV5         0.0000E+00    BV6         1.0000E+00
+    BV7         1.0000E+00
+    Objective Function =  6.565376E+04
+ 
+ SUBPROBLEM          62 IS FATHOMED - ALREADY BRANCHED FROM IT ONCE
+ NEXT: BRANCH FROM SUBPROBLEM          61
+                 AND VARIABLE           7
+ SUBPROBLEM          65 IS FATHOMED - IT IS INFEASIBLE
+    Feasible Solution Found
+ SUBPROBLEM          55 IS FATHOMED - IT IS RELAXED AND INFERIOR
+ SUBPROBLEM          61 IS FATHOMED - IT IS RELAXED AND INFERIOR
+ SUBPROBLEM          66 IS FATHOMED - IT IS INTEGER AND THE NEW BEST SOLUTION
+    Name          Value       Name          Value       Name          Value
+Flow Variables
+    Q1          1.2425E+03    Q2          0.0000E+00    Q3          0.0000E+00
+    Q4          6.9415E+02    Q5          0.0000E+00    Q6          0.0000E+00
+    Q7          9.4327E+02
+Binary Variables
+    BV1         1.0000E+00    BV2         0.0000E+00    BV3         0.0000E+00
+    BV4         1.0000E+00    BV5         0.0000E+00    BV6         0.0000E+00
+    BV7         1.0000E+00
+    Objective Function =  6.359811E+04
+ 
+ SUBPROBLEM          54 IS FATHOMED - ALREADY BRANCHED FROM IT ONCE
+ SUBPROBLEM          43 IS FATHOMED - ALREADY BRANCHED FROM IT ONCE
+ SUBPROBLEM           3 IS FATHOMED - ALREADY BRANCHED FROM IT ONCE
+ SUBPROBLEM           2 IS FATHOMED - ALREADY BRANCHED FROM IT ONCE
+ 
+          66 RELAXED PROBLEMS WERE SOLVED.
+    Feasible Solution Found
+  Optimal Solution Found
+
+----------------------------------------------------------------------
+               Groundwater Management Solution
+----------------------------------------------------------------------
+
+       OPTIMAL SOLUTION FOUND 
+
+       OPTIMAL RATES FOR EACH FLOW VARIABLE 
+       ---------------------------------------
+Variable           Withdrawal          Injection           Contribution
+Name               Rate                Rate                To Objective
+----------         --------------      ------------        ------------
+ Q1                1.242483E+03                            2.484966E+04
+ Q2                0.000000E+00                            0.000000E+00
+ Q3                0.000000E+00                            0.000000E+00
+ Q4                6.941515E+02                            1.388303E+04
+ Q5                0.000000E+00                            0.000000E+00
+ Q6                0.000000E+00                            0.000000E+00
+ Q7                9.432707E+02                            1.886541E+04
+                   ------------        ------------        ------------
+TOTALS             2.879905E+03        0.000000E+00        5.759811E+04
+
+       OPTIMAL VALUES FOR EACH BINARY VARIABLE 
+       ---------------------------------------
+Variable                                                   Contribution
+Name               Value                                   To Objective
+----------         ------------                            ------------
+ BV1                   1                                   2.000000E+03
+ BV2                   0                                   0.000000E+00
+ BV3                   0                                   0.000000E+00
+ BV4                   1                                   2.000000E+03
+ BV5                   0                                   0.000000E+00
+ BV6                   0                                   0.000000E+00
+ BV7                   1                                   2.000000E+03
+                   ------------                            ------------
+TOTALS                 3                                   6.000000E+03
+
+
+       OBJECTIVE FUNCTION VALUE                            6.359811E+04
+
+       BINDING CONSTRAINTS 
+Constraint Type        Name     Status      Shadow Price
+---------------        ----     ------      ------------
+Head Bound             b_03     Binding     -1.5521E+03
+Head Bound             b_06     Binding     -4.8538E+02
+Head Bound             b_10     Binding     -9.2893E+02
+Summation              Binlower Binding    Not Available
+
+  Binding constraint and range analysis values are determined from the linear
+    program and based on the response matrix approximation of the flow-process.
+ 
+       RANGE ANALYSIS 
+
+
+       Constraint Ranges
+
+  Lower/Upper Bound are the values of the RHS beyond which basis will change.
+    Leaving is the variable which will leave the basis. 
+    Entering is the variable which will enter the basis.
+    If the entering or leaving variable is a constraint name,
+      then the constraint slack variable is active
+
+Constraint                Original      Lower/Upper
+Name        Slack         RHS           Bound            Entering    Leaving
+----------  ----------    ----------    ----------       ----------  ----------
+b_01        5.2251E-01    5.0000E+01    4.9477E+01       Q5          b_01      
+                                          Infinity       ----- No Change -----
+
+b_02        2.4082E+00    5.0000E+01    4.7592E+01       Q5          b_02      
+                                          Infinity       ----- No Change -----
+
+b_03        0.0000E+00    5.0000E+01    4.7711E+01       b_06        NA        
+                                        5.0317E+01       Q5          b_01      
+
+b_04        2.3850E+00    5.0000E+01    4.7615E+01       Q5          b_04      
+                                          Infinity       ----- No Change -----
+
+b_05        1.0416E+00    5.0000E+01    4.8958E+01       Q6          b_05      
+                                          Infinity       ----- No Change -----
+
+b_06        0.0000E+00    5.0000E+01    4.7939E+01       Q5          b_01      
+                                        5.1811E+01       b_06        NA        
+
+b_07        2.5491E+00    5.0000E+01    4.7451E+01       Q6          b_07      
+                                          Infinity       ----- No Change -----
+
+b_08        1.8244E+00    5.0000E+01    4.8176E+01       Q6          b_08      
+                                          Infinity       ----- No Change -----
+
+b_09        1.0201E+00    5.0000E+01    4.8980E+01       b_10        b_09      
+                                          Infinity       ----- No Change -----
+
+b_10        0.0000E+00    5.0000E+01    4.7205E+01       Q5          b_01      
+                                        5.0855E+01       b_10        b_09      
+
+
+
+       Objective-Function Coefficient Ranges 
+
+  Lower/Upper Bound are the values of the coefficients beyond which basis will change.
+    Leaving is the variable which will leave the basis. 
+    Entering is the variable which will enter the basis.
+    If the entering or leaving variable is a constraint name,
+      then the constraint slack variable is active
+    Basic variables are shown with zero reduced cost
+
+Variable    Reduced       Original      Lower/Upper
+Name        Cost          Coefficient   Bound            Entering    Leaving
+----------  ----------    ----------    ----------       ----------  ----------
+Q1          0.0000E+00    2.0000E+01    1.9145E+01       Q5          Q5        
+                                        2.1201E+01       Q6          Q6        
+
+Q2         -3.6428E+00    2.0000E+01      Infinity       ----- No Change -----
+                                        2.3643E+01       Q2          Q2        
+
+Q3         -9.9689E-01    2.0000E+01      Infinity       ----- No Change -----
+                                        2.0997E+01       Q3          Q3        
+
+Q4          0.0000E+00    2.0000E+01    1.8521E+01       b_06        b_01      
+                                        2.3810E+01       Q2          Q2        
+
+Q5         -7.7019E-01    2.0000E+01      Infinity       ----- No Change -----
+                                        2.0770E+01       Q5          Q5        
+
+Q6          5.5650E-01    2.0000E+01    1.9443E+01       Q6          Q6        
+                                          Infinity       ----- No Change -----
+
+Q7          0.0000E+00    2.0000E+01    1.6231E+01       Q5          Q5        
+                                        2.0955E+01       Q6          Q6        
+
+---------------------------------------------------------------
+         Final Flow Process Simulation
+---------------------------------------------------------------
+  Running Final Flow Process Simulation
+    using Optimal Flow Variable Rates 
+    
+      Status of Simulation-Based Constraints 
+        Using Optimal Flow Rate Variable Values
+
+                                           Simulated    Specified
+                                            By Flow        in
+      Constraint Type        Name           Process    Constraints   Difference
+      ---------------        ----          ----------   ----------   ----------
+      Head Bound             b_01          4.9477E+01 < 5.0000E+01  -5.2251E-01
+      Head Bound             b_02          4.7592E+01 < 5.0000E+01  -2.4082E+00
+      Head Bound             b_03          5.0000E+01 < 5.0000E+01   1.9778E-09
+      Head Bound             b_04          4.7615E+01 < 5.0000E+01  -2.3850E+00
+      Head Bound             b_05          4.8958E+01 < 5.0000E+01  -1.0416E+00
+      Head Bound             b_06          5.0000E+01 < 5.0000E+01  -9.4735E-10
+      Head Bound             b_07          4.7451E+01 < 5.0000E+01  -2.5491E+00
+      Head Bound             b_08          4.8176E+01 < 5.0000E+01  -1.8244E+00
+      Head Bound             b_09          4.8980E+01 < 5.0000E+01  -1.0201E+00
+      Head Bound             b_10          5.0000E+01 < 5.0000E+01  -2.8722E-09
+      Summation              Binlower      3.0000E+00 > 3.0000E+00   0.0000E+00
+
+  Difference is computed by subtracting right hand side of the constraint 
+    from the left side of the constraint.
+  Precision limitations and nonlinear response may cause the 
+    values of the binding constraints computed directly by the flow process 
+    to differ from those computed using the linear program.  
+
+ Run end date and time (yyyy/mm/dd hh:mm:ss): 2014/08/11 15:13:09
+ Elapsed run time:  6.679 Seconds
+

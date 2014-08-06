@@ -1,0 +1,9 @@
+#MNW-SUPPLY Sample Problem, VARCON file
+#January 2012
+ 1                         #1-IPRN
+ Qm1		0	2d4	0	 #2-FVNAME FVMIN FVMAX FVREF
+ Qm2		0	4d5	0		
+ Qm3		0	6d5	0	
+ Qm4		0	4d5	0	
+ Qm5		0	2d4	0
+ Qm6		0	4d5	0

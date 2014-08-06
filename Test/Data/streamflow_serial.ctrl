@@ -1,0 +1,17 @@
+BEGIN Options
+  Verbose = 3
+  MessageFile = streamflow_messages.txt
+END Options
+
+BEGIN Simulation
+  SimCommand = "..\..\bin\mf2005dbl ..\data\streamflow.nam"
+END Simulation
+
+BEGIN Model_Command_Lines
+  command = ..\data\streamflow_cmr.bat
+  commandID = strmflow_cmr
+END Model_Command_Lines
+
+BEGIN Parallel_Control
+  parallel=false
+END Parallel_Control

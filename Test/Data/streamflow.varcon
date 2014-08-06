@@ -1,0 +1,12 @@
+#STREAMFLOW Sample Problem--VARCON File
+#December 2009     
+ 1                        #1-IPRN
+ Q1  0.0  5.0d4  0.0D2    #2-FVNAME FVMIN FVMAX FVREF
+ Q2win 0.0  5.0d4  0.0D2
+ Q2spr 0.0  5.0d4  0.0D2
+ Q2sum 0.0  5.0d4  0.0D2
+ Q2fal 0.0  5.0d4  0.0D2
+ Q3spr 0.0  5.0d4  0.0D2
+ Q3sum 0.0  5.0d4  0.0D2
+
+

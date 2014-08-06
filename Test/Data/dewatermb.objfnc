@@ -1,0 +1,20 @@
+#DEWATER Sample Problem, OBJFNC file
+#February 20, 2005
+ 1              #1-IPRN
+ MIN  WSDV      #2-OBJTYP  FNTYP
+ 7  0  7        #3-NFVOBJ  NEVOBJ  NBVOBJ
+ Q1  0.02       #4-FVNAME  FVOBJC
+ Q2  0.02 
+ Q3  0.02 
+ Q4  0.02 
+ Q5  0.02 
+ Q6  0.02 
+ Q7  0.02 
+ BV1 2000.0    #6-BVNAME  BVOBJC
+ BV2 2000.0 
+ BV3 2000.0 
+ BV4 2000.0 
+ BV5 2000.0 
+ BV6 2000.0 
+ BV7 2000.0 
+

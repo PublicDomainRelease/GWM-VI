@@ -1,0 +1,11 @@
+#DRAIN Sample Problem--DECVAR File
+#March 2012    
+ 1 20                             #1-IPRN  GWMWFILE
+ 7 0 0                            #2-NFVAR NEVAR NBVAR
+ Q1  1  1  12  11  W  Y  1-12     #3a-FVNAME NC LAY ROW COL FTYPE FSTAT WSP
+ Q2win 1  1  16  17  W  Y  1:5:9
+ Q2spr 1  1  16  17  W  Y  2:6:10
+ Q2sum 1  1  16  17  W  Y  3:7:11
+ Q2fal 1  1  16  17  W  Y  4:8:12
+ Q3spr 1  1  14  25  W  Y  2:6:10
+ Q3sum 1  1  14  25  W  Y  3:7:11

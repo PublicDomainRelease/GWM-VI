@@ -1,0 +1,11 @@
+#DRAIN Sample Problem--GWM File
+#March 2012    
+OUT     drain.rate.gwmout.serial
+DECVAR  ..\data\drain.decvar
+STAVAR  ..\data\drain_rate.stavar
+OBJFNC  ..\data\drain.objfnc
+VARCON  ..\data\drain.varcon
+SUMCON  ..\data\drain_rate.sumcon
+SOLN    ..\data\drain.soln
+CONTROL ..\data\drain_rate_serial.ctrl
+NAM     ..\data\drain_rate.nam

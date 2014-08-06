@@ -1,0 +1,7 @@
+HEAD PRINT FORMAT 20
+head save unit 50
+compact budget
+PERIOD 1 STEP 1
+PRINT HEAD
+save budget
+save head

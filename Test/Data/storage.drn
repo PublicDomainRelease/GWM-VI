@@ -1,0 +1,17 @@
+# STORAGE Sample problem - convert 8.64E4 ft3/day = 1 ft3/sec
+         9         0    MXDRAI,IDRNBD
+         9              NDRAIN
+         1         8         2        0.   8.64E4      
+         1         8         3        0.   8.64E4  
+         1         8         4       10.   8.64E4  
+         1         8         5       20.   8.64E4  
+         1         8         6       30.   8.64E4  
+         1         8         7       50.   8.64E4  
+         1         8         8       70.   8.64E4  
+         1         8         9       90.   8.64E4  
+         1         8        10      100.   8.64E4  
+        -9             NDRAIN  Stress Period 2
+        -9             NDRAIN  Stress Period 3
+        -9             NDRAIN  Stress Period 4
+        -9             NDRAIN  Stress Period 5
+        -9             NDRAIN  Stress Period 6

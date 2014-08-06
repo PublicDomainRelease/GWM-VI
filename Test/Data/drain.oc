@@ -1,0 +1,52 @@
+HEAD PRINT FORMAT   4
+Head save unit 51
+Compact budget AUXILIARY
+PERIOD   1 STEP   1
+    PRINT BUDGET
+    PRINT HEAD
+    Save Head
+PERIOD   2 STEP   1
+    PRINT BUDGET
+    PRINT HEAD
+    Save Head
+PERIOD   3 STEP   1
+    PRINT BUDGET
+    PRINT HEAD
+    Save Head
+PERIOD   4 STEP   1
+    PRINT BUDGET
+    PRINT HEAD
+    Save Head
+PERIOD   5 STEP   1
+    PRINT BUDGET
+    PRINT HEAD
+    Save Head
+PERIOD   6 STEP   1
+    PRINT BUDGET
+    PRINT HEAD
+    Save Head
+PERIOD   7 STEP   1
+    PRINT BUDGET
+    PRINT HEAD
+    Save Head
+PERIOD   8 STEP   1
+    PRINT BUDGET
+    PRINT HEAD
+    Save Head
+PERIOD   9 STEP   1
+    PRINT BUDGET
+    PRINT HEAD
+    Save Head
+PERIOD  10 STEP   1
+    PRINT BUDGET
+    PRINT HEAD
+    Save Head
+PERIOD  11 STEP   1
+    PRINT BUDGET
+    PRINT HEAD
+    SAVE BUDGET    
+    Save Head
+PERIOD  12 STEP   1
+    PRINT BUDGET
+    PRINT HEAD
+    Save Head

@@ -1,0 +1,46 @@
+#MNW-SUPPLY Sample Problem, HEDCON file for GWM-VI
+#January 2012
+#Head constraints H2b_SP2,  H2b_SP5 are the heads in the cell containing MNWQm2b
+#Head constraint H3_Sp53 is the head in the cell containing MNWQm3
+# In the GWM2005 version of this sample problem the heads in the MNW wells are directly used
+1	#1-IPRN						
+39	0	0	0	#2-NHB	NDD	NDF	NGD
+h2_L1_SP3	1	12	5	ge	159	3	
+h3_L1_SP3	1	12	9	ge	145	3	
+h4_L1_SP3	1	12	13	ge	134	3	
+h5_L1_SP3	1	14	5	ge	152	3	
+h6_L1_SP3	1	14	9	ge	143	3	
+h7_L1_SP3	1	14	13	ge	133	3	
+h2_L2_SP3	2	12	5	ge	152	3	
+h3_L2_SP3	2	12	9	ge	147	3	
+h4_L2_SP3	2	12	13	ge	139	3	
+h5_L2_SP3	2	14	5	ge	156	3	
+h6_L2_SP3	2	14	9	ge	147	3	
+h7_L2_SP3	2	14	13	ge	132	3	
+h2_L1_SP4	1	12	5	ge	154	4
+h3_L1_SP4	1	12	9	ge	140	4
+h4_L1_SP4	1	12	13	ge	132	4
+h5_L1_SP4	1	14	5	ge	148	4
+h6_L1_SP4	1	14	9	ge	139	4
+h7_L1_SP4	1	14	13	ge	130	4
+h2_L2_SP4	2	12	5	ge	153	4
+h3_L2_SP4	2	12	9	ge	138	4
+h4_L2_SP4	2	12	13	ge	137	4
+h5_L2_SP4	2	14	5	ge	152	4
+h6_L2_SP4	2	14	9	ge	144	4
+h7_L2_SP4	2	14	13	ge	128	4
+h2_L1_SP5	1	12	5	ge	169	5
+h3_L1_SP5	1	12	9	ge	153	5
+h4_L1_SP5	1	12	13	ge	138	5
+h5_L1_SP5	1	14	5	ge	169	5
+h6_L1_SP5	1	14	9	ge	153	5
+h7_L1_SP5	1	14	13	ge	137	5
+h2_L2_SP5	2	12	5	ge	168	5
+h3_L2_SP5	2	12	9	ge	157	5
+h4_L2_SP5	2	12	13	ge	148	5
+h5_L2_SP5	2	14	5	ge	168	5
+h6_L2_SP5	2	14	9	ge	157	5
+h7_L2_SP5	2	14	13	ge	148	5
+H2b_SP2	1     9     3     ge    40    2
+H2b_SP5	1     9     3     ge    76    5
+H3_SP5	2     15    9     ge    65    5

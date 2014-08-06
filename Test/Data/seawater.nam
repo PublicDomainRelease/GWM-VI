@@ -1,0 +1,12 @@
+LIST  10  seawater.lst
+DIS   11  ..\data\seawater.dis
+BAS6  12  ..\data\seawater.ba6
+BCF6  13  ..\data\seawater.bc6
+WEL   14  seawater.wel
+RCH   15  ..\data\seawater.rch
+PCG   16  ..\data\seawater.pcg
+#DE4   16  ..\data\seawater.de4
+PVAL  17  ..\data\seawater.pval
+OC    19  ..\data\seawater.oc
+DATA  20  seawater.gwmwell REPLACE
+DATA(BINARY) 50 seawaterhd.bin REPLACE

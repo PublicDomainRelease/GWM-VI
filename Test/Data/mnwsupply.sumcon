@@ -1,0 +1,7 @@
+#MNW-SUPPLY Sample Problem, SUMCON file
+#January 2012
+ 1                     #1-IPRN
+ 1                     #2-SMCNUM
+ MNW_1_HD  2 le 5.0    #3a-SMCNAME NTERMS TYPE RHS
+  N1_SP3  1.0          #3b-GVNAME GVCOEFF
+  H1_SP3 -1.0   

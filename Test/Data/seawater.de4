@@ -1,0 +1,4 @@
+# DE4 input for Seawater example
+10  0  0  0          # Item 1: ITMX MXUP MXLOW MXBW
+ 3  0  1  1.0E-8  1  # Item 2: IFREQ MUTD4 ACCL HCLOSE IPRD4
+  
