@@ -397,6 +397,7 @@ CONTAINS
                J, JD, JJ, K, KD, KPER, KSTP, &
                MAXAUXVALUE, &
                NAUX, NC, NCB, NL, NLIST, NR
+    INTEGER :: NLPOS
     INTEGER :: AUXINDX, IAUX
     REAL :: DELTLOCAL, PERTIM, TOTIM
     DOUBLE PRECISION :: DELTDLOCAL, PERTIMD, TOTIMD
@@ -445,8 +446,9 @@ CONTAINS
       !
       ! Read a header record from unformatted budget file
       READ(IU,ERR=900,END=1000,IOSTAT=IST) KSTP,KPER,TEXT,NC,NR,NL
-      IF (.NOT. ALLOCATED(BUF)) ALLOCATE(BUF(NC*NR*NL))
-      IF (.NOT. ALLOCATED(DBUF)) ALLOCATE(DBUF(NC*NR*NL))
+      NLPOS = ABS(NL)
+      IF (.NOT. ALLOCATED(BUF)) ALLOCATE(BUF(NC*NR*NLPOS))
+      IF (.NOT. ALLOCATED(DBUF)) ALLOCATE(DBUF(NC*NR*NLPOS))
       IF (IST.NE.0) THEN
         OKLOCAL = .FALSE.
         GOTO 900
@@ -596,6 +598,7 @@ CONTAINS
     ! Local variables
     INTEGER :: I, IERR, IPREC, IST, IU, IUSFR, KPER, KSTP, NC, NCB, &
                NL, NR, NREACH
+    INTEGER :: NLPOS
     INTEGER :: IGRID = 1
     INTEGER :: KPERSFR
     REAL :: DELTLOCAL, PERTIM, TOTIM
@@ -633,8 +636,9 @@ CONTAINS
       !
       ! Read a header record from unformatted budget file
       READ(IU,ERR=900,END=1000,IOSTAT=IST) KSTP,KPER,TEXT,NC,NR,NL
-      IF (.NOT. ALLOCATED(BUF)) ALLOCATE(BUF(NC*NR*NL))
-      IF (.NOT. ALLOCATED(DBUF)) ALLOCATE(DBUF(NC*NR*NL))
+      NLPOS = ABS(NL)
+      IF (.NOT. ALLOCATED(BUF)) ALLOCATE(BUF(NC*NR*NLPOS))
+      IF (.NOT. ALLOCATED(DBUF)) ALLOCATE(DBUF(NC*NR*NLPOS))
       QUANTITY = ADJUSTL(TEXT)
       IF (IST.NE.0) THEN
         OKLOCAL = .FALSE.
@@ -656,7 +660,8 @@ CONTAINS
       !
       ! Read data set from budget file
       ! When COMPACT BUDGET is specified, SFR writes 
-      ! list data using UBDSV2 and UBDSVA (NCB=2)
+      ! list data using UBDSV2 and UBDSVA (NCB=2) for streamflow
+      ! and using UBDSV4 AND UBDSVB (NCB=5) for leakage
       SELECT CASE (NCB)
       CASE (1) ! Full 3-D array (many packages when budget file is not COMPACT)
         CALL READ_3D_ARRAY(IU,IPREC,NC,NR,NL,IERR,DBUFF3D)
@@ -684,8 +689,25 @@ CONTAINS
         CALL READ_2D_ARRAY_LAYER(IU,IPREC,NC,NR,NL,IERR,DBUFF3D)
       CASE (4) ! 2-D array for layer 1 (ETS, EVT, RCH)
         CALL READ_2D_ARRAY_L1(IU,IPREC,NC,NR,NL,IERR,DBUFF3D)
-      CASE (5) ! List with auxiliary values (WEL, DRN, RIV, GHB)
-        CALL READ_LIST_AUX(IU,IPREC,NC,NR,NL,IERR,DBUFF3D)
+      CASE (5) ! List with auxiliary values (WEL, DRN, RIV, GHB, SFR-leak)
+        IF (TEXT==BUDTEXT(ITYP)) THEN
+          ! Data set contains SFR data of indicated type.
+          ! Get list of SFR data from binary file
+          CALL READ_LIST_SFR2(IU,IPREC,NSTRM,QD,IERR)
+          ! Loop through all dependents to find SFR dependents of
+          ! indicated type, and see if stress period matches.
+          DO I=1,NSV  
+            IF (DEPS(I)%CTYPE==DEPTEXT(ITYP)) THEN
+              IF (DEPS(I)%INDX(3)==KPER .AND. KSTP==NSTP(KPER)) THEN
+                DEPS(I)%SIMVAL = QD(DEPS(I)%INDX(4))
+              ENDIF
+            ENDIF
+          ENDDO
+        ELSE
+          ! Data set does not contain SFR data of indicated type.  
+          ! Read list and ignore.
+          CALL READ_LIST_AUX(IU,IPREC,NC,NR,NL,IERR,DBUFF3D)
+        ENDIF
       END SELECT
       IF (IERR==1) THEN
         GOTO 900
@@ -1027,6 +1049,50 @@ CONTAINS
     IERR = 2  ! End of file
     RETURN
   END SUBROUTINE READ_LIST_SFR
+  !-------------------------------------------------------------------
+  SUBROUTINE READ_LIST_SFR2(IU,IPREC,NSTRM,QD,IERR)
+    ! Read NAUX and NLIST (written by UBDSV4) and reach-by-reach data
+    ! written by SFR using UBDSVB
+    IMPLICIT NONE
+    ! Arguments
+    INTEGER, INTENT(IN) :: IU, IPREC, NSTRM
+    INTEGER, INTENT(OUT) :: IERR
+    DOUBLE PRECISION, DIMENSION(NSTRM), INTENT(OUT) :: QD
+    ! Local variables
+    INTEGER :: I, ICRL, J, K, L, N, NLIST, NVAL
+    REAL :: Q
+    CHARACTER(LEN=16) :: TEXT
+    !
+    QD = 0.0D0
+    IERR = 0
+    READ(IU,END=950,ERR=900) NVAL
+    IF (NVAL.GT.1) THEN
+      READ(IU,END=950,ERR=900) (TEXT,N=2,NVAL)
+    ENDIF
+    READ(IU,END=950,ERR=900) NLIST
+       
+    DO L=1,NLIST
+      SELECT CASE (IPREC)
+      CASE (1)
+        READ(IU,END=950,ERR=900) ICRL,Q
+        QD(L) = REAL(Q,8)
+      CASE (2)
+        READ(IU,END=950,ERR=900) ICRL,QD(L)
+      END SELECT
+    ENDDO
+    !
+    ! Normal return    
+    RETURN
+    !
+    ! Error handling
+    900 CONTINUE
+    IERR = 1  ! Unidentified error
+    RETURN
+    !
+    950 CONTINUE
+    IERR = 2  ! End of file
+    RETURN
+  END SUBROUTINE READ_LIST_SFR2
   !-------------------------------------------------------------------
   SUBROUTINE READ_LIST_AUX(IU,IPREC,NC,NR,NL,IERR,DBUF3D)
     USE GWM_UTLS, ONLY: FINDCELL

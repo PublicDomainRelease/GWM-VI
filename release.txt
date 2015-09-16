@@ -10,6 +10,35 @@ release.txt
 NOTE: Any use of trade, product or firm names is for descriptive purposes 
       only and does not imply endorsement by the U.S. Government.
 
+o Version 1.0.2 09/17/2015
+
+A bug was fixed in EXTRACT_BUD_SFR_DEPS that had caused streamflow leakage 
+to be improperly read when streamflow leakage is selected as a state 
+variable.  
+
+A feature was added to allow repeat lines for reading the list of stress 
+periods over which a decision variable (either flow type or external) 
+applies as read by the DECVAR file.  The list of stress periods can now 
+extend over multiple lines; an ampersand ("&") character at the end of an 
+input line (with no preceding space) instructs GWM to read the following 
+line as a continuation of the list. 
+
+Development Notes: 
+
+1. The procedure within GWM_SUBS used to write unique base-36 numbers for 
+   internal identification of dependents was modified to write 3-digit 
+   base-36 numbers rather than 2-digit numbers.
+
+2. In MAIN_INI_WRITE_PREDDATA the field width used to write the number of 
+   rows used in the Prediction_Data block in a scratch file was increased 
+   from 6 to 9.
+
+3. A new variable in GWM1STA3 holds the total number of state variables so 
+   that the repeated calculation of this total can be avoided.
+
+4. In August 2015, GWM files were moved to a new repository environment.  
+   At that time the date stamp on all files was changed to 8/22/2015.
+
 o Version 1.0.1 08/07/2014
 
 A new variable called EpsQnet is now supported in the GWM-VI Control input 
@@ -24,7 +53,7 @@ messages_from_gwmvi.txt.
 The following bugs have been fixed:
 
 1. Execution failed when there were no managed wells simulated by the 
-Well Package.
+   Well Package.
 
 2. An infinite loop could happen under any of the following conditions:
     a. Modflow did not converge,
@@ -32,7 +61,7 @@ Well Package.
     c. A constraint cell went dry.
 
 3. Execution failed when flow-rate decision variables were simulated with
-the MNW2 Package and the original MNW2 input file specified 0 wells.
+   the MNW2 Package and the original MNW2 input file specified 0 wells.
 
 o Version 1.0.0 12/05/2013
 

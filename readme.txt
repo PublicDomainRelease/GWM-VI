@@ -1,6 +1,6 @@
 readme.txt
 
-                 GWM-VI Suite of Programs - Version: 1.0.1
+                 GWM-VI Suite of Programs - Version: 1.0.2
               Groundwater-Management with Parallel Processing 
                        for Multiple MODFLOW Versions
 
@@ -34,7 +34,7 @@ A. DISTRIBUTION FILE
 
 The following compressed file contains the GWM-VI distribution:
 
-         GWMVI_1_0_1.zip
+         GWMVI_1_0_2.zip
 
 The distribution file contains:
 
@@ -52,7 +52,7 @@ subdirectories and individual files.  The installation instructions assume that
 the files are restored into folder C:\WRDAPP.  If so, the following folder 
 structure will be created in C:\WRDAPP:
 
-| GWMVI_1_0_1
+| GWMVI_1_0_2
    | Bin              ; Executable files for personal computers
    | Doc              ; Documentation files
    | Src              ; Source code for use on any computer
@@ -78,8 +78,8 @@ structure will be created in C:\WRDAPP:
       | Test-run      ; Folder for running all tests at once
 
 
-It is recommended that no user files are kept in the GWMVI_1_0_1 folder 
-structure.  
+It is recommended that no user files are kept in the GWMVI_1_0_2 folder 
+structure.
 
 Included in the Doc folder are various documentation files.  Some of them are 
 Portable Document Format (PDF) files. The PDF files are readable and printable 
@@ -107,7 +107,7 @@ From the Start menu, select Control Panel.  Select System and Security, and
 within that screen choose the System option. Then select the Advanced System 
 Settings option.  Select the Environment Variables button.  In the System 
 Variables pane, select the PATH variable followed by Edit.  In the Edit window, 
-add ";C:\WRDAPP\GWMVI_1_0_1\Bin" to the end of the Variable Value (ensure that 
+add ";C:\WRDAPP\GWMVI_1_0_2\Bin" to the end of the Variable Value (ensure that 
 the current contents of the User Value are not deleted) and click OK. Click OK 
 in the Environment Variables window and then exit from the control panel 
 windows.  Initiate and use a new Windows Command window.
@@ -118,7 +118,7 @@ windows.  Initiate and use a new Windows Command window.
 From the Start menu, select Settings and then Control Panel.  Double click 
 System and select the Advanced tab.  Click on Environment Variables.  If a PATH 
 user variable already is defined, click on it in the User Variables pane, then 
-click Edit.  In the Edit User Variable window, add ";C:\WRDAPP\GWMVI_1_0_1\Bin" 
+click Edit.  In the Edit User Variable window, add ";C:\WRDAPP\GWMVI_1_0_2\Bin" 
 to the end of the Variable Value (ensure that the current contents of the User 
 Value are not deleted) and click OK.  If a PATH user variable is not already 
 defined in the User variables pane of the Environment Variables window, click 
@@ -133,7 +133,7 @@ From the Start menu, select Settings and then Control Panel.  Select System &
 Maintenance followed by System.  Choose the Advanced System option.  Select the 
 Settings Task, and then select the Environmental Variables button.  In the 
 System Variables pane, select the PATH variable followed by Edit.  In the Edit 
-window, add ";C:\WRDAPP\GWMVI_1_0_1\Bin" to the end of the Variable Value 
+window, add ";C:\WRDAPP\GWMVI_1_0_2\Bin" to the end of the Variable Value 
 (ensure that the current contents of the User Value are not deleted) and click 
 OK. Click OK in the Environment Variables window and then exit from the control 
 panel windows.  Initiate and use a new Windows Command window.
@@ -206,7 +206,7 @@ MODFLOW runs.
 E. COMPILING
 
 The executable files provided in the Bin folder were created using the Intel
-Visual Fortran 13.0 compiler.  Although executable versions of the programs 
+Visual Fortran 16.0 compiler.  Although executable versions of the programs 
 are provided, the source code is provided in the Src folder so that the 
 programs can be recompiled if necessary.  However, the USGS cannot provide 
 assistance to those compiling GWM-VI.  In general, the requirements are a 
@@ -269,5 +269,5 @@ MODFLOW input files.
 3. GWM-VI reads binary output files from MODFLOW to determine heads and flows 
 needed to evaluate constraints and state variables.  It is preferred that these 
 binary files be double precision, however, GWM-VI can operate with single-
-precision binary files.  GWM-VI will determine if a given binary file is single 
-or double precision.
+precision binary files.  GWM-VI will determine if a given binary file is single-
+or double-precision.

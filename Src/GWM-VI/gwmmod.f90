@@ -411,7 +411,7 @@ CONTAINS
     !   read from DECVAR file: FVNAME // cell number (1 through NC)
     USE UTILITIES
     USE GWM_UTLS, ONLY: APPEND_MESSAGE
-    USE GWM_SUBS, ONLY: I_BASE36
+    USE GWM_SUBS, ONLY: I_BASE36_3
     USE GWM1DCV3, ONLY: FVMNW
     IMPLICIT NONE
     !   Argument-list variables
@@ -421,7 +421,7 @@ CONTAINS
     INTEGER(I4B), DIMENSION(NFVAR), INTENT(IN) :: FVNCELL
     LOGICAL, INTENT(INOUT) :: OK
     !   Local variables
-    CHARACTER(LEN=12) :: TEMPNAM
+    CHARACTER(LEN=13) :: TEMPNAM
     INTEGER :: I, J, K, L, NAMLEN, NC, NMNW
     LOGICAL :: OKLOCAL
     !
@@ -444,11 +444,11 @@ CONTAINS
           ! When the WEL type decision variable controls multiple cells,
           ! an additional, derived parameter is needed for each cell
           NAMLEN = LEN_TRIM(TEMPNAM)
-          TEMPNAM = '__________  '         ! Ten underscore characters, two blanks
+          TEMPNAM = '__________   '         ! Ten underscore characters, three blanks
           TEMPNAM(1:NAMLEN) = TRIM(FVNAME(I))
           DO J=1,NC
             ! Add sequential cell number (in base-36) to GWM name to form PARNAM
-            TEMPNAM(11:12) = I_BASE36(J) 
+            TEMPNAM(11:13) = I_BASE36_3(J) 
             K = K+1
             IF (K>NPT)THEN
               CALL APPEND_MESSAGE('Programming error caught in MAIN_INI_DEFPARNAM')
@@ -479,7 +479,7 @@ CONTAINS
   END SUBROUTINE MAIN_INI_DEFPARNAM
   !-----------------------------------------------------------------------------
   SUBROUTINE MAIN_INI_DEP(NCOVMAT,NHB,NDD,NDF,NGD,HDCNAME,STCNUM,STCNAME, &
-                          STANUM,SVNAME,NHVAR,NRVAR,NSVAR,NDVAR,SVILOC)
+                          STANUM,SVNAME,NHVAR,NRVAR,NSVAR,NDVAR,NSTADEP,SVILOC)
     !   Allocate arrays related to dependents, and populate with defaults.
     !   Write a PREDICTION_DATA input block to a scratch file, 
     !   then call DEP_INI_READ 
@@ -490,8 +490,10 @@ CONTAINS
     !   Argument-list variables
     INTEGER, INTENT(INOUT) :: NCOVMAT
     INTEGER, INTENT(IN) :: NHB, NDD, NDF, NGD, STCNUM
-    INTEGER, INTENT(IN) :: STANUM, NHVAR, NRVAR, NSVAR, NDVAR, SVILOC(STANUM)
-    CHARACTER(LEN=10), INTENT(IN) :: HDCNAME(NHB+NDD+NDF+NGD), STCNAME(STCNUM), &
+    INTEGER, INTENT(IN) :: STANUM, NHVAR, NRVAR, NSVAR, NDVAR, NSTADEP, &
+                           SVILOC(STANUM)
+    CHARACTER(LEN=10), INTENT(IN) :: HDCNAME(NHB+NDD+NDF+NGD), &
+                                     STCNAME(STCNUM), &
                                      SVNAME(STANUM)
     !   Local variables
     INTEGER :: ISCRATCH 
@@ -500,8 +502,9 @@ CONTAINS
     !   block to scratch file opened on unit ISCRATCH
     ISCRATCH = UTL_GETUNIT(7,2000)
     OPEN(ISCRATCH,STATUS='SCRATCH')
-    CALL MAIN_INI_WRITE_PREDDATA(ISCRATCH,NHB,NDD,NDF,NGD,HDCNAME,STCNUM,STCNAME, &
-                                 STANUM,SVNAME,NHVAR,NRVAR,NSVAR,NDVAR,SVILOC)
+    CALL MAIN_INI_WRITE_PREDDATA(ISCRATCH,NHB,NDD,NDF,NGD,HDCNAME,STCNUM, &
+                                 STCNAME, STANUM,SVNAME,NHVAR,NRVAR,NSVAR, &
+                                 NDVAR,NSTADEP,SVILOC)
     REWIND(ISCRATCH)
     CALL DEP_INI_READ(2,ISCRATCH,IOUTMESS,NCOVMAT,NDEPSTAT,NDDEP,NEDEP,NTDEP)
     CLOSE(ISCRATCH)
@@ -518,37 +521,37 @@ CONTAINS
     ENDIF
   END SUBROUTINE MAIN_INI_DEP
   !-----------------------------------------------------------------------------
-  SUBROUTINE MAIN_INI_WRITE_PREDDATA(IU,NHB,NDD,NDF,NGD,HDCNAME,STCNUM,STCNAME, &
-                                     STANUM,SVNAME,NHVAR,NRVAR,NSVAR,NDVAR,SVILOC)
-    !   Write an PREDICTION_DATA input block to unit IU
+  SUBROUTINE MAIN_INI_WRITE_PREDDATA(IU,NHB,NDD,NDF,NGD,HDCNAME,STCNUM, &
+                                     STCNAME, STANUM,SVNAME,NHVAR,NRVAR, &
+                                     NSVAR,NDVAR,NSTADEP,SVILOC)
+    !   Write a PREDICTION_DATA input block to unit IU
     USE GWM_UTLS, ONLY: SAVE_FILE
     USE GWM_SUBS, ONLY: TO_LONGNAME
     IMPLICIT NONE
     !   Argument-list variables
     INTEGER, INTENT(IN) :: IU
     INTEGER, INTENT(IN) :: NHB, NDD, NDF, NGD, STCNUM
-    INTEGER, INTENT(IN) :: STANUM, NHVAR, NRVAR, NSVAR, NDVAR, SVILOC(STANUM)
-    CHARACTER(LEN=10), INTENT(IN) :: HDCNAME(NHB+NDD+NDF+NGD), STCNAME(STCNUM), &
-                                     SVNAME(STANUM)
+    INTEGER, INTENT(IN) :: STANUM, NHVAR, NRVAR, NSVAR, NDVAR, NSTADEP, &
+                           SVILOC(STANUM)
+    CHARACTER(LEN=10), INTENT(IN) :: HDCNAME(NHB+NDD+NDF+NGD), &
+                                     STCNAME(STCNUM), SVNAME(STANUM)
     !   Local variables
     INTEGER :: I, K, ISTRT
     REAL :: STAT, REFVAL
     CHARACTER(LEN=3) :: STATFLAG
-    CHARACTER(LEN=12) :: TEMPDEPNAM
+    CHARACTER(LEN=13) :: TEMPDEPNAM
     !   Format statements
     10 FORMAT(A)
-    20 FORMAT(2X,'NROW=',I6,2X,'NCOL=4  COLUMNLABELS')
-    30 FORMAT(2X,'PredName',T17,'MeasStatistic',T32,'MeasStatflag',T46,'RefValue')
+    20 FORMAT(2X,'NROW=',I9,2X,'NCOL=4  COLUMNLABELS')
+    30 FORMAT(2X,'PredName',T17,'MeasStatistic',T32,'MeasStatflag',T46, &
+              'RefValue')
     40 FORMAT(2X,A,T17,F4.1,T32,A,T46,F4.1)
     !
     STAT = 1.0
     REFVAL = 0.0
     STATFLAG = 'Var'
-    ISTRT = NHVAR+NRVAR+NSVAR   ! Locate beginning of drain variables
-    NDEP = NHB + NDD + NDF*2 + NGD*2 + STCNUM + ISTRT
-    DO I=ISTRT+1,ISTRT+NDVAR    ! Loop over drain state variables
-      NDEP = NDEP + SVILOC(I)  ! One simulated value per drain cell
-    ENDDO 
+    NDEP = NHB + NDD + NDF*2 + NGD*2 + STCNUM 
+    NDEP = NDEP + NSTADEP        ! Add dependents related to state variables
     ! Add "dependents": 1 for MODFLOW_STAT, 1 for DEWATER_STAT
     NDEPSTAT = NDEP + 2 
     WRITE(IU,10)'BEGIN Prediction_Data TABLE'
@@ -801,7 +804,8 @@ CONTAINS
     ! Use extracted values to populate HDCSTATE array and other variables
     USE GWM1HDC3, ONLY: GWM1HDC3OS
     USE GWM1STC3, ONLY: GWM1STC3OS, STCNUM
-    USE GWM1STA3, ONLY: GWM1STA3OS, STANUM, NHVAR, NRVAR, NSVAR, NDVAR, SVILOC
+    USE GWM1STA3, ONLY: GWM1STA3OS, STANUM, NHVAR, NRVAR, NSVAR, NDVAR, NSTADEP, &
+                        SVILOC
     IMPLICIT NONE
     !   Argument-list variables
     INTEGER, INTENT(IN) :: NDEPSTAT
@@ -842,11 +846,7 @@ CONTAINS
       CALL GWM1STA3OS(1,1,1,1,HDRY,1,1, &
                       1,1,1,1,IC1,NDEP,DEPVALS)
       IF (.NOT. OKLOCAL) GOTO 100
-      IC1 = IC1 + NHVAR + NRVAR + NSVAR
-      NSLOC = NHVAR+NRVAR+NSVAR
-      DO I=NSLOC+1,NSLOC+NDVAR  ! Loop over drain state variables
-        IC1 = IC1 + SVILOC(I)   ! Increment IC1 by # drains included in state variable
-      ENDDO
+      IC1 = IC1 + NSTADEP        ! Add the number of dependents related to state variables
     ENDIF
     !
     !   Assign MFCNVRG, DEWATERQ, HCLOSE, and HNOFLO

@@ -180,7 +180,7 @@ C-----LOCAL VARIABLES
       INTEGER(I4B)::LOCAT,ISTART,ISTOP,IPRN,IPRNG
       INTEGER(I4B),DIMENSION(NGRIDS)::NUNOPN
       INTEGER(I4B)::NC
-      INTEGER(I4B)::IPSS,IPSF,IPTS,IPTF,ITYPES,ITYPEF
+      INTEGER(I4B)::IPSS,IPSF,IPTS,IPTF,ITYPES,ITYPEF,LINEST,LINEEN
       CHARACTER(LEN=1)::FTYPE,FSTAT
       CHARACTER(LEN=2)::ETYPE
       LOGICAL(LGT)::NFOUND
@@ -190,7 +190,7 @@ C-----LOCAL VARIABLES
       CHARACTER(LEN=10)::ETYPED(7)
 C-----ALLOCATE TEMPORARY STORAGE UNTIL SIZE CAN BE DETERMINED
       INTEGER(I4B),ALLOCATABLE::TBVLIST(:,:)
-      CHARACTER(LEN=120),ALLOCATABLE::WSP(:),ESP(:)
+      CHARACTER(LEN=10000),ALLOCATABLE::WSP(:),ESP(:)
       INTEGER(I4B),ALLOCATABLE::GRDLOCFV(:),GRDLOCEV(:),
      &             GRDLOCBV(:)
       DATA ETYPED /'  Import  ','  Export  ','  Head    ',
@@ -288,6 +288,7 @@ C-------ALLOCATE SPACE FOR FLOW-RATE VARIABLE INFORMATION
         BYTES = BYTES + 10*NFVAR + 8*5*NFVAR + 4*3*NFVAR +(NFVAR*NPER)/8
         ALLOCATE (WSP(NFVAR),GRDLOCFV(NFVAR),STAT=ISTAT) ! TEMPORARY ARRAYS
         IF(ISTAT.NE.0)GOTO 992 
+        WSP = ' '
         JFVROW=0
         DO 240 G=1,NGRIDS
           IF(FNAMEN(G).NE.' ')THEN
@@ -375,7 +376,18 @@ C-------------PROCESS FSTAT, THE FLAG TO INDICATE FLOW-RATE VARIABLE IS ACTIVE
               ENDIF
 C
 C-------------ASSIGN WELLSP TO IDENTIFY STRESS PERIODS VARIABLE IS ACTIVE
-              WSP(J)=LINE(ITYPES:ITYPEF)
+              LINEST = 1
+              LINEEN = LINEST + ITYPEF-ITYPES
+              WSP(J)(LINEST:LINEEN)=LINE(ITYPES:ITYPEF)
+              DO WHILE (LINE(ITYPEF:ITYPEF).EQ.'&')  ! Continuation line present
+                READ(LOCAT,'(A)',ERR=991)LINE        ! Read the next line
+                LLOC=1
+                CALL URWORD(LINE,LLOC,ITYPES,ITYPEF,0,NDUM,RDUM,
+     &                    IOUT,LOCAT)                ! Find location of start/end
+                LINEST = LINEEN                      ! Start of array; Overwrite the &
+                LINEEN = LINEST + ITYPEF-ITYPES      ! End of array
+                WSP(J)(LINEST:LINEEN)=LINE(ITYPES:ITYPEF)
+              ENDDO
               CALL SPARRAY(WSP(J),FVSP,NFVAR,NPER,J)
   230       ENDDO
 C
@@ -398,6 +410,7 @@ C-------ALLOCATE SPACE FOR EXTERNAL VARIABLES
         BYTES = BYTES + 10*NEVAR + 8*3*NEVAR + 4*NEVAR +(NEVAR*NPER)/8
         ALLOCATE (ESP(NEVAR),GRDLOCEV(NEVAR),STAT=ISTAT)  ! TEMPORARY ARRAYS
         IF(ISTAT.NE.0)GOTO 992 
+        ESP = ' '
 C
         JEVROW=0
         DO 320 G=1,NGRIDS
@@ -442,7 +455,18 @@ C-------------PROCESS ETYPE, THE EXTERNAL VARIABLE DIRECTION
               ENDIF
 C
 C-------------ASSIGN EVSP TO IDENTIFY STRESS PERIODS VARIABLE IS ACTIVE
-              ESP(J)=LINE(ITYPES:ITYPEF)
+              LINEST = 1
+              LINEEN = LINEST + ITYPEF-ITYPES
+              ESP(J)(LINEST:LINEEN)=LINE(ITYPES:ITYPEF)
+              DO WHILE (LINE(ITYPEF:ITYPEF).EQ.'&')  ! Continuation line present
+                READ(LOCAT,'(A)',ERR=991)LINE        ! Read the next line
+                LLOC=1
+                CALL URWORD(LINE,LLOC,ITYPES,ITYPEF,0,NDUM,RDUM,
+     &                    IOUT,LOCAT)                ! Find location of start/end
+                LINEST = LINEEN                      ! Start of array; Overwrite the &
+                LINEEN = LINEST + ITYPEF-ITYPES      ! End of array
+                ESP(J)(LINEST:LINEEN)=LINE(ITYPES:ITYPEF)
+              ENDDO
               CALL SPARRAY(ESP(J),EVSP,NEVAR,NPER,J)
   310       ENDDO
 C
@@ -586,7 +610,7 @@ C-----WRITE INFORMATION TO OUTPUT FILE
               ENDIF
   600       ENDDO
             IF(FVON(J).GT.0)THEN
-              WRITE(IOUT,7030,ERR=990)WSP(J)
+              WRITE(IOUT,7030,ERR=990)TRIM(WSP(J))
             ELSE
               WRITE(IOUT,7040,ERR=990)
             ENDIF
@@ -641,7 +665,8 @@ C
                 WRITE(IOUT,7055,ERR=990)FNAMEN(GRDLOCDCV(J+JJ))
               ENDIF
             ENDIF
-            WRITE(IOUT,7060,ERR=990)J,EVNAME(J),ETYPED(EVDIR(J)),ESP(J)
+            I=EVDIR(J)
+            WRITE(IOUT,7060,ERR=990)J,EVNAME(J),ETYPED(I),TRIM(ESP(J))
   700     ENDDO
         ENDIF
 C
@@ -734,12 +759,12 @@ C
  7012 FORMAT(/,I5,6X,A10,1X,A10,1X,I5,1X,A20,1X,F6.4)
  7014 FORMAT(  33X,                I5,1X,A20,1X,F6.4)
  7020 FORMAT(T34,3I5,4X,F6.4)
- 7030 FORMAT('   AVAILABLE IN STRESS PERIODS: ',A120,/)
+ 7030 FORMAT('   AVAILABLE IN STRESS PERIODS: ',A,/)
  7040 FORMAT('   UNAVAILABLE IN ALL STRESS PERIODS',/)
  7050 FORMAT(/,T2,'EXTERNAL VARIABLES:',/,/,T3,'NUMBER',T14,'NAME',
      1  T24,'TYPE',/,1X'------------------------------',/)
  7055 FORMAT('  EXTERNAL VARIABLES READ FROM FILE: ',A120,/)
- 7060 FORMAT(I5,8X,A10,A10,/,'   AVAILABLE IN STRESS PERIODS: ',A120,/)
+ 7060 FORMAT(I5,8X,A10,A10,/,'   AVAILABLE IN STRESS PERIODS: ',A,/)
  7070 FORMAT(/,T2,'BINARY VARIABLES:',/,T24,'NUMBER OF',T46,
      1  'NAME OF',/,T3,'NUMBER',T14,'NAME',T20,
      2  'ASSOCIATED VARIABLES',T42,'ASSOCIATED VARIABLES',/,
@@ -853,7 +878,7 @@ C***********************************************************************
 C
 C  PURPOSE - CONVERT CHARACTER STRING, SPSTRNG TO LOGICAL ARRAY, SARRAY
 C-----------------------------------------------------------------------
-      CHARACTER(LEN=120),INTENT(IN)::SPSTRNG
+      CHARACTER(LEN=10000),INTENT(IN)::SPSTRNG
       INTEGER(I4B),INTENT(IN)::NV,NPER,J
       LOGICAL(LGT),INTENT(OUT)::SARRAY(NV,NPER)
 C-----LOCAL VARIABLES
@@ -912,7 +937,7 @@ C      IP      LOCATION OF NEXT PUNCTUATION MARK
 C      IT      INTEGER WHICH INDICATES VALUE OF NEXT PUNCTUATION MARK
 C      NUM     VALUE OF NEXT NUMERAL
 C-----------------------------------------------------------------------
-      CHARACTER(LEN=120),INTENT(IN)::WSP
+      CHARACTER(LEN=10000),INTENT(IN)::WSP
       INTEGER(I4B),INTENT(INOUT)::IP
       INTEGER(I4B),INTENT(IN)::IN
       INTEGER(I4B),INTENT(OUT)::IT,NUM

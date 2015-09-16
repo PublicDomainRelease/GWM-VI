@@ -6,7 +6,7 @@ MODULE GWM_SUBS
   PUBLIC :: EPSQNET, MNWCOPYOK, MNW2FILE, MNW2FILEORIG
   ! Public program units
   PUBLIC :: BASE36_I, CLEAN_UP, FUZZY_EQUALS, I_BASE36, IGETUNIT, &
-            TO_LONGNAME, URWORD2
+            I_BASE36_3, TO_LONGNAME, URWORD2
   !
   INTERFACE URWORD2
     MODULE PROCEDURE URWORD2_D
@@ -201,6 +201,36 @@ CONTAINS
     RETURN
   END FUNCTION I_BASE36
   !-----------------------------------------------------------------------------
+  FUNCTION I_BASE36_3(I) RESULT(CH3)
+    !   Return a LEN=3 character string based on integer KSP
+    !   The string may contain any of 10 digits 0-9 and 26 letters A-Z
+    !   The result is a two-digit, base-36 representation of integer KSP
+    !   The largest integer that can be represented this way
+    !   is 36*36*36-1 = 46655.  I may be in range 0-46655.  If I is outside
+    !   this range, the function returns '***'
+    IMPLICIT NONE
+    !   Argument-list and result variables
+    INTEGER, INTENT(IN) :: I
+    CHARACTER(LEN=3) :: CH3
+    !   Local variables
+    INTEGER :: I1, I2, I3
+    CHARACTER(LEN=1), DIMENSION(0:35) :: DIGIT36 
+    DATA DIGIT36/'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E', &
+        'F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V', &
+        'W','X','Y','Z'/
+    !
+    CH3 = '***'   ! Indicates error
+    IF (I.GE.0 .AND. I.LE.46655) THEN
+      I1 = I/1296             ! Find the 1296's digit, in decimal 
+      I2 = (I-I1*1296)/36     ! Find the 36's digit, in decimal 
+      I3 = I-I1*1296-I2*36    ! Find the 1's digit, in decimal
+      CH3(1:1) = DIGIT36(I1)  ! Assign 1296's digit, in base-36
+      CH3(2:2) = DIGIT36(I2)  ! Assign 36's digit, in base-36
+      CH3(3:3) = DIGIT36(I3)  ! Assign 1's digit, in base-36
+    ENDIF
+    RETURN
+  END FUNCTION I_BASE36_3
+  !-----------------------------------------------------------------------------
   FUNCTION IGETUNIT(IFIRST,MAXUNIT) RESULT (KUNIT)
     !   Find first unused file unit number between IFIRST and MAXUNIT
     IMPLICIT NONE
@@ -315,24 +345,24 @@ CONTAINS
     !   Local variables
     INTEGER :: LENL, LENS, LENSP1, LENSTRIM, LENOUT
     CHARACTER(LEN=40) :: TEMPNAM, UNDERSCORES
-    CHARACTER(LEN=2)  :: CH2
+    CHARACTER(LEN=3)  :: CH3
     DATA UNDERSCORES/'________________________________________'/
     !
     LENS = LEN(SHORTNAME)
     LENL = LEN(LONGNAME)
     LENSP1 = LENS+1
-    LENOUT = LENS+2
-    CH2 = I_BASE36(NUM)
+    LENOUT = LENS+3
+    CH3 = I_BASE36_3(NUM)
     !
     !   Error checks
     IF (LENOUT .GT. 40) CALL USTOP('SHORTNAME TOO LONG IN TO_LONGNAME')
     IF (LENL .LT. LENOUT) CALL USTOP('PROGRAMMER ERROR IN TO_LONGNAME')
-    IF (CH2 == '**') CALL USTOP('ILLEGAL VALUE OF NUM IN TO_LONGNAME')
+    IF (CH3 == '***') CALL USTOP('ILLEGAL VALUE OF NUM IN TO_LONGNAME')
     !
     LENSTRIM = LEN_TRIM(SHORTNAME)
     TEMPNAM = UNDERSCORES
     TEMPNAM(1:LENSTRIM) = TRIM(SHORTNAME)
-    TEMPNAM(LENSP1:LENOUT) = CH2
+    TEMPNAM(LENSP1:LENOUT) = CH3
     TEMPNAM(LENOUT+1:LENL) = ' '
     LONGNAME = TEMPNAM
     RETURN

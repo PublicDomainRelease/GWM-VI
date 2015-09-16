@@ -3,8 +3,8 @@ MODULE MKMMPROC
   USE GWM1HDC3, ONLY: HDCNAME,HDCNUM,HDCSP,NHB,NDD,NDF,NGD,&
                     HDCILOC,HDCJLOC,HDCKLOC
   USE GWM1STC3, ONLY: STCNAME,STCNUM,STCSP,NSF,NSD,NLK,STCSLOC,STCRLOC
-  USE GWM1STA3, ONLY: SVNAME,STANUM,NHVAR,NRVAR,NSVAR,NDVAR,SVSP,FLOWTYPE,&
-                    SVILOC,SVJLOC,SVKLOC,GWMSTADAT
+  USE GWM1STA3, ONLY: SVNAME,STANUM,NHVAR,NRVAR,NSVAR,NDVAR,NSTADEP,SVSP,&
+                    FLOWTYPE,SVILOC,SVJLOC,SVKLOC,GWMSTADAT
   USE GWM1DCV3, ONLY: FVILOC,FVJLOC,FVKLOC,FVNAME,FVNCELL,FVSP,NFVAR,FVMNW
   USE MKMMPROC_RDNAM, ONLY: READ_NAME_FILE
   USE MKMMPROC_RDNAM, ONLY: LISTFILE,HCLOSE, &
@@ -168,8 +168,10 @@ CONTAINS
         ENDIF
 !  Item 9: NABF -- Number of additional binary budget files.  I
         NABF = 0
-        IF(SFRB1FILE.NE.'') NABF = NABF + 1
-        IF(SFRB2FILE.NE.'') NABF = NABF + 1
+        IF (STCNUM.GT.0.OR.NRVAR.GT.0) THEN
+          IF(SFRB1FILE.NE.'') NABF = NABF + 1
+          IF(SFRB2FILE.NE.'') NABF = NABF + 1
+        ENDIF
         IF(NDVAR.GT.0)      NABF = NABF + 1
         WRITE(IUMMP,9020)NABF,'     # ITEM 9: NABF - Number of other binary files'
 !  Item 10: SFR-LEAK  SFR-budget-file-name for SFR-LEAK (may be same as any other budget file)
@@ -348,13 +350,7 @@ CONTAINS
 !    Item 17 - NSV - number of model simulated records
         NSV = NHB+NDD+2*NDF+2*NGD       ! Number of head constraints
         NSV = NSV + STCNUM              ! Number of streamflow constraints
-        NSV = NSV + NHVAR               ! Number of head state variables
-        NSV = NSV + NRVAR               ! Number of streamflow state variables
-        NSV = NSV + NSVAR               ! Number of storage state variables
-        ISTRT = NHVAR+NRVAR+NSVAR       ! Locate beginning of drain variables
-        DO I=ISTRT+1,ISTRT+NDVAR        ! Loop over drain state variables
-          NSV = NSV + SVILOC(I)         ! One simulated value per drain cell
-        ENDDO 
+        NSV = NSV + NSTADEP             ! Number of dependents related to state variables
         WRITE(IUMMP,9020)NSV,'   # ITEM 17: NSV - number of simulated values'
 !      Write JUPITER instruction file header lines
         WRITE(IUJIF,9100)
